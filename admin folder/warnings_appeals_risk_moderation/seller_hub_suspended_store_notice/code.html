@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary-fixed":"#cce5ff","surface":"#faf8ff","on-surface-variant":"#464555","primary-container":"#4f46e5","on-error-container":"#93000a","secondary-fixed":"#ffdbca","secondary-container":"#fd761a","on-error":"#ffffff","on-primary-container":"#dad7ff","on-secondary-container":"#5c2400","on-background":"#131b2e","on-primary-fixed":"#0f0069","on-tertiary-container":"#bedfff","surface-variant":"#dae2fd","on-secondary-fixed-variant":"#783200","surface-container-low":"#f2f3ff","surface-dim":"#d2d9f4","tertiary-container":"#00659a","inverse-surface":"#283044","surface-container-high":"#e2e7ff","on-surface":"#131b2e","on-tertiary-fixed":"#001d31","primary":"#3525cd","inverse-primary":"#c3c0ff","surface-container-lowest":"#ffffff","tertiary":"#004c76","surface-tint":"#4d44e3","on-tertiary-fixed-variant":"#004b73","outline-variant":"#c7c4d8","on-secondary":"#ffffff","primary-fixed":"#e2dfff","primary-fixed-dim":"#c3c0ff","surface-container":"#eaedff","secondary-fixed-dim":"#ffb690","tertiary-fixed-dim":"#93ccff","secondary":"#9d4300","on-secondary-fixed":"#341100","surface-container-highest":"#dae2fd","on-primary":"#ffffff","error":"#ba1a1a","error-container":"#ffdad6","inverse-on-surface":"#eef0ff","surface-bright":"#faf8ff","outline":"#777587","on-tertiary":"#ffffff","on-primary-fixed-variant":"#3323cc","background":"#faf8ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"1.5rem","space-sm":"0.5rem","gutter-md":"1.25rem","space-md":"1rem","space-xs":"0.25rem","gutter-lg":"1.5rem","margin-md":"1.5rem","margin-lg":"2rem","margin":"1rem","space-lg":"1.25rem","gutter":"1rem"},"fontFamily":{"label-md":["Inter"],"body-md":["Inter"],"display-lg":["Inter"],"body-sm":["Inter"],"label-lg":["Inter"],"headline-lg-mobile":["Inter"],"headline-md":["Inter"],"display-lg-mobile":["Inter"],"title-md":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"headline-lg":["Inter"]},"fontSize":{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0.005em","fontWeight":"400"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"600"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"700"}],"title-md":["18px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"headline-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 px-gutter-lg"><div class="max-w-7xl mx-auto h-full flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="w-10 h-10 rounded-xl bg-error flex items-center justify-center text-on-error shadow-sm"><span class="material-symbols-outlined text-[24px]">storefront</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface tracking-tight leading-tight">ShopSphere</span><span class="font-label-sm text-label-sm text-error uppercase font-bold tracking-wider">Merchant Portal • Account Notice</span></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold"><span class="material-symbols-outlined text-[16px]">warning</span><span>Account Restricted</span></div><a class="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" data-path="help" href="#"><span class="material-symbols-outlined text-[16px]">help</span><span>Appeals Help</span></a><a class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="logout" href="#" title="Sign out"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></div></header><main class="relative pt-16 bg-surface min-h-screen px-gutter-lg py-gutter-lg"><div class="max-w-7xl mx-auto"><div class="flex flex-col w-full relative">
+<!-- FROSTED SIMULATED LOCKED DASHBOARD BASEMENT -->
+<div aria-hidden="true" class="relative w-full overflow-hidden select-none pointer-events-none rounded-xl">
+<!-- Mock Hub Top Metric Strip -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md opacity-35 filter blur-[2px]">
+<div class="bg-surface-container p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">30-Day Gross Volume</span>
+<span class="material-symbols-outlined text-outline">lock</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface tabular-nums tracking-tight">$84,120.50</div>
+<div class="font-label-sm text-label-sm text-error mt-space-xs font-semibold">Account frozen</div>
+</div>
+<div class="bg-surface-container p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Active Listings</span>
+<span class="material-symbols-outlined text-outline">lock</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface tabular-nums tracking-tight">42 SKUs</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-space-xs">Paused from storefront</div>
+</div>
+<div class="bg-surface-container p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Return Rate Defect</span>
+<span class="material-symbols-outlined text-error">trending_up</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-error tabular-nums tracking-tight">28.4%</div>
+<div class="font-label-sm text-label-sm text-error mt-space-xs">Exceeds 25% Threshold</div>
+</div>
+<div class="bg-surface-container p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Escrow Reserve</span>
+<span class="material-symbols-outlined text-outline">lock</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface tabular-nums tracking-tight">$28,450.00</div>
+<div class="font-label-sm text-label-sm text-error mt-space-xs">Payouts suspended</div>
+</div>
+</div>
+<!-- Mock Tab Navigation Bar -->
+<div class="flex items-center gap-space-md mt-space-lg pb-space-sm opacity-35 filter blur-[2px]">
+<div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-high text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+<span>Products (42)</span>
+<span class="material-symbols-outlined text-[16px] text-error">lock</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>Orders &amp; Fulfillment</span>
+<span class="material-symbols-outlined text-[16px] text-error">lock</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
+<span>Disbursements &amp; Payouts</span>
+<span class="material-symbols-outlined text-[16px] text-error">lock</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">analytics</span>
+<span>Performance Analytics</span>
+<span class="material-symbols-outlined text-[16px] text-outline">lock</span>
+</div>
+</div>
+<!-- Mock Orders Table Preview -->
+<div class="mt-space-md bg-surface-container-lowest rounded-xl p-space-lg shadow-sm opacity-25 filter blur-[3px]">
+<div class="flex justify-between items-center mb-space-md">
+<span class="font-title-md text-title-md text-on-surface">Recent Merchant Transactions</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Read-only system state</span>
+</div>
+<div class="space-y-3">
+<div class="h-10 bg-surface-container rounded-lg w-full"></div>
+<div class="h-10 bg-surface-container rounded-lg w-full"></div>
+<div class="h-10 bg-surface-container rounded-lg w-full"></div>
+</div>
+</div>
+</div>
+<!-- FOREGROUND DIALOG & ENFORCEMENT CONTAINER -->
+<div class="relative -mt-[370px] sm:-mt-[330px] z-20 flex flex-col items-center justify-center pb-space-xl">
+<!-- Heavy Elevation Modal Box -->
+<div class="w-full max-w-5xl bg-surface-container-lowest rounded-xl shadow-[0_25px_60px_-15px_rgba(19,27,46,0.18)] overflow-hidden">
+<!-- Top Colored Status Stripe -->
+<div class="h-1.5 w-full bg-gradient-to-r from-error via-secondary-container to-error"></div>
+<!-- Header Banner Section -->
+<div class="p-space-xl md:p-margin-lg bg-gradient-to-b from-surface-container-low to-surface-container-lowest">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-lg">
+<div class="flex items-start gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-error-container text-on-error-container flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">gpp_maybe</span>
+</div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Your Merchant Account is Suspended</span>
+<span class="px-2.5 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm uppercase tracking-wide font-semibold">Immediate Restriction</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+                Merchant Entity: <span class="font-label-lg text-label-lg text-on-surface font-semibold">Nexus Audio Gear LLC</span> • Seller ID: <span class="font-mono text-body-sm font-semibold text-primary">SHP-NX-88219</span>
+</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto bg-surface-container px-space-md py-space-sm rounded-xl">
+<span class="material-symbols-outlined text-error text-[20px]">timer</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Case Reference</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">SEC-2024-99824</span>
+</div>
+</div>
+</div>
+<!-- 4-Quadrant Status Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-space-xl">
+<!-- Box 1: Violation Details -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-error/10 text-error flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">report</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Violation Summary</span>
+<p class="font-body-md text-body-md text-on-surface font-medium mt-0.5 leading-snug">
+                High return or damage rate (Exceeded 25% threshold) &amp; Suspected counterfeit product complaints
+              </p>
+<span class="font-label-sm text-label-sm text-error font-semibold mt-1.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">priority_high</span> Policy Section 8.4 (Product Authenticity)
+              </span>
+</div>
+</div>
+<!-- Box 2: Enforcement Timeline -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">event_busy</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Enforcement &amp; Re-assessment</span>
+<div class="font-body-md text-body-md text-on-surface font-medium mt-0.5">
+                Effective: <span class="text-on-surface-variant">Nov 12, 2024 at 10:15 AM EST</span>
+</div>
+<div class="font-body-md text-body-md text-on-surface font-medium mt-0.5">
+                Suspension Window: <span class="font-semibold text-secondary">14 Days (Review: Nov 26, 2024)</span>
+</div>
+</div>
+</div>
+<!-- Box 3: Immediate Commercial Impact -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex items-start gap-space-md md:col-span-2">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/15 text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">block</span>
+</div>
+<div class="flex flex-col w-full">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Active Operational Restrictions</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">Storefront Delisted</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1 leading-relaxed">
+                Your <strong class="text-on-surface">42 listings</strong> have been paused from marketplace search, buy-box algorithms, and direct consumer catalog display. Payout disbursements of <strong class="text-on-surface">Rs 48,200 ($28,450.00)</strong> are currently held in risk escrow pending appeal resolution.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- APPEAL STATUS PROGRESS TRACKER -->
+<div class="p-space-xl md:p-margin-lg bg-surface-container-lowest">
+<div class="flex items-center justify-between mb-space-lg">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Adjudication Pipeline</span>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">Appeal Resolution Lifecycle</h2>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>SecOps Review in Progress</span>
+</div>
+</div>
+<!-- Stepper Component -->
+<div class="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Step 1 (Completed) -->
+<div class="flex flex-col p-space-md bg-surface-container-low rounded-xl relative">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Nov 12</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Notice Dispatched</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-tight">Formal violation notification and policy citations delivered.</span>
+<div class="mt-space-md flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Acknowledged</span>
+</div>
+</div>
+<!-- Step 2 (Completed) -->
+<div class="flex flex-col p-space-md bg-surface-container-low rounded-xl relative">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Nov 14</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Appeal Dossier Filed</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-tight">Appeal #APP-9042 received with initial OEM documentation.</span>
+<div class="mt-space-md flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">folder_zip</span>
+<span>Dossier Ingested</span>
+</div>
+</div>
+<!-- Step 3 (Active) -->
+<div class="flex flex-col p-space-md bg-surface-container-high rounded-xl relative shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="w-8 h-8 rounded-full bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center font-bold animate-pulse">
+                3
+              </span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Active</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">SecOps Adjudication</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-tight">Senior auditor investigating supply chain invoices &amp; RMA metrics.</span>
+<div class="mt-space-md flex items-center gap-1 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Est. reply within ~20 hrs</span>
+</div>
+</div>
+<!-- Step 4 (Pending) -->
+<div class="flex flex-col p-space-md bg-surface-container-low/60 rounded-xl relative opacity-70">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface-variant font-label-md text-label-md flex items-center justify-center font-bold">
+                4
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pending</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Final Disposition</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-tight">Storefront reinstatement or sustained account termination.</span>
+<div class="mt-space-md flex items-center gap-1 text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">hourglass_empty</span>
+<span>Awaiting Step 3</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ACTIVE APPEAL EVIDENCE & CLARIFYING SUBMISSION SECTION -->
+<div class="p-space-xl md:p-margin-lg bg-surface-container-low">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Supplementary Evidence Submission</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Your appeal dossier is actively registered. Add manufacturer certificates or customs manifests to expedite resolution.
+            </p>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-medium self-start sm:self-auto">
+            Appeal Ref #APP-9042
+          </span>
+</div>
+<form class="space-y-space-md" id="appealForm" onsubmit="event.preventDefault(); handleEvidenceSubmit();">
+<!-- Explanation Response Box -->
+<div class="flex flex-col">
+<label class="font-label-md text-label-md text-on-surface-variant font-semibold mb-1.5 flex items-center justify-between" for="appealStatement">
+<span>Merchant Clarifying Statement / Corrective Action Plan (CAP)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-normal">Auto-saved draft</span>
+</label>
+<textarea class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-xl p-space-md focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline" id="appealStatement" placeholder="Describe quality control changes, packaging upgrades, and supply line verifications..." rows="4">We have engaged our Tier-1 manufacturer directly regarding the 28.4% RMA spike. All reported batches (Model NX-Pro Headphones) had a defective foam-sealing process from the Q3 production run, which has been corrected. In addition, we have attached our authorized brand-distribution license from Nexus Audio Global.</textarea>
+</div>
+<!-- Current Attached Files -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Attached Dossier Documentation (1 file uploaded)</span>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-2.5 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">picture_as_pdf</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">OEM-Invoice-Verified.pdf</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">3.4 MB • Verified by Cryptographic Hash</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold ml-2">Ingested</span>
+</div>
+</div>
+</div>
+<!-- File Upload Zone -->
+<div class="relative bg-surface-container-lowest rounded-xl p-space-lg text-center flex flex-col items-center justify-center cursor-pointer hover:bg-surface-container transition-colors group">
+<input class="absolute inset-0 opacity-0 cursor-pointer" id="evidenceFileInput" multiple="" onchange="handleFileSelect(event)" type="file"/>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high group-hover:bg-primary-fixed flex items-center justify-center text-primary transition-colors mb-space-sm">
+<span class="material-symbols-outlined text-[26px]">upload_file</span>
+</div>
+<div class="font-label-lg text-label-lg text-on-surface font-semibold">
+              Drop new evidence files here or <span class="text-primary hover:underline">browse files</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Supports PDF, PNG, JPG, or ZIP (Customs clearance, Authorized Reseller Agreement, Batch QA Certificates up to 25MB).
+            </span>
+<div class="hidden mt-space-sm font-label-md text-label-md text-primary font-semibold flex items-center gap-1" id="fileSelectedFeedback">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span id="fileNameDisplay">File ready to attach</span>
+</div>
+</div>
+<!-- Action Buttons Strip -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-sm">
+<a class="flex items-center gap-2 font-label-md text-label-md text-primary hover:text-primary-container font-semibold transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>View Seller Policy &amp; Agreement (Section 8.4)</span>
+</a>
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="flex-1 sm:flex-initial flex items-center justify-center gap-2 px-space-md py-3 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-high transition-colors" onclick="openEscalationModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">headset_mic</span>
+<span>Contact Escalation Unit</span>
+</button>
+<button class="flex-1 sm:flex-initial flex items-center justify-center gap-2 px-space-lg py-3 rounded-xl bg-secondary-container text-on-secondary font-label-lg text-label-lg font-bold shadow-md hover:bg-secondary transition-all active:scale-[0.99]" id="submitButton" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Update Appeal Dossier</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+<!-- Trust & Compliance Clarification Footer -->
+<div class="p-space-lg bg-surface-container-high/60 flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[20px]">security</span>
+<span>Cases are reviewed by accredited ShopSphere Trust &amp; Safety Officers under ISO/IEC 27001 dispute frameworks.</span>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm">
+<span>Priority Queue: <strong class="text-on-surface font-bold">Tier-1 Merchant</strong></span>
+<span class="text-outline">•</span>
+<span>Security Token: <span class="font-mono text-outline">SEC-NX-09</span></span>
+</div>
+</div>
+</div>
+</div>
+<!-- FLOATING LIVE CHAT ESCALATION WIDGET -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+<!-- Collapsible Chat Popup -->
+<div class="hidden mb-3 w-80 sm:w-96 bg-surface-container-lowest rounded-xl shadow-2xl overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200" id="chatBox">
+<div class="p-space-md bg-inverse-surface text-inverse-on-surface flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary-container animate-pulse"></div>
+<span class="font-label-lg text-label-lg font-bold">Appeals Support Desk</span>
+</div>
+<button class="text-inverse-on-surface/80 hover:text-inverse-on-surface" onclick="toggleLiveChat()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-md space-y-3 max-h-72 overflow-y-auto bg-surface-container-low">
+<div class="flex items-start gap-2">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-[12px]">SS</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-xl rounded-tl-none font-body-sm text-body-sm text-on-surface shadow-sm">
+            Hello Nexus Audio Gear representative. Case <strong>#APP-9042</strong> is active with Senior Investigator Vance. How can we clarify your submission requirements?
+          </div>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-lowest flex items-center gap-2">
+<input class="flex-1 bg-surface-container-low px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none placeholder:text-outline" placeholder="Type clarification message..." type="text"/>
+<button class="p-2 rounded-lg bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</div>
+<!-- Floating Bubble Button -->
+<button aria-label="Open Emergency Appeals Chat" class="group flex items-center gap-2 px-4 py-3 rounded-full bg-inverse-surface text-inverse-on-surface shadow-xl hover:bg-on-background transition-all active:scale-95" onclick="toggleLiveChat()">
+<div class="relative">
+<span class="material-symbols-outlined text-[22px]">support_agent</span>
+<span class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-secondary-container rounded-full"></span>
+</div>
+<span class="font-label-md text-label-md font-bold tracking-tight pr-1">Emergency Appeals Chat</span>
+</button>
+</div>
+<!-- TOAST NOTIFICATION CONTAINER -->
+<div class="fixed top-20 right-6 z-50 transform translate-y-[-100px] opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2 px-space-md py-3 rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl" id="toastNotification">
+<span class="material-symbols-outlined text-secondary-container text-[22px]">check_circle</span>
+<span class="font-label-md text-label-md font-semibold" id="toastMessage">Supplementary evidence submitted successfully.</span>
+</div>
+</div>
+<script>
+  function toggleLiveChat() {
+    const chat = document.getElementById('chatBox');
+    if (chat.classList.contains('hidden')) {
+      chat.classList.remove('hidden');
+    } else {
+      chat.classList.add('hidden');
+    }
+  }
+
+  function handleFileSelect(event) {
+    const input = event.target;
+    const feedback = document.getElementById('fileSelectedFeedback');
+    const label = document.getElementById('fileNameDisplay');
+    if (input.files && input.files.length > 0) {
+      label.textContent = input.files[0].name + ' (' + (input.files[0].size / 1024 / 1024).toFixed(2) + ' MB) attached';
+      feedback.classList.remove('hidden');
+    }
+  }
+
+  function handleEvidenceSubmit() {
+    const btn = document.getElementById('submitButton');
+    const originalText = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span><span>Transmitting Dossier...</span>';
+
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.innerHTML = originalText;
+      showToast('Supplementary evidence logged with Case Officer Vance.');
+    }, 1200);
+  }
+
+  function openEscalationModal() {
+    toggleLiveChat();
+    showToast('Direct line opened with Merchant Escalations desk.');
+  }
+
+  function showToast(message) {
+    const toast = document.getElementById('toastNotification');
+    const msg = document.getElementById('toastMessage');
+    msg.textContent = message;
+    toast.classList.remove('opacity-0', 'translate-y-[-100px]', 'pointer-events-none');
+    toast.classList.add('opacity-100', 'translate-y-0');
+
+    setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      toast.classList.add('opacity-0', 'translate-y-[-100px]', 'pointer-events-none');
+    }, 4000);
+  }
+</script></div></main><footer class="bg-surface-container-low border-t border-outline-variant/30 py-space-lg px-gutter-lg"><div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-space-md"><span class="font-body-sm text-body-sm text-on-surface-variant">© 2025 ShopSphere Inc. Seller Integrity &amp; Compliance Operations.</span><div class="flex items-center gap-space-lg"><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" data-path="terms" href="#">Merchant Terms</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" data-path="seller-policy" href="#">Seller Policy</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" data-path="support" href="#">Contact Support</a></div></div></footer></body></html>

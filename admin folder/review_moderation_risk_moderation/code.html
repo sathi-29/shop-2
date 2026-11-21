@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary-fixed":"#cce5ff","surface":"#faf8ff","on-surface-variant":"#464555","primary-container":"#4f46e5","on-error-container":"#93000a","secondary-fixed":"#ffdbca","secondary-container":"#fd761a","on-error":"#ffffff","on-primary-container":"#dad7ff","on-secondary-container":"#5c2400","on-background":"#131b2e","on-primary-fixed":"#0f0069","on-tertiary-container":"#bedfff","surface-variant":"#dae2fd","on-secondary-fixed-variant":"#783200","surface-container-low":"#f2f3ff","surface-dim":"#d2d9f4","tertiary-container":"#00659a","inverse-surface":"#283044","surface-container-high":"#e2e7ff","on-surface":"#131b2e","on-tertiary-fixed":"#001d31","primary":"#3525cd","inverse-primary":"#c3c0ff","surface-container-lowest":"#ffffff","tertiary":"#004c76","surface-tint":"#4d44e3","on-tertiary-fixed-variant":"#004b73","outline-variant":"#c7c4d8","on-secondary":"#ffffff","primary-fixed":"#e2dfff","primary-fixed-dim":"#c3c0ff","surface-container":"#eaedff","secondary-fixed-dim":"#ffb690","tertiary-fixed-dim":"#93ccff","secondary":"#9d4300","on-secondary-fixed":"#341100","surface-container-highest":"#dae2fd","on-primary":"#ffffff","error":"#ba1a1a","error-container":"#ffdad6","inverse-on-surface":"#eef0ff","surface-bright":"#faf8ff","outline":"#777587","on-tertiary":"#ffffff","on-primary-fixed-variant":"#3323cc","background":"#faf8ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"1.5rem","space-sm":"0.5rem","gutter-md":"1.25rem","space-md":"1rem","space-xs":"0.25rem","gutter-lg":"1.5rem","margin-md":"1.5rem","margin-lg":"2rem","margin":"1rem","space-lg":"1.25rem","gutter":"1rem"},"fontFamily":{"label-md":["Inter"],"body-md":["Inter"],"display-lg":["Inter"],"body-sm":["Inter"],"label-lg":["Inter"],"headline-lg-mobile":["Inter"],"headline-md":["Inter"],"display-lg-mobile":["Inter"],"title-md":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"headline-lg":["Inter"]},"fontSize":{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0.005em","fontWeight":"400"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"600"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"700"}],"title-md":["18px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"headline-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 min-h-0"><div class="p-space-lg flex flex-col gap-space-sm bg-surface-container-low"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">admin_panel_settings</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface tracking-tight leading-tight">ShopSphere</span><span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Admin Console</span></div></div><div class="flex items-center justify-between px-space-sm py-1.5 rounded-lg bg-surface-container"><div class="flex items-center gap-1.5 min-w-0"><span class="material-symbols-outlined text-[16px] text-primary shrink-0">shield_person</span><span class="font-label-sm text-label-sm text-on-surface truncate">Platform Security &amp; Ops</span></div><span class="font-label-sm text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant shrink-0 font-bold">Admin</span></div></div><nav class="flex-1 overflow-y-auto px-space-md py-space-xs space-y-4" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-xl shadow-sm"><div class="space-y-1"><span class="px-space-md font-label-sm text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Core Platform</span><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="font-label-lg text-label-lg">Overview</span></a><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="sellers" href="#"><span class="font-label-lg text-label-lg">Sellers</span></a><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="products" href="#"><span class="font-label-lg text-label-lg">Products</span></a><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="orders" href="#"><span class="font-label-lg text-label-lg">Orders</span></a><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="returns-damages" href="#"><span class="font-label-lg text-label-lg">Returns &amp; Damages</span></a></div><div class="space-y-1"><span class="px-space-md font-label-sm text-[11px] font-bold text-secondary uppercase tracking-wider">Risk &amp; Moderation</span><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="flagged-sellers" href="#"><span class="font-label-lg text-label-lg">Flagged Sellers</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-2 transition-colors bg-primary-container text-on-primary font-label-lg rounded-xl shadow-sm" data-path="review-moderation" href="#"><span class="font-label-lg text-label-lg">Review Moderation</span></a><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="warnings-appeals" href="#"><span class="font-label-lg text-label-lg">Warnings and Appeals</span></a><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="risk-rules" href="#"><span class="font-label-lg text-label-lg">Risk Rules</span></a></div><div class="space-y-1"><span class="px-space-md font-label-sm text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Marketing &amp; Finance</span><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reels-reviews" href="#"><span class="font-label-lg text-label-lg">Reels &amp; Reviews</span></a><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ads-promotions" href="#"><span class="font-label-lg text-label-lg">Ads &amp; Promotions</span></a><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="payouts" href="#"><span class="font-label-lg text-label-lg">Payouts</span></a></div><div class="space-y-1"><span class="px-space-md font-label-sm text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Governance &amp; Security</span><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="staff-roles" href="#"><span class="font-label-lg text-label-lg">Staff &amp; Roles</span></a><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="audit-log" href="#"><span class="font-label-lg text-label-lg">Audit Log</span></a></div></nav></div><div class="p-space-md space-y-space-sm bg-surface-container-low"><div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between mb-1.5"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">verified_user</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Compliance Health</span></div><span class="font-label-sm text-label-sm text-secondary font-semibold">99.4%</span></div><div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden"><div class="bg-primary h-full rounded-full" style="width: 99.4%"></div></div><div class="flex items-center justify-between mt-2 pt-1.5 border-t border-outline-variant/30"><a class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" data-path="compliance-support" href="#"><span class="material-symbols-outlined text-[15px]">help_center</span><span class="font-label-sm text-label-sm">System Guide</span></a><span class="font-label-sm text-label-sm text-on-surface-variant">v4.8</span></div></div><div class="flex items-center justify-between p-2 rounded-xl bg-surface-container"><div class="flex items-center gap-2.5 min-w-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Admin Supervisor</span><span class="font-body-sm text-[11px] text-on-surface-variant truncate">Global Compliance</span></div></div><a class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="logout" href="#" title="Sign out"><span class="material-symbols-outlined text-[18px]">logout</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter-lg gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full h-10 pl-10 pr-4 rounded-xl bg-surface-container-lowest text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/20 shadow-[0_1px_8px_rgba(0,0,0,0.04)]" placeholder="Search sellers, disputes, audits, risk rules, staff..." type="search"/></div><div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed shrink-0"><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span class="font-label-sm text-label-sm font-semibold whitespace-nowrap">Global Admin Mode</span><span class="material-symbols-outlined text-[16px]">expand_more</span></div></div><div class="flex items-center gap-space-sm shrink-0"><div class="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-primary">cloud_done</span><span class="font-label-sm text-label-sm">System Healthy • 99.98% uptime</span></div><button class="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors"><span class="material-symbols-outlined text-[16px]">public</span><span>Global (US-East)</span><span class="material-symbols-outlined text-[14px] text-on-surface-variant">arrow_drop_down</span></button><div class="h-6 w-px bg-outline-variant/40 mx-1"></div><button class="relative p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-error text-on-error font-label-sm text-[10px] flex items-center justify-center font-bold">5</span></button><button class="p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">shield</span></button><button class="p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">help</span></button><div class="flex items-center gap-2"><button class="h-10 px-4 rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg flex items-center gap-1.5 shadow-sm transition-colors"><span class="material-symbols-outlined text-[18px]">security</span><span>Security Incident</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen px-gutter-lg py-gutter-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- Page Header & Key Metrics -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-1 max-w-3xl">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider font-bold">Risk &amp; Moderation</span>
+<span class="text-outline text-label-sm">•</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Heuristic AI Engine v4.2</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Customer Review Moderation &amp; Anomaly Detection</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Detect coordinated review attacks, counterfeit flags, and abusive customer feedback across marketplace products.</p>
+</div>
+<!-- KPI Pills Bar -->
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<div class="flex flex-col leading-none">
+<span class="font-headline-md text-headline-md text-on-surface font-bold tabular-nums">142</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Flagged Reviews</span>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<div class="flex flex-col leading-none">
+<span class="font-headline-md text-headline-md text-on-surface font-bold tabular-nums">89%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">AI Suspicion Conf.</span>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-error-container text-on-error-container shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-error" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<div class="flex flex-col leading-none">
+<span class="font-headline-md text-headline-md text-error font-bold tabular-nums">12</span>
+<span class="font-label-sm text-label-sm font-semibold">Velocity Surges</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Search & Filter Controls -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-2xl bg-surface-container-lowest shadow-sm">
+<div class="flex flex-col lg:flex-row gap-space-sm items-stretch lg:items-center justify-between">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full h-11 pl-11 pr-4 rounded-xl bg-surface-container-low text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/25 transition-all" placeholder="Search review text, customer name, order ID, product SKU..." type="search"/>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="h-11 px-4 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Advanced Rules</span>
+</button>
+<button class="h-11 px-4 rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">auto_fix_high</span>
+<span>Run Auto-Triage</span>
+</button>
+</div>
+</div>
+<!-- Granular Filter Pills -->
+<div class="flex flex-wrap items-center gap-x-6 gap-y-2 pt-1 border-t border-outline-variant/20">
+<!-- Ratings Filter Group -->
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider mr-1">Rating:</span>
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">All</button>
+<button class="px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm font-semibold">
+<span>1-Star Only</span>
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">2-Star</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">Positive (4-5★)</button>
+</div>
+<div class="hidden md:block h-4 w-px bg-outline-variant/50"></div>
+<!-- Flags Filter Group -->
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider mr-1">Flags:</span>
+<button class="px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm font-semibold">
+<span>AI-Flagged Only</span>
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">Abusive Language</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">Fake or Paid</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">Competitor Spam</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">Duplicate Pattern</button>
+</div>
+<div class="hidden md:block h-4 w-px bg-outline-variant/50"></div>
+<!-- Status Filter Group -->
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider mr-1">Status:</span>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Pending (94)</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">Approved</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">Hidden</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">Blocked</button>
+</div>
+</div>
+</div>
+<!-- Two-Column Layout (Left 68% Data Table, Right 32% Anomaly Inspector) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Flagged Reviews Data Stream (8 Cols ~ 68%) -->
+<div class="xl:col-span-8 flex flex-col gap-space-md min-w-0">
+<!-- Table Header & Batch Bar -->
+<div class="flex items-center justify-between px-space-md py-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" type="checkbox"/>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Flagged Queue</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[11px] font-bold">Showing 4 of 142 Critical</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">sort</span>
+<span>Sort: Anomaly Score (High to Low)</span>
+</button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium transition-colors">Batch Moderate</button>
+</div>
+</div>
+<!-- REVIEW ITEM 1 -->
+<div class="flex flex-col p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow gap-space-md relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-error"></div>
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-space-sm pl-2">
+<!-- Product & Seller Identity -->
+<div class="flex items-start gap-3 min-w-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="High fidelity over-ear active noise cancelling headphones with gunmetal finish and dark leather ear cushions on minimal gradient studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-jv-knklCJb_AQt1AhshEGMi8NN4e7HlDrqRWnpCiPOL3AljQE9KMdsgyoo15UWVYltmSalEHfgnBdK43RlmWNRZhWw1cemdXF38V7p3WM878MPSdwDXKKpEHd-wfD4sABLoKUv3mARI5CjHxdrFpJltf8ucVlcKqiuXL_PROhmmR2tI2rDtNGB25b9GM_wS5JTzD0iZVNKoRkoZ36Lb6ZOkvfrNVm7PzuNFC6by_"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Aura Studio Pro ANC Headphones</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SKU: ASP-9002</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span>Seller:</span>
+<a class="font-label-sm text-label-sm text-primary hover:underline font-semibold flex items-center gap-0.5" href="#">
+<span>Nexus Audio Gear</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+<span class="text-outline">•</span>
+<span class="text-error font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">trending_down</span>
+                  Velocity Surge Detected
+                </span>
+</div>
+</div>
+</div>
+<!-- Rating & Status Badge -->
+<div class="flex items-center gap-3 shrink-0">
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-error-container text-on-error-container">
+<div class="flex items-center text-error">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-md text-label-md font-bold">1.0</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold uppercase tracking-wider">Pending Moderation</span>
+<button class="p-1 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Customer Identity & Review Snippet -->
+<div class="pl-2 space-y-2">
+<div class="flex items-center gap-2 flex-wrap text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-outline">account_circle</span>
+<span>Marcus Vance</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-[11px] font-semibold">Unverified Buyer</span>
+<span class="text-outline">•</span>
+<span>Reviewed 42 minutes ago</span>
+<span class="text-outline">•</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Cluster ID: #CLUST-881</span>
+</div>
+<!-- Review Text Quote -->
+<p class="font-body-md text-body-md text-on-surface bg-surface-container-low p-space-sm rounded-xl leading-relaxed">
+            “Complete garbage, fake drivers inside, box arrived opened without serial barcode. Go buy Brand X instead!”
+          </p>
+<!-- Evidence Thumbnails -->
+<div class="flex items-center gap-2 pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Customer Evidence (2):</span>
+<div class="relative group cursor-pointer w-14 h-14 rounded-lg overflow-hidden shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Close up photograph showing cracked plastic headphone headband joint with exposed wiring under dramatic contrast lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFWgpFGIL8wqrArwE5eMcXNB8LljEVGXRROQJpgIo45MM7T62P6bOdkESAcsInryQjlZSf-vRV1oOR6SuKX5tc7o7jV0uOJqA0dw-kw9qX-B8T_Oj5lJjUpPPFxCPmQqoZDRgsCaaeBzss2daY_7Hy3cJmSo8TXBtMX95aKLGr58KSFLJrOPAKpmRpoOWRohljSjllkyeI8xUqpHG45B-NxnjR38bt1jZH7_Z2eT34"/>
+<div class="absolute inset-0 bg-on-surface/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-[18px]">zoom_in</span>
+</div>
+</div>
+<div class="relative group cursor-pointer w-14 h-14 rounded-lg overflow-hidden shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Close up macro photo of torn paper packaging box without genuine certification label barcode" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIyUqNu-SBYXO78oWhZtoApkH4SuRAMINHaE_C37vq2_wf6U7rux0vvKPLesJig8dMmx_c1Ddwm3CCL5R_JIBH64n9kcB81vFZwBpEN_ArxxmOoAlLxd2UdjKA4DNAf4oRiof3ODO0b1mfJLDSesb9KkppHWqsFDNWZyyD1fatXRN2dHCU08N8ZdMyPvY5Ud1lbwclAMD3LCEyIJWUwA7Bs5MAeh1-Ziqne7x-F6ZW"/>
+<div class="absolute inset-0 bg-on-surface/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-[18px]">zoom_in</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tags & Direct Resolution Actions -->
+<div class="pl-2 pt-2 border-t border-outline-variant/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">warning</span>
+              AI-Flagged: Competitor URL / Spam
+            </span>
+<span class="px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">block</span>
+              Abusive
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+              NLP Defamation: 94%
+            </span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="h-9 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium transition-colors">Approve</button>
+<button class="h-9 px-3 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-sm text-label-sm font-medium transition-colors">Hide</button>
+<button class="h-9 px-3 rounded-lg bg-error-container hover:bg-error text-on-error-container hover:text-on-error font-label-sm text-label-sm font-bold transition-colors">Remove</button>
+<button class="h-9 px-3 rounded-lg bg-error text-on-error hover:opacity-90 font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm transition-opacity">
+<span class="material-symbols-outlined text-[15px]">person_off</span>
+<span>Block Reviewer</span>
+</button>
+</div>
+</div>
+</div>
+<!-- REVIEW ITEM 2 -->
+<div class="flex flex-col p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow gap-space-md relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-secondary-container"></div>
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-space-sm pl-2">
+<!-- Product & Seller Identity -->
+<div class="flex items-start gap-3 min-w-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Modern ceramic digital smartwatch with sleek bezel and dark silicone strap on neutral slate backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5MrQ7KilIIcy1e8tIgzj2nGuEgZDiSaZ091TNb5Gi4cpx1Tma1nLb5BC_bRA5-W1azC7s1Q4t6mmYl_5i-xypMTH3yIyXOXBcMskgkTKKt_XfTXezZqmURNnPVsmH9qB8_D4FwHRd6jM4Hlri4LMPIGQbQApybSg-fYuLNkJxdpAxOqhpZ5SSQds7dJDyvSDZoN4RqRkmT4vzLZ4Zvx2o4yQrcZEu5dwz1A_NghQ6"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Ceramic Ultra Smartwatch Gen 2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SKU: CHR-CW2</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span>Seller:</span>
+<a class="font-label-sm text-label-sm text-primary hover:underline font-semibold flex items-center gap-0.5" href="#">
+<span>Chrono Precision</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+<span class="text-outline">•</span>
+<span>Category: Wearables</span>
+</div>
+</div>
+</div>
+<!-- Rating & Status Badge -->
+<div class="flex items-center gap-3 shrink-0">
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-error-container text-on-error-container">
+<span class="material-symbols-outlined text-[16px] text-error" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold">1.0</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold uppercase tracking-wider">Hidden</span>
+<button class="p-1 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Customer Identity & Review Snippet -->
+<div class="pl-2 space-y-2">
+<div class="flex items-center gap-2 flex-wrap text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5 font-semibold text-error">
+<span class="material-symbols-outlined text-[16px]">smart_toy</span>
+<span>sybil_bot_99</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[11px] font-bold">Bot Pattern Flagged</span>
+<span class="text-outline">•</span>
+<span>Reviewed 3 hours ago</span>
+<span class="text-outline">•</span>
+<span class="font-body-sm text-[11px] text-outline font-mono">IP: 194.26.29.112 (VPN Proxy)</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface bg-surface-container-low p-space-sm rounded-xl leading-relaxed">
+            “SCAM PRODUCT DO NOT BUY! Visit <span class="text-primary underline font-medium">scamalert-deals.com/refund</span> for free coupons”
+          </p>
+</div>
+<!-- Tags & Actions -->
+<div class="pl-2 pt-2 border-t border-outline-variant/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">link_off</span>
+              External Link Spam
+            </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">content_copy</span>
+              Duplicate Pattern across 8 items
+            </span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="h-9 px-4 rounded-lg bg-error text-on-error hover:opacity-90 font-label-sm text-label-sm font-bold flex items-center gap-1.5 shadow-sm transition-opacity">
+<span class="material-symbols-outlined text-[16px]">delete_forever</span>
+<span>Remove &amp; Block Reviewer</span>
+</button>
+</div>
+</div>
+</div>
+<!-- REVIEW ITEM 3 -->
+<div class="flex flex-col p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow gap-space-md relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-tertiary"></div>
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-space-sm pl-2">
+<!-- Product & Seller Identity -->
+<div class="flex items-start gap-3 min-w-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Minimalist architectural aluminum desk lightbar glowing softly over wooden tabletop in a design studio setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAItbdRPf-oBBGrfrgHx8sxt4hXNSA94RZlExpM2GXL8Nj__k8Vx9rvbIXoVF4cZqUrLsK_BK1YBvP3TT7ywZkyhNyHEksVFiiZ_yrZtUVTCcH_qsRpFgqmCb44HfqxFL51F0QsOAOgOYTAwApDnQAj8iq1A_7-STcfe8KULFFPXE4QwWhjEoI9VumjBd4GbX4JY78dXNkiuDAPu8o7X76X-ONZrmvmhzEmHO3nHbjl"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Lumina Nordic Lightbar</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SKU: LMN-NL4</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span>Seller:</span>
+<a class="font-label-sm text-label-sm text-primary hover:underline font-semibold flex items-center gap-0.5" href="#">
+<span>Lumina Home</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+<span class="text-outline">•</span>
+<span class="text-on-surface-variant">Electronics / Lighting</span>
+</div>
+</div>
+</div>
+<!-- Rating & Status Badge -->
+<div class="flex items-center gap-3 shrink-0">
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-secondary-fixed text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[16px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold">2.0</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span>
+              Escalated to QA
+            </span>
+<button class="p-1 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Customer Identity & Review Snippet -->
+<div class="pl-2 space-y-2">
+<div class="flex items-center gap-2 flex-wrap text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span>Sarah Jenkins</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-[11px] font-bold">Verified Buyer</span>
+<span class="text-outline">•</span>
+<span>Order #SP-882910</span>
+<span class="text-outline">•</span>
+<span>Reviewed 6 hours ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface bg-surface-container-low p-space-sm rounded-xl leading-relaxed">
+            “Power supply failed after 2 days. Sparks came out. Dangerous.”
+          </p>
+<!-- Evidence Thumbnail -->
+<div class="flex items-center gap-2 pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Customer Evidence (1):</span>
+<div class="relative group cursor-pointer w-14 h-14 rounded-lg overflow-hidden shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="High contrast macro shot of scorched black insulation on a melted USB power cord adapter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxipk5AhZ1mxEZfgLp9ORdTU7GGBTh9W_-GhGfPG-FNoZ7uvKgnVm_6hoPaJzWq3riy6Eo7JTe-niHZcPIpcDcU5i3K-IEwKeMS1r9FhhZ6AOf8nQhUGLSLDc0eV1tk2hKmWqM9Oaalg2cmEXBEq3e3cz6oEY9HLkwJT_PsnkEXtSPaZPlXsx3_nzPV2QeGI6yAgmjnj0GSLdP7pYRF6kItPhSSCOiM3SmY-lr5DCG"/>
+<div class="absolute inset-0 bg-on-surface/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-[18px]">zoom_in</span>
+</div>
+</div>
+<span class="text-body-sm font-body-sm text-error font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">report_problem</span>
+              Hazard Keyword: “Sparks / Dangerous”
+            </span>
+</div>
+</div>
+<!-- Tags & Actions -->
+<div class="pl-2 pt-2 border-t border-outline-variant/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">electric_bolt</span>
+              Safety Anomaly Alert
+            </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+              Critical Product Safety Team Notified
+            </span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="h-9 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium transition-colors">Approve</button>
+<button class="h-9 px-3 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[16px]">contact_support</span>
+<span>Contact Customer</span>
+</button>
+</div>
+</div>
+</div>
+<!-- REVIEW ITEM 4 -->
+<div class="flex flex-col p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow gap-space-md relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-outline"></div>
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-space-sm pl-2">
+<!-- Product & Seller Identity -->
+<div class="flex items-start gap-3 min-w-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Ergonomic contoured memory foam keyboard wrist rest resting on modern dark oak computer desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY2a-QjNNMTvCBSYEMPFolJqkziZ3lrdGzyeLhDKmvsxFPwVl85F26QD51gotONlqMtBQekS2VpWIS3pB-gEmNbsV9FF1i5GrMmylQ7oyeWSj1lrzJYwYQt1_s1PwiA1eMzN9bqsEV36RIf40ycbcZ1zwXt8LWQgSWcUNyYOKUk_PcAxL_2BoHf-kiGBrJgA80oTuwWgfICxutWIq1jFajDbw0g2hlWXEVcp8bl4vM"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Ergonomic Memory Foam Wrist Rest</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SKU: AUR-WST-01</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span>Seller:</span>
+<a class="font-label-sm text-label-sm text-primary hover:underline font-semibold flex items-center gap-0.5" href="#">
+<span>Aura Sound Labs</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Rating & Status Badge -->
+<div class="flex items-center gap-3 shrink-0">
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-error-container text-on-error-container">
+<span class="material-symbols-outlined text-[16px] text-error" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold">1.0</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold uppercase tracking-wider">Pending</span>
+<button class="p-1 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Customer Identity & Review Snippet -->
+<div class="pl-2 space-y-2">
+<div class="flex items-center gap-2 flex-wrap text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span>TechFan42</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-[11px] font-bold">Verified Buyer</span>
+<span class="text-outline">•</span>
+<span>Reviewed 14 hours ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface bg-surface-container-low p-space-sm rounded-xl leading-relaxed">
+            “Smelled of toxic chemical fumes, gave me a headache. Cheap knockoff foam.”
+          </p>
+</div>
+<!-- Tags & Actions -->
+<div class="pl-2 pt-2 border-t border-outline-variant/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">air</span>
+              Quality / Odor Flag
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+              Single Incident
+            </span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="h-9 px-3.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium transition-colors">Approve</button>
+<button class="h-9 px-3.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-sm text-label-sm font-medium transition-colors">Hide</button>
+</div>
+</div>
+</div>
+<!-- Pagination Footer -->
+<div class="flex items-center justify-between px-space-md py-3 rounded-xl bg-surface-container-lowest shadow-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Showing 1 to 4 of 142 flagged entries</span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:bg-surface-container disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center bg-primary text-on-primary font-label-sm text-label-sm font-bold">1</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container font-label-sm text-label-sm">2</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container font-label-sm text-label-sm">3</button>
+<span class="px-1 text-outline">...</span>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container font-label-sm text-label-sm">36</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Review Velocity Anomaly Inspector (4 Cols ~ 32%) -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Top Alert Box (Amber/Red Container) -->
+<div class="p-space-lg rounded-2xl bg-secondary-fixed text-on-secondary-fixed shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[24px] text-secondary shrink-0" style="font-variation-settings: 'FILL' 1;">warning</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] uppercase tracking-wider font-bold text-secondary">Velocity Surge Triggered</span>
+<h3 class="font-title-md text-title-md font-bold leading-snug">Nexus Audio Gear received 30 one-star reviews in the past 7 days.</h3>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-secondary-fixed-variant leading-relaxed">
+          Review velocity is <strong class="text-on-secondary-fixed font-bold">+840%</strong> higher than seller historical baseline. <strong class="text-on-secondary-fixed font-bold">18 reviews</strong> originate from unverified accounts with matching IP subnets. Possible genuine supplier batch defect OR coordinated competitor attack.
+        </p>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 pt-1">
+<button class="h-10 px-3.5 rounded-xl bg-secondary text-on-secondary hover:bg-on-secondary-fixed font-label-md text-label-md font-bold flex items-center justify-center gap-1.5 shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+<span>Investigate Cluster</span>
+</button>
+<button class="h-10 px-3 rounded-xl bg-surface-container-lowest/80 hover:bg-surface-container-lowest text-on-secondary-fixed font-label-md text-label-md font-semibold transition-colors">
+            Dismiss Alert
+          </button>
+</div>
+</div>
+<!-- Seller Review Trend Chart Card -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold text-primary">Nexus Audio Gear</span>
+<h4 class="font-title-md text-title-md text-on-surface font-bold">30-Day Sentiment Histogram</h4>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant font-mono">Oct 10 - Nov 09</span>
+</div>
+<!-- Inline SVG Histogram Chart showing steady 4.8★ then sudden 1★ spike Nov 04 -->
+<div class="w-full flex flex-col gap-2">
+<div class="relative h-44 w-full flex items-end">
+<!-- Background Baseline Guideline -->
+<div class="absolute inset-x-0 bottom-8 h-px bg-outline-variant/30"></div>
+<div class="absolute inset-x-0 bottom-24 h-px bg-outline-variant/30"></div>
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 320 140">
+<!-- Defs for subtle glow -->
+<defs>
+<lineargradient id="spikeGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#ba1a1a" stop-opacity="0.9"></stop>
+<stop offset="100%" stop-color="#fd761a" stop-opacity="0.2"></stop>
+</lineargradient>
+</defs>
+<!-- Steady 4.8★ Baseline bars (Days 1 to 20) -->
+<!-- Group of normal blue/primary bars -->
+<rect class="fill-surface-container-high" height="40" rx="2" width="7" x="8" y="90"></rect>
+<rect class="fill-surface-container-high" height="44" rx="2" width="7" x="20" y="86"></rect>
+<rect class="fill-surface-container-high" height="36" rx="2" width="7" x="32" y="94"></rect>
+<rect class="fill-surface-container-high" height="42" rx="2" width="7" x="44" y="88"></rect>
+<rect class="fill-surface-container-high" height="38" rx="2" width="7" x="56" y="92"></rect>
+<rect class="fill-surface-container-high" height="46" rx="2" width="7" x="68" y="84"></rect>
+<rect class="fill-surface-container-high" height="40" rx="2" width="7" x="80" y="90"></rect>
+<rect class="fill-surface-container-high" height="42" rx="2" width="7" x="92" y="88"></rect>
+<rect class="fill-surface-container-high" height="38" rx="2" width="7" x="104" y="92"></rect>
+<rect class="fill-surface-container-high" height="45" rx="2" width="7" x="116" y="85"></rect>
+<rect class="fill-surface-container-high" height="41" rx="2" width="7" x="128" y="89"></rect>
+<rect class="fill-surface-container-high" height="39" rx="2" width="7" x="140" y="91"></rect>
+<rect class="fill-surface-container-high" height="44" rx="2" width="7" x="152" y="86"></rect>
+<rect class="fill-surface-container-high" height="40" rx="2" width="7" x="164" y="90"></rect>
+<rect class="fill-surface-container-high" height="37" rx="2" width="7" x="176" y="93"></rect>
+<rect class="fill-surface-container-high" height="46" rx="2" width="7" x="188" y="84"></rect>
+<rect class="fill-surface-container-high" height="42" rx="2" width="7" x="200" y="88"></rect>
+<!-- Anomaly Trigger Threshold line -->
+<line stroke="#ba1a1a" stroke-dasharray="3 3" stroke-width="1.5" x1="216" x2="216" y1="10" y2="130"></line>
+<!-- DRAMATIC 1-STAR SPIKE starting Nov 04 (Day 22+) -->
+<rect fill="url(#spikeGrad)" height="70" rx="2" width="8" x="216" y="60"></rect>
+<rect fill="url(#spikeGrad)" height="88" rx="2" width="8" x="228" y="42"></rect>
+<rect fill="url(#spikeGrad)" height="106" rx="2" width="8" x="240" y="24"></rect>
+<rect fill="url(#spikeGrad)" height="120" rx="2" width="8" x="252" y="10"></rect>
+<rect fill="url(#spikeGrad)" height="112" rx="2" width="8" x="264" y="18"></rect>
+<rect fill="url(#spikeGrad)" height="98" rx="2" width="8" x="276" y="32"></rect>
+<rect fill="url(#spikeGrad)" height="85" rx="2" width="8" x="288" y="45"></rect>
+<rect fill="url(#spikeGrad)" height="75" rx="2" width="8" x="300" y="55"></rect>
+</svg>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-[11px] pt-1">
+<span>Oct 10 (Steady 4.8★)</span>
+<span class="text-error font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+              Nov 04: Spike Trigger (+840%)
+            </span>
+<span>Nov 09</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low mt-1">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-surface-container-high shrink-0"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Baseline (Avg 4.8★)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-error shrink-0"></span>
+<span class="font-label-sm text-label-sm text-error font-bold">1★ Negative Surge</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Reviewer Authenticity Breakdown Panel -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h4 class="font-title-md text-title-md text-on-surface font-bold">Reviewer Authenticity</h4>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[11px] font-bold">High Risk Cluster</span>
+</div>
+<!-- Donut / Split Bar Representation -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+              Verified Purchases
+            </span>
+<span class="font-bold text-on-surface tabular-nums">22%</span>
+</div>
+<!-- Dual Colored Progress Meter -->
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 22%"></div>
+<div class="bg-error h-full" style="width: 78%"></div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-error font-bold flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+              Unverified Accounts (Flagged)
+            </span>
+<span class="font-bold text-error tabular-nums">78%</span>
+</div>
+</div>
+<!-- Heuristic Metrics List -->
+<div class="flex flex-col divide-y divide-outline-variant/20 pt-1">
+<div class="flex items-center justify-between py-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Avg Account Age</span>
+<span class="font-label-md text-label-md text-error font-bold tabular-nums">2.4 days</span>
+</div>
+<div class="flex items-center justify-between py-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">IP Subnet Match</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">18 of 30 reviews</span>
+</div>
+<div class="flex items-center justify-between py-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sentiment Polarity Deviation</span>
+<span class="font-label-md text-label-md text-secondary font-bold tabular-nums">-3.8σ</span>
+</div>
+<div class="flex items-center justify-between py-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Associated Competitor Entities</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">2 Brands Identified</span>
+</div>
+</div>
+<!-- Quick Action Trigger -->
+<button class="w-full h-11 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px]">policy</span>
+<span>Apply Temporary Velocity Shield</span>
+</button>
+</div>
+<!-- Quick Tips & SLA Guidance Card -->
+<div class="p-space-md rounded-2xl bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0">info</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Review Shield Policy Note</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-normal">
+            Hiding reviews does not notify the submitter. Banning a reviewer account automatically quashes historical 1-star reviews submitted in the same 48-hour cluster.
+          </p>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed": "#cce5ff", "primary-fixed-dim": "#c3c0ff", "on-tertiary-fixed": "#001d31", "on-secondary": "#ffffff", "surface-container-high": "#e2e7ff", "outline-variant": "#c7c4d8", "on-secondary-fixed-variant": "#783200", "tertiary-fixed-dim": "#93ccff", "surface-tint": "#4d44e3", "on-surface-variant": "#464555", "error-container": "#ffdad6", "on-secondary-container": "#5c2400", "on-surface": "#131b2e", "primary-container": "#4f46e5", "inverse-primary": "#c3c0ff", "primary": "#3525cd", "on-primary": "#ffffff", "on-primary-fixed": "#0f0069", "secondary": "#9d4300", "on-background": "#131b2e", "surface-dim": "#d2d9f4", "surface-bright": "#faf8ff", "surface-container-low": "#f2f3ff", "surface-container": "#eaedff", "tertiary-container": "#00659a", "on-primary-fixed-variant": "#3323cc", "surface-variant": "#dae2fd", "secondary-fixed-dim": "#ffb690", "error": "#ba1a1a", "secondary-fixed": "#ffdbca", "inverse-surface": "#283044", "surface-container-highest": "#dae2fd", "on-error-container": "#93000a", "inverse-on-surface": "#eef0ff", "surface-container-lowest": "#ffffff", "on-tertiary": "#ffffff", "tertiary": "#004c76", "on-error": "#ffffff", "primary-fixed": "#e2dfff", "on-tertiary-container": "#bedfff", "on-primary-container": "#dad7ff", "outline": "#777587", "surface": "#faf8ff", "secondary-container": "#fd761a", "background": "#faf8ff", "on-tertiary-fixed-variant": "#004b73", "on-secondary-fixed": "#341100" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-lg": "1.5rem", "margin-lg": "2rem", "space-xl": "1.5rem", "space-xs": "0.25rem", "space-md": "1rem", "margin-md": "1.5rem", "space-lg": "1.25rem", "gutter": "1rem", "gutter-md": "1.25rem", "space-sm": "0.5rem", "margin": "1rem" }, "fontFamily": { "label-md": ["Inter"], "display-lg-mobile": ["Inter"], "headline-lg-mobile": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"], "title-md": ["Inter"], "body-lg": ["Inter"], "label-lg": ["Inter"], "label-sm": ["Inter"], "display-lg": ["Inter"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" }], "title-md": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-margin flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[22px]">storefront</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface tracking-tight leading-none">ShopSphere</span><span class="font-label-sm text-label-sm text-primary font-semibold tracking-wider uppercase leading-none mt-0.5">Seller Hub</span></div></div><div class="hidden md:block w-px h-6 bg-outline-variant/40 ml-space-xs"></div><nav class="hidden md:flex items-center gap-space-sm pl-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg"><a class="px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors font-label-md text-label-md" data-path="seller-registration" href="#">Registration Overview</a><a class="px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors font-label-md text-label-md" data-path="program-policies" href="#">Programs &amp; Fee Schedule</a></nav></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface cursor-pointer px-space-xs py-1 rounded transition-colors"><span class="material-symbols-outlined text-[18px]">language</span><span class="font-label-md text-label-md">EN</span><span class="material-symbols-outlined text-[16px]">expand_more</span></div><a class="hidden sm:flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="seller-support" href="#"><span class="material-symbols-outlined text-[18px]">contact_support</span><span>Help / Support</span></a><a class="inline-flex items-center justify-center px-space-md py-2 rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" data-path="seller-login" href="#">Already registered? Log in</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Stepper / Breadcrumbs Tracker Bar -->
+<section class="w-full bg-surface-container-lowest shadow-sm">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-md">
+<!-- Metadata Row -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm mb-space-sm border-b border-outline-variant/30">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="hover:text-primary cursor-pointer transition-colors">Seller Central</span>
+<span class="text-outline-variant">/</span>
+<span class="hover:text-primary cursor-pointer transition-colors">Onboarding</span>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface font-semibold">Step 2: Business Details &amp; Store Profile</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-tertiary">fingerprint</span>
+<span>App ID: <strong class="text-on-surface font-semibold">SSH-2024-88421</strong></span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span>Draft auto-saved just now</span>
+</div>
+</div>
+</div>
+<!-- 5-Step Stepper Component -->
+<div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-3 pt-space-xs">
+<!-- Step 1: Completed -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-low transition-all">
+<div class="w-8 h-8 rounded-full bg-emerald-600 text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="min-w-0">
+<span class="block font-label-sm text-label-sm text-emerald-700 leading-none">Step 1 • Completed</span>
+<span class="block font-label-md text-label-md text-on-surface truncate mt-0.5">Account Credentials</span>
+</div>
+</div>
+<!-- Step 2: Active (Current) -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-primary text-on-primary shadow-md">
+<div class="w-8 h-8 rounded-full bg-on-primary text-primary flex items-center justify-center shrink-0 font-label-md text-label-md font-bold shadow-sm">
+            2
+          </div>
+<div class="min-w-0">
+<span class="block font-label-sm text-label-sm text-on-primary/80 leading-none">Active Step (40%)</span>
+<span class="block font-label-md text-label-md text-on-primary font-semibold truncate mt-0.5">Business Profile</span>
+</div>
+</div>
+<!-- Step 3: Upcoming -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container opacity-85 transition-all">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center shrink-0 font-label-md text-label-md">
+            3
+          </div>
+<div class="min-w-0">
+<span class="block font-label-sm text-label-sm text-on-surface-variant leading-none">Step 3</span>
+<span class="block font-label-md text-label-md text-on-surface truncate mt-0.5">Tax &amp; Trade License</span>
+</div>
+</div>
+<!-- Step 4: Upcoming -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container opacity-85 transition-all">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center shrink-0 font-label-md text-label-md">
+            4
+          </div>
+<div class="min-w-0">
+<span class="block font-label-sm text-label-sm text-on-surface-variant leading-none">Step 4</span>
+<span class="block font-label-md text-label-md text-on-surface truncate mt-0.5">Payouts &amp; ID Proof</span>
+</div>
+</div>
+<!-- Step 5: Upcoming -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container opacity-85 transition-all">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center shrink-0 font-label-md text-label-md">
+            5
+          </div>
+<div class="min-w-0">
+<span class="block font-label-sm text-label-sm text-on-surface-variant leading-none">Step 5</span>
+<span class="block font-label-md text-label-md text-on-surface truncate mt-0.5">Review &amp; Launch</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Multi-Step Workspace Container -->
+<div class="max-w-7xl mx-auto w-full px-margin md:px-margin-md lg:px-margin-lg py-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT COLUMN: Guidance, Pillars, Ecosystem Preview -->
+<aside class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Hero Illustration Card -->
+<div class="rounded-xl overflow-hidden bg-surface-container-lowest shadow-sm flex flex-col">
+<div class="relative w-full h-56 bg-surface-container flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Modern 3D isometric isometric digital commerce setup showing sleek laptop dashboard with glowing analytics, mini retail storefront awning, secure verification shield badges, credit card, and stacked cardboard delivery packages in violet and orange lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2keqxiLoT4cXIh5pWHxAEkTjedSjIJCWVxktHHkAHaqizQro2nCZr7Nvh0cx5fHDjurklX40gm2qKRI36DjXdPR8PVYV0wB-FmgRz-1jiXbmSdox-Nd6HO55Ywb1_v68UuYPghHsqFyRrMt70IvfkE7L3Vjd241zHhLfnevemJF3QLfuvv-Beo-jJWkj-ovb4YnqKpGHPbgOtb7pnroP2l19Zc8JNVbUESqbUDdky"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<span class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+              Verified Merchant Ecosystem
+            </span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-sm">
+<h3 class="font-title-md text-title-md text-on-surface">Building Your Storefront Identity</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Your registered company entity establishes institutional trust, unlocking automated tax compliance, cross-border shipping zones, and priority marketplace search positioning.
+            </p>
+</div>
+</div>
+<!-- Trust Pillars & Merchant Benefits -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<h4 class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider text-xs text-primary font-bold">
+            Key Merchant Superpowers
+          </h4>
+<!-- Benefit 1 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">palette</span>
+</div>
+<div>
+<span class="block font-label-lg text-label-lg text-on-surface">Brand Storefront Customizer</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Unlock custom hero banners, curated product carousels, and interactive shoppable video displays.
+              </p>
+</div>
+</div>
+<!-- Benefit 2 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high text-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</div>
+<div>
+<span class="block font-label-lg text-label-lg text-on-surface">Multi-Warehouse Fulfillment</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Easily configure local regional centers and international transit routes with synchronized inventory levels.
+              </p>
+</div>
+</div>
+<!-- Benefit 3 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-secondary-fixed text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">link</span>
+</div>
+<div>
+<span class="block font-label-lg text-label-lg text-on-surface">Instant Brand Vanity URL</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Reserve your indexed custom web address: <code class="px-1.5 py-0.5 rounded bg-surface-container font-mono text-[11px] text-primary">shopsphere.io/@yourbrand</code>.
+              </p>
+</div>
+</div>
+</div>
+<!-- Help / Support Assistance Card -->
+<div class="p-space-lg rounded-xl bg-surface-container flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[22px]">support_agent</span>
+</div>
+<div>
+<span class="block font-label-lg text-label-lg text-on-surface">Need Registration Help?</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Live onboarding advisors ready</span>
+</div>
+</div>
+<button class="px-3.5 py-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors shadow-sm shrink-0" type="button">
+            Chat Now
+          </button>
+</div>
+<!-- Progress Overview Widget -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between text-on-surface font-label-md text-label-md">
+<span>Overall Readiness</span>
+<span class="font-bold text-primary">40% Completed</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="w-2/5 h-full rounded-full bg-gradient-to-r from-primary to-secondary-container"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            2 of 5 modules finalized. Next: Automated Tax Compliance Verification.
+          </p>
+</div>
+</aside>
+<!-- RIGHT COLUMN: Registration Form Content -->
+<main class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Section Header Banner -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm p-space-lg rounded-xl bg-surface-container-lowest shadow-sm">
+<div>
+<span class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold mb-1">
+<span class="material-symbols-outlined text-[16px]">domain</span>
+              Commercial Entity Setup
+            </span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Business Details &amp; Store Profile</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-2xl">
+              Provide verified company records and define your primary marketplace shop presence for customer discovery.
+            </p>
+</div>
+<div class="sm:self-start shrink-0 px-3 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Est. 3-4 mins</span>
+</div>
+</div>
+<!-- FORM CARD 1: Registered Legal Entity -->
+<div class="p-space-lg md:p-space-xl rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between pb-space-sm border-b border-outline-variant/30">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center font-bold font-label-md text-label-md">
+                1
+              </div>
+<h2 class="font-title-md text-title-md text-on-surface">Registered Legal Entity</h2>
+</div>
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Confidential Record</span>
+</div>
+<!-- Entity Type Pills -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+              Legal Structure / Entity Classification <span class="text-error">*</span>
+</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
+<!-- Selected -->
+<label class="relative flex items-center justify-between p-3 rounded-xl bg-primary-fixed/40 text-on-primary-fixed cursor-pointer transition-all shadow-sm">
+<input checked="" class="sr-only" name="entity_type" type="radio" value="llc"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold">LLC / Ltd</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Limited Liability</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">radio_button_checked</span>
+</label>
+<!-- Option 2 -->
+<label class="relative flex items-center justify-between p-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface cursor-pointer transition-all">
+<input class="sr-only" name="entity_type" type="radio" value="corp"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold">Corporation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">C-Corp / S-Corp</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">radio_button_unchecked</span>
+</label>
+<!-- Option 3 -->
+<label class="relative flex items-center justify-between p-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface cursor-pointer transition-all">
+<input class="sr-only" name="entity_type" type="radio" value="sole"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold">Sole Proprietor</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Individual Trader</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">radio_button_unchecked</span>
+</label>
+<!-- Option 4 -->
+<label class="relative flex items-center justify-between p-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface cursor-pointer transition-all">
+<input class="sr-only" name="entity_type" type="radio" value="partner"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold">Partnership</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">General / LLP</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">radio_button_unchecked</span>
+</label>
+</div>
+</div>
+<!-- Two Column Form Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Business Legal Name -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between" for="legal_name">
+<span>Registered Business Name <span class="text-error">*</span></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-normal text-[11px]">As on Articles</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="legal_name" type="text" value="Aura Tech Goods LLC"/>
+<span class="material-symbols-outlined absolute right-3.5 top-1/2 -translate-y-1/2 text-emerald-600 text-[20px]">check_circle</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Must match official government certificate and tax registration.</p>
+</div>
+<!-- Business Reg Number -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="reg_number">
+                EIN / Business Registration Number <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all uppercase tracking-wider" id="reg_number" type="text" value="EIN-8492014-DE"/>
+<span class="material-symbols-outlined absolute right-3.5 top-1/2 -translate-y-1/2 text-emerald-600 text-[20px]">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Federal or regional identifier used for merchant tax reports.</p>
+</div>
+</div>
+<!-- Secondary Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Date of Incorporation -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="inc_date">
+                Date of Incorporation <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 pl-3.5 pr-10 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="inc_date" type="text" value="March 14, 2021"/>
+<span class="material-symbols-outlined absolute right-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px] pointer-events-none">calendar_today</span>
+</div>
+</div>
+<!-- Primary Business Category -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="category">
+                Primary Product Category <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-12 pl-3.5 pr-10 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary appearance-none transition-all cursor-pointer" id="category">
+<option selected="">Consumer Electronics &amp; Tech Accessories</option>
+<option>Home Goods, Kitchen &amp; Furniture</option>
+<option>Health, Beauty &amp; Personal Wellness</option>
+<option>Apparel, Footwear &amp; Timepieces</option>
+<option>Industrial Equipment &amp; Pro Supplies</option>
+</select>
+<span class="material-symbols-outlined absolute right-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px] pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- FORM CARD 2: Public Storefront Profile & Branding -->
+<div class="p-space-lg md:p-space-xl rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between pb-space-sm border-b border-outline-variant/30">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center font-bold font-label-md text-label-md">
+                2
+              </div>
+<h2 class="font-title-md text-title-md text-on-surface">Public Storefront Profile &amp; Branding</h2>
+</div>
+<span class="px-2.5 py-0.5 rounded-md bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">Buyer Visible</span>
+</div>
+<!-- Logo & Brand Assets Upload -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-center gap-space-md">
+<div class="relative w-20 h-20 rounded-2xl bg-primary flex items-center justify-center text-on-primary font-bold text-2xl shadow-md shrink-0">
+<span>AT</span>
+<button aria-label="Edit Store Logo" class="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-secondary-container text-on-secondary flex items-center justify-center shadow-md hover:scale-105 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]">photo_camera</span>
+</button>
+</div>
+<div class="flex flex-col gap-1 text-center sm:text-left">
+<div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+<span class="font-label-lg text-label-lg text-on-surface">Store Icon &amp; Logo Badge</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Recommended 500x500px PNG/SVG</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Displayed in search results, order confirmations, and your public shop banner.
+              </p>
+<div class="flex items-center justify-center sm:justify-start gap-space-sm mt-1">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+                  Upload Image
+                </button>
+<button class="px-3 py-1.5 rounded-lg text-error hover:bg-error-container/40 font-label-sm text-label-sm transition-colors" type="button">
+                  Remove
+                </button>
+</div>
+</div>
+</div>
+<!-- Storefront Name & URL Handle -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Display Name -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between" for="display_name">
+<span>Storefront Display Name <span class="text-error">*</span></span>
+<span class="text-emerald-600 font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span> Available
+                </span>
+</label>
+<input class="w-full h-12 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="display_name" type="text" value="Aura Official Store"/>
+</div>
+<!-- Public URL Reservation -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+                ShopSphere Public Vanity Handle <span class="text-error">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="absolute left-3.5 font-mono text-[12px] text-on-surface-variant pointer-events-none">shopsphere.io/@</span>
+<input class="w-full h-12 pl-36 pr-24 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md font-mono text-[13px] focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" type="text" value="auraofficial"/>
+<button class="absolute right-2 px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Copy</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Store Bio / Description -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between" for="store_bio">
+<span>Public Storefront Bio &amp; Value Proposition</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">118 / 300 characters</span>
+</label>
+<textarea class="w-full p-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all resize-none" id="store_bio" rows="3">Premium acoustic engineering, minimalist tactile mechanical keyboards, and precision smart wearables crafted for high-performance workspaces.</textarea>
+</div>
+<!-- Customer Service Contact info -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Support Email -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between" for="support_email">
+<span>Customer Inquiries Email <span class="text-error">*</span></span>
+<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">Verified</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 pl-3.5 pr-10 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="support_email" type="email" value="support@auratechgoods.com"/>
+<span class="material-symbols-outlined absolute right-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">mail</span>
+</div>
+</div>
+<!-- Customer Care Phone -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="support_phone">
+                Customer Care Direct Line <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 pl-3.5 pr-10 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="support_phone" type="tel" value="+1 (555) 234-8901"/>
+<span class="material-symbols-outlined absolute right-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">phone</span>
+</div>
+</div>
+</div>
+</div>
+<!-- FORM CARD 3: Registered Headquarters & Operating Address -->
+<div class="p-space-lg md:p-space-xl rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between pb-space-sm border-b border-outline-variant/30">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center font-bold font-label-md text-label-md">
+                3
+              </div>
+<h2 class="font-title-md text-title-md text-on-surface">Registered Headquarters Address</h2>
+</div>
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Tax Nexus</span>
+</div>
+<!-- Country Selection -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="country">
+              Country / Territory of Legal Registration <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-12 pl-3.5 pr-10 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary appearance-none transition-all cursor-pointer" id="country">
+<option selected="">United States (Domestic LLC)</option>
+<option>Canada</option>
+<option>United Kingdom</option>
+<option>Germany (GmbH)</option>
+<option>Singapore</option>
+<option>Australia</option>
+</select>
+<span class="material-symbols-outlined absolute right-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Street Address 1 & 2 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="street_1">
+                Street Address Line 1 <span class="text-error">*</span>
+</label>
+<input class="w-full h-12 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="street_1" type="text" value="742 Evergreen Terrace, Suite 400"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="street_2">
+                Building, Suite, or Unit (Optional)
+              </label>
+<input class="w-full h-12 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="street_2" type="text" value="Building B, Tech Park"/>
+</div>
+</div>
+<!-- City, State, ZIP -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="city">
+                City <span class="text-error">*</span>
+</label>
+<input class="w-full h-12 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="city" type="text" value="Brooklyn"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="state">
+                State / Province <span class="text-error">*</span>
+</label>
+<input class="w-full h-12 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="state" type="text" value="New York (NY)"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="zip">
+                Postal / ZIP Code <span class="text-error">*</span>
+</label>
+<input class="w-full h-12 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="zip" type="text" value="11201"/>
+</div>
+</div>
+<!-- Checkbox Toggle -->
+<label class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container cursor-pointer select-none">
+<input checked="" class="mt-0.5 w-4 h-4 rounded text-primary focus:ring-primary" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">
+                Warehouse &amp; shipping dispatch origin is the same as legal headquarters
+              </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                Uncheck if you dispatch parcels from specialized 3PLs or international distribution hubs.
+              </span>
+</div>
+</label>
+</div>
+<!-- ACTION BAR: Navigation Buttons -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-space-md py-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Back: Step 1</span>
+</button>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-space-md py-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">cloud_sync</span>
+<span>Save &amp; Exit</span>
+</button>
+</div>
+<!-- Primary Orange Action Button (Vibrant Orange Conversion Target) -->
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-space-xl py-3.5 rounded-xl bg-secondary-container hover:bg-secondary text-on-secondary font-label-lg text-label-lg shadow-md hover:shadow-lg transition-all cursor-pointer" href="#">
+<span>Continue to Tax &amp; Legal (Step 3)</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+</div>
+<!-- Compliance & SLA Footprint Badges -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md py-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant justify-center sm:justify-start">
+<span class="material-symbols-outlined text-primary text-[20px]">lock</span>
+<span class="font-label-sm text-label-sm">256-Bit TLS Bank Encryption</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant justify-center sm:justify-start">
+<span class="material-symbols-outlined text-emerald-600 text-[20px]">verified_user</span>
+<span class="font-label-sm text-label-sm">Automated Entity Registry Sync</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant justify-center sm:justify-start">
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">bolt</span>
+<span class="font-label-sm text-label-sm">Fast 24-48hr Compliance SLA</span>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-low mt-space-xl"><div class="max-w-7xl mx-auto px-margin py-space-xl"><div class="flex flex-col md:flex-row items-center justify-between gap-space-lg mb-space-lg"><div class="flex items-center gap-space-lg flex-wrap justify-center md:justify-start"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-tertiary-container">verified_user</span><span class="font-label-md text-label-md">Bank-Grade TLS Encryption</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-tertiary-container">shield</span><span class="font-label-md text-label-md">PCI-DSS Level 1 Compliant</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-tertiary-container">lock</span><span class="font-label-md text-label-md">Authorized Seller Vault</span></div></div><div class="flex items-center gap-space-md text-on-surface-variant"><a class="font-label-md text-label-md hover:text-on-surface transition-colors" data-path="seller-terms" href="#">Terms of Service</a><span class="text-outline-variant">•</span><a class="font-label-md text-label-md hover:text-on-surface transition-colors" data-path="privacy-notice" href="#">Privacy Notice</a><span class="text-outline-variant">•</span><a class="font-label-md text-label-md hover:text-on-surface transition-colors" data-path="merchant-agreement" href="#">Merchant Agreement</a></div></div><div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-md border-t border-outline-variant/20"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 ShopSphere Inc. Global Seller Operations. All rights reserved.</p><p class="font-body-sm text-body-sm text-on-surface-variant">Serving trusted commercial sellers across 120+ territories.</p></div></div></footer></body></html>

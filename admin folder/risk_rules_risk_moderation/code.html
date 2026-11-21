@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary-fixed":"#cce5ff","surface":"#faf8ff","on-surface-variant":"#464555","primary-container":"#4f46e5","on-error-container":"#93000a","secondary-fixed":"#ffdbca","secondary-container":"#fd761a","on-error":"#ffffff","on-primary-container":"#dad7ff","on-secondary-container":"#5c2400","on-background":"#131b2e","on-primary-fixed":"#0f0069","on-tertiary-container":"#bedfff","surface-variant":"#dae2fd","on-secondary-fixed-variant":"#783200","surface-container-low":"#f2f3ff","surface-dim":"#d2d9f4","tertiary-container":"#00659a","inverse-surface":"#283044","surface-container-high":"#e2e7ff","on-surface":"#131b2e","on-tertiary-fixed":"#001d31","primary":"#3525cd","inverse-primary":"#c3c0ff","surface-container-lowest":"#ffffff","tertiary":"#004c76","surface-tint":"#4d44e3","on-tertiary-fixed-variant":"#004b73","outline-variant":"#c7c4d8","on-secondary":"#ffffff","primary-fixed":"#e2dfff","primary-fixed-dim":"#c3c0ff","surface-container":"#eaedff","secondary-fixed-dim":"#ffb690","tertiary-fixed-dim":"#93ccff","secondary":"#9d4300","on-secondary-fixed":"#341100","surface-container-highest":"#dae2fd","on-primary":"#ffffff","error":"#ba1a1a","error-container":"#ffdad6","inverse-on-surface":"#eef0ff","surface-bright":"#faf8ff","outline":"#777587","on-tertiary":"#ffffff","on-primary-fixed-variant":"#3323cc","background":"#faf8ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"1.5rem","space-sm":"0.5rem","gutter-md":"1.25rem","space-md":"1rem","space-xs":"0.25rem","gutter-lg":"1.5rem","margin-md":"1.5rem","margin-lg":"2rem","margin":"1rem","space-lg":"1.25rem","gutter":"1rem"},"fontFamily":{"label-md":["Inter"],"body-md":["Inter"],"display-lg":["Inter"],"body-sm":["Inter"],"label-lg":["Inter"],"headline-lg-mobile":["Inter"],"headline-md":["Inter"],"display-lg-mobile":["Inter"],"title-md":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"headline-lg":["Inter"]},"fontSize":{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0.005em","fontWeight":"400"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"600"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"700"}],"title-md":["18px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"headline-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 min-h-0"><div class="p-space-lg flex flex-col gap-space-sm bg-surface-container-low"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">admin_panel_settings</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface tracking-tight leading-tight">ShopSphere</span><span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Admin Console</span></div></div><div class="flex items-center justify-between px-space-sm py-1.5 rounded-lg bg-surface-container"><div class="flex items-center gap-1.5 min-w-0"><span class="material-symbols-outlined text-[16px] text-primary shrink-0">shield_person</span><span class="font-label-sm text-label-sm text-on-surface truncate">Platform Security &amp; Ops</span></div><span class="font-label-sm text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant shrink-0 font-bold">Admin</span></div></div><nav class="flex-1 overflow-y-auto px-space-md py-space-xs space-y-4" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-xl shadow-sm"><div class="space-y-1"><span class="px-space-md font-label-sm text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Core Platform</span><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="font-label-lg text-label-lg">Overview</span></a><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="sellers" href="#"><span class="font-label-lg text-label-lg">Sellers</span></a><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="products" href="#"><span class="font-label-lg text-label-lg">Products</span></a><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="orders" href="#"><span class="font-label-lg text-label-lg">Orders</span></a><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="returns-damages" href="#"><span class="font-label-lg text-label-lg">Returns &amp; Damages</span></a></div><div class="space-y-1"><span class="px-space-md font-label-sm text-[11px] font-bold text-secondary uppercase tracking-wider">Risk &amp; Moderation</span><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="flagged-sellers" href="#"><span class="font-label-lg text-label-lg">Flagged Sellers</span></a><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="review-moderation" href="#"><span class="font-label-lg text-label-lg">Review Moderation</span></a><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="warnings-appeals" href="#"><span class="font-label-lg text-label-lg">Warnings and Appeals</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-2 transition-colors bg-primary-container text-on-primary font-label-lg rounded-xl shadow-sm" data-path="risk-rules" href="#"><span class="font-label-lg text-label-lg">Risk Rules</span></a></div><div class="space-y-1"><span class="px-space-md font-label-sm text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Marketing &amp; Finance</span><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reels-reviews" href="#"><span class="font-label-lg text-label-lg">Reels &amp; Reviews</span></a><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ads-promotions" href="#"><span class="font-label-lg text-label-lg">Ads &amp; Promotions</span></a><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="payouts" href="#"><span class="font-label-lg text-label-lg">Payouts</span></a></div><div class="space-y-1"><span class="px-space-md font-label-sm text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Governance &amp; Security</span><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="staff-roles" href="#"><span class="font-label-lg text-label-lg">Staff &amp; Roles</span></a><a class="flex items-center justify-between px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="audit-log" href="#"><span class="font-label-lg text-label-lg">Audit Log</span></a></div></nav></div><div class="p-space-md space-y-space-sm bg-surface-container-low"><div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between mb-1.5"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">verified_user</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Compliance Health</span></div><span class="font-label-sm text-label-sm text-secondary font-semibold">99.4%</span></div><div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden"><div class="bg-primary h-full rounded-full" style="width: 99.4%"></div></div><div class="flex items-center justify-between mt-2 pt-1.5 border-t border-outline-variant/30"><a class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" data-path="compliance-support" href="#"><span class="material-symbols-outlined text-[15px]">help_center</span><span class="font-label-sm text-label-sm">System Guide</span></a><span class="font-label-sm text-label-sm text-on-surface-variant">v4.8</span></div></div><div class="flex items-center justify-between p-2 rounded-xl bg-surface-container"><div class="flex items-center gap-2.5 min-w-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Admin Supervisor</span><span class="font-body-sm text-[11px] text-on-surface-variant truncate">Global Compliance</span></div></div><a class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="logout" href="#" title="Sign out"><span class="material-symbols-outlined text-[18px]">logout</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter-lg gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full h-10 pl-10 pr-4 rounded-xl bg-surface-container-lowest text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/20 shadow-[0_1px_8px_rgba(0,0,0,0.04)]" placeholder="Search sellers, disputes, audits, risk rules, staff..." type="search"/></div><div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed shrink-0"><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span class="font-label-sm text-label-sm font-semibold whitespace-nowrap">Global Admin Mode</span><span class="material-symbols-outlined text-[16px]">expand_more</span></div></div><div class="flex items-center gap-space-sm shrink-0"><div class="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-primary">cloud_done</span><span class="font-label-sm text-label-sm">System Healthy • 99.98% uptime</span></div><button class="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors"><span class="material-symbols-outlined text-[16px]">public</span><span>Global (US-East)</span><span class="material-symbols-outlined text-[14px] text-on-surface-variant">arrow_drop_down</span></button><div class="h-6 w-px bg-outline-variant/40 mx-1"></div><button class="relative p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-error text-on-error font-label-sm text-[10px] flex items-center justify-center font-bold">5</span></button><button class="p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">shield</span></button><button class="p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">help</span></button><div class="flex items-center gap-2"><button class="h-10 px-4 rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg flex items-center gap-1.5 shadow-sm transition-colors"><span class="material-symbols-outlined text-[18px]">security</span><span>Security Incident</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen px-gutter-lg py-gutter-lg"><div class="flex flex-col w-full">
+<!-- PAGE HEADER & ACTION CONTROLS -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-xl">
+<div class="flex flex-col gap-1 max-w-3xl">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">Risk &amp; Moderation</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Algorithmic Heuristics</span>
+<span class="text-outline-variant">•</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-[10px] font-bold">Policy v3.4.1</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Automated Risk Rules &amp; Flagging Thresholds</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Configure algorithmic surveillance parameters, automated warning triggers, and administrative suspension safeguards across multi-channel merchant operations.</p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="h-12 px-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-lg text-label-lg shadow-sm transition-all duration-150 flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">restart_alt</span>
+<span>Restore Defaults</span>
+</button>
+<button class="h-12 px-space-lg rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm hover:shadow-md hover:bg-primary transition-all duration-150 flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[20px]">add_moderator</span>
+<span>+ Add New Risk Rule</span>
+</button>
+</div>
+</div>
+<!-- GLOBAL SAFEGUARDS DUAL-ADMIN BANNER -->
+<div class="mb-space-xl rounded-xl bg-surface-container-low p-space-lg shadow-sm relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-64 h-64 rounded-full bg-primary/5 pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg relative z-10">
+<div class="flex items-start gap-space-md max-w-3xl">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/15 flex items-center justify-center shrink-0 text-secondary-container mt-0.5">
+<span class="material-symbols-outlined text-[26px]">gavel</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-bold tracking-tight">Auto-Suspend at Critical Risk Score (Requires Dual Admin SecOps Approval)</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></span>
+              Active Safeguard
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            When enabled, merchants crossing <span class="font-semibold text-on-surface">90/100 risk score</span> are immediately placed into temporary escrow hold, and a 14-day suspension proposal is generated for review.
+          </p>
+<div class="flex flex-wrap items-center gap-space-sm pt-1">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span>SOC 2 Type II Enforced • 2FA Step-up Required</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">approval</span>
+<span>Dual Admin Sign-off Required</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center lg:self-center shrink-0">
+<label class="relative inline-flex items-center cursor-pointer select-none">
+<input checked="" class="sr-only peer" id="globalSafeguardToggle" type="checkbox"/>
+<div class="w-14 h-8 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary-container shadow-inner"></div>
+<span class="ml-3 font-label-lg text-label-lg text-on-surface font-semibold">Enabled</span>
+</label>
+</div>
+</div>
+</div>
+<!-- AUTO-FLAG THRESHOLDS MATRIX -->
+<div class="mb-space-xl">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</div>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface tracking-tight font-bold">Auto-Flag Thresholds Matrix</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time surveillance baselines evaluated against 30-day and 14-day rolling window activity.</p>
+</div>
+</div>
+<div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">analytics</span>
+<span>Total Impact: <strong class="text-on-surface font-bold">23 Active Sellers</strong> Flagged</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Threshold 1: Customer Rating -->
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow duration-200">
+<div>
+<div class="flex items-start justify-between gap-space-xs mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant tracking-wider">Metric 01</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[11px] font-bold">Critical Floor</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold mb-1">Customer Rating Threshold</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Trigger automated compliance review if rolling 30-day customer rating falls below threshold.</p>
+<div class="p-space-sm rounded-xl bg-surface-container-low mb-space-md">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Trigger Value</span>
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2.5 py-1 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">star</span>
+<input class="w-12 bg-transparent text-right font-title-md text-title-md font-bold text-on-surface focus:outline-none" type="text" value="3.00"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">★</span>
+</div>
+</div>
+<input class="w-full accent-primary h-2 bg-surface-container-high rounded-lg cursor-pointer" max="4.5" min="1.0" step="0.05" type="range" value="3.00"/>
+<div class="flex justify-between font-label-sm text-[10px] text-on-surface-variant mt-1">
+<span>1.00 ★</span>
+<span class="text-primary font-bold">3.00 ★</span>
+<span>4.50 ★</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">flag</span>
+<span class="font-label-sm text-label-sm font-semibold">Flags 6 active sellers</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary p-1 rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</div>
+<!-- Threshold 2: Return Rate -->
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow duration-200">
+<div>
+<div class="flex items-start justify-between gap-space-xs mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant tracking-wider">Metric 02</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-[11px] font-bold">High RMA Alert</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold mb-1">Order Return Rate Threshold</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Trigger flag if rolling 14-day customer return rate exceeds configured ceiling percentage.</p>
+<div class="p-space-sm rounded-xl bg-surface-container-low mb-space-md">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Trigger Ceiling</span>
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2.5 py-1 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">assignment_return</span>
+<input class="w-12 bg-transparent text-right font-title-md text-title-md font-bold text-on-surface focus:outline-none" type="text" value="25.0"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">%</span>
+</div>
+</div>
+<input class="w-full accent-primary h-2 bg-surface-container-high rounded-lg cursor-pointer" max="50" min="5" step="0.5" type="range" value="25.0"/>
+<div class="flex justify-between font-label-sm text-[10px] text-on-surface-variant mt-1">
+<span>5.0%</span>
+<span class="text-primary font-bold">25.0%</span>
+<span>50.0%</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">flag</span>
+<span class="font-label-sm text-label-sm font-semibold">Flags 8 active sellers</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary p-1 rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</div>
+<!-- Threshold 3: Damage Rate -->
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow duration-200">
+<div>
+<div class="flex items-start justify-between gap-space-xs mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant tracking-wider">Metric 03</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[11px] font-bold">Logistics Risk</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold mb-1">Transit Damage Rate Threshold</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Trigger flag if carrier-confirmed damage claims exceed tolerance on completed dispatches.</p>
+<div class="p-space-sm rounded-xl bg-surface-container-low mb-space-md">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Claim Threshold</span>
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2.5 py-1 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">broken_image</span>
+<input class="w-12 bg-transparent text-right font-title-md text-title-md font-bold text-on-surface focus:outline-none" type="text" value="10.0"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">%</span>
+</div>
+</div>
+<input class="w-full accent-primary h-2 bg-surface-container-high rounded-lg cursor-pointer" max="25" min="2" step="0.5" type="range" value="10.0"/>
+<div class="flex justify-between font-label-sm text-[10px] text-on-surface-variant mt-1">
+<span>2.0%</span>
+<span class="text-primary font-bold">10.0%</span>
+<span>25.0%</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">flag</span>
+<span class="font-label-sm text-label-sm font-semibold">Flags 4 active sellers</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary p-1 rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</div>
+<!-- Threshold 4: Fraud & Dispute Reports -->
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow duration-200">
+<div>
+<div class="flex items-start justify-between gap-space-xs mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant tracking-wider">Metric 04</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[11px] font-bold">Instant Escalation</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold mb-1">Fraud &amp; Dispute Ceiling</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Trigger immediate escalation if seller receives verified fraud reports within 30-day window.</p>
+<div class="p-space-sm rounded-xl bg-surface-container-low mb-space-md">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Max Incidents</span>
+<span class="font-label-sm text-[11px] text-error font-semibold">Strict Trigger</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest rounded-xl p-1 shadow-sm">
+<button class="w-10 h-10 rounded-lg flex items-center justify-center bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg text-[24px] leading-tight font-bold text-on-surface">5</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Reports</span>
+</div>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+<div class="text-center font-label-sm text-[11px] text-on-surface-variant mt-2">
+              Tolerance: <span class="font-medium text-on-surface">≤ 4 reports per rolling 30d</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">flag</span>
+<span class="font-label-sm text-label-sm font-semibold">Flags 5 active sellers</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary p-1 rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ACTIVE RISK RULES LIBRARY & LIVE IMPACT PREVIEW -->
+<div class="mb-space-xl">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-title-md text-title-md text-on-surface tracking-tight font-bold">Active Heuristic Rules Library</h2>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px] font-bold">4 Active Rules</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time surveillance listeners monitoring order intake, review clusters, logistics telematics, and KYC records.</p>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex items-center bg-surface-container-lowest rounded-xl p-1 shadow-sm">
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold">All Categories</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">Disputes (1)</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">Fulfillment (2)</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">KYC (1)</button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Rule Card 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-start justify-between gap-space-md mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">scale</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold">Serial Weight Discrepancy Detection</h3>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[10px] font-mono font-bold">Rule #RMA-04</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Logistics &amp; Return Fraud</span>
+</div>
+</div>
+<!-- Toggle -->
+<label class="relative inline-flex items-center cursor-pointer select-none">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low mb-space-md">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-on-surface-variant font-bold block mb-1">Trigger Heuristic</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">
+              Trigger alert if <strong class="text-primary">&gt; 15%</strong> package weight difference detected on return drop-offs compared to origin manifest.
+            </p>
+</div>
+</div>
+<div class="pt-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">package_2</span>
+<span>Monitoring 4,820 orders</span>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span>3 sellers flagged</span>
+</div>
+</div>
+<div class="flex items-center gap-1 self-end sm:self-auto">
+<button class="px-3 py-1.5 rounded-lg text-primary hover:bg-surface-container font-label-sm text-label-sm font-semibold flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>Edit Logic</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Rule Card 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-start justify-between gap-space-md mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">hub</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold">Sybil Review Attack Heuristic</h3>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[10px] font-mono font-bold">Rule #REV-12</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Reputation Manipulation</span>
+</div>
+</div>
+<!-- Toggle -->
+<label class="relative inline-flex items-center cursor-pointer select-none">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low mb-space-md">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-on-surface-variant font-bold block mb-1">Trigger Heuristic</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">
+              Flag reviews if <strong class="text-primary">&gt; 5 one-star reviews</strong> posted from identical IP subnet within a continuous 24h rolling window.
+            </p>
+</div>
+</div>
+<div class="pt-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>
+<span>24 reviews quarantined</span>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>1 seller under review</span>
+</div>
+</div>
+<div class="flex items-center gap-1 self-end sm:self-auto">
+<button class="px-3 py-1.5 rounded-lg text-primary hover:bg-surface-container font-label-sm text-label-sm font-semibold flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>Edit Logic</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Rule Card 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-start justify-between gap-space-md mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-error-container/40 flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined text-[22px]">badge</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold">Tax EIN / Bank Entity Mismatch</h3>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[10px] font-mono font-bold">Rule #KYC-02</span>
+</div>
+<span class="font-label-sm text-label-sm text-error font-semibold">Critical AML &amp; Identity</span>
+</div>
+</div>
+<!-- Toggle -->
+<label class="relative inline-flex items-center cursor-pointer select-none">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low mb-space-md">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-on-surface-variant font-bold block mb-1">Trigger Heuristic</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">
+              Instant critical flag if payout routing beneficiary name does not strictly match registered corporate EIN filing name.
+            </p>
+</div>
+</div>
+<div class="pt-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-error">dangerous</span>
+<span>Zero-tolerance trigger</span>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">ac_unit</span>
+<span>2 accounts auto-frozen</span>
+</div>
+</div>
+<div class="flex items-center gap-1 self-end sm:self-auto">
+<button class="px-3 py-1.5 rounded-lg text-primary hover:bg-surface-container font-label-sm text-label-sm font-semibold flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>Edit Logic</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Rule Card 4 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-start justify-between gap-space-md mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">trending_up</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold">Viral Spike Fulfillment Velocity</h3>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[10px] font-mono font-bold">Rule #ORD-08</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Order Fulfillment Risk</span>
+</div>
+</div>
+<!-- Toggle -->
+<label class="relative inline-flex items-center cursor-pointer select-none">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low mb-space-md">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-on-surface-variant font-bold block mb-1">Trigger Heuristic</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">
+              Flag seller if order volume surges <strong class="text-primary">&gt; 500% in 48h</strong> without corresponding warehouse inventory replenishment proof.
+            </p>
+</div>
+</div>
+<div class="pt-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">speed</span>
+<span>Velocity tracker active</span>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+<span>1 seller flagged</span>
+</div>
+</div>
+<div class="flex items-center gap-1 self-end sm:self-auto">
+<button class="px-3 py-1.5 rounded-lg text-primary hover:bg-surface-container font-label-sm text-label-sm font-semibold flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>Edit Logic</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RISK SURVEILLANCE TELEMETRY & PIPELINE PREVIEW -->
+<div class="mb-space-xl p-space-lg rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-md">
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold">24-Hour Heuristic Execution Pipeline</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live telemetry from event streams scanning incoming transactions against the above matrix.</p>
+</div>
+<div class="flex items-center gap-space-md text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="text-on-surface-variant">Processed: <strong class="text-on-surface">184.2k events</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="text-on-surface-variant">Triggers: <strong class="text-on-surface">31 flags</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="text-on-surface-variant">Holds: <strong class="text-on-surface">2 escrow freezes</strong></span>
+</div>
+</div>
+</div>
+<!-- Inline Telemetry SVG Chart -->
+<div class="w-full bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="h-28 w-full flex items-end gap-2 pt-2">
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-surface-container-high rounded-t-lg transition-all hover:bg-primary/40 relative group" style="height: 45%;">
+<div class="hidden group-hover:block absolute -top-7 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded bg-inverse-surface text-inverse-on-surface font-label-sm text-[10px] whitespace-nowrap">00:00 • 2 flags</div>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant">00h</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-surface-container-high rounded-t-lg transition-all hover:bg-primary/40 relative group" style="height: 30%;">
+<div class="hidden group-hover:block absolute -top-7 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded bg-inverse-surface text-inverse-on-surface font-label-sm text-[10px] whitespace-nowrap">04:00 • 1 flag</div>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant">04h</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-surface-container-high rounded-t-lg transition-all hover:bg-primary/40 relative group" style="height: 65%;">
+<div class="hidden group-hover:block absolute -top-7 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded bg-inverse-surface text-inverse-on-surface font-label-sm text-[10px] whitespace-nowrap">08:00 • 4 flags</div>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant">08h</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-secondary-container/80 rounded-t-lg transition-all hover:bg-secondary-container relative group" style="height: 95%;">
+<div class="hidden group-hover:block absolute -top-7 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded bg-inverse-surface text-inverse-on-surface font-label-sm text-[10px] whitespace-nowrap">12:00 • Peak 9 flags</div>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant font-bold text-secondary-container">12h</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-surface-container-high rounded-t-lg transition-all hover:bg-primary/40 relative group" style="height: 80%;">
+<div class="hidden group-hover:block absolute -top-7 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded bg-inverse-surface text-inverse-on-surface font-label-sm text-[10px] whitespace-nowrap">16:00 • 6 flags</div>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant">16h</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-primary-container rounded-t-lg transition-all hover:bg-primary relative group" style="height: 70%;">
+<div class="hidden group-hover:block absolute -top-7 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded bg-inverse-surface text-inverse-on-surface font-label-sm text-[10px] whitespace-nowrap">20:00 • 5 flags</div>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant">20h</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-surface-container-high rounded-t-lg transition-all hover:bg-primary/40 relative group" style="height: 50%;">
+<div class="hidden group-hover:block absolute -top-7 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded bg-inverse-surface text-inverse-on-surface font-label-sm text-[10px] whitespace-nowrap">Now • 3 flags</div>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant font-bold text-primary">Now</span>
+</div>
+</div>
+</div>
+</div>
+<!-- PERSISTENT FOOTER ACTION BAR (UNSAVED CHANGES & IMMUTABLE LEDGER) -->
+<div class="sticky bottom-4 z-30 w-full p-space-md sm:p-space-lg rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest/10 flex items-center justify-center text-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-[22px]">history_edu</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg font-bold text-inverse-on-surface">Unsaved Configuration Changes Pending</span>
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+</div>
+<p class="font-body-sm text-body-sm text-outline-variant">
+          All modifications are cryptographically signed and logged to the immutable WORM audit ledger with dual-key admin verification.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 self-end sm:self-auto">
+<button class="h-12 px-space-md rounded-xl bg-inverse-surface hover:bg-surface-container-highest/20 text-inverse-on-surface font-label-lg text-label-lg transition-colors" type="button">
+        Discard
+      </button>
+<button class="h-12 px-space-lg rounded-xl bg-secondary-container hover:bg-secondary text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:shadow-lg transition-all duration-150 flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[20px]">save_as</span>
+<span>Save Rule Policy Changes</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interactions for input sliders
+  document.querySelectorAll('input[type="range"]').forEach(slider => {
+    slider.addEventListener('input', (e) => {
+      const container = e.target.closest('.p-space-sm');
+      if (container) {
+        const textInput = container.querySelector('input[type="text"]');
+        if (textInput) {
+          textInput.value = parseFloat(e.target.value).toFixed(e.target.step.includes('.') ? 1 : 2);
+        }
+      }
+    });
+  });
+</script></main></div></body></html>

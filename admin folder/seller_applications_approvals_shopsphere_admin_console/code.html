@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-surface-variant": "#464555",
+        "on-primary-fixed-variant": "#3323cc",
+        "secondary-fixed-dim": "#ffb690",
+        "tertiary-container": "#00659a",
+        "tertiary-fixed-dim": "#93ccff",
+        "on-error": "#ffffff",
+        "outline": "#777587",
+        "surface-bright": "#faf8ff",
+        "on-primary": "#ffffff",
+        "primary-container": "#4f46e5",
+        "surface": "#faf8ff",
+        "surface-container-low": "#f2f3ff",
+        "inverse-surface": "#283044",
+        "inverse-on-surface": "#eef0ff",
+        "on-tertiary-fixed": "#001d31",
+        "surface-container-high": "#e2e7ff",
+        "secondary": "#9d4300",
+        "on-secondary-fixed-variant": "#783200",
+        "surface-dim": "#d2d9f4",
+        "background": "#faf8ff",
+        "inverse-primary": "#c3c0ff",
+        "on-primary-container": "#dad7ff",
+        "surface-container": "#eaedff",
+        "on-tertiary-container": "#bedfff",
+        "on-background": "#131b2e",
+        "on-error-container": "#93000a",
+        "tertiary-fixed": "#cce5ff",
+        "on-secondary-container": "#5c2400",
+        "surface-tint": "#4d44e3",
+        "on-tertiary-fixed-variant": "#004b73",
+        "error-container": "#ffdad6",
+        "primary-fixed": "#e2dfff",
+        "secondary-container": "#fd761a",
+        "secondary-fixed": "#ffdbca",
+        "error": "#ba1a1a",
+        "surface-container-lowest": "#ffffff",
+        "primary-fixed-dim": "#c3c0ff",
+        "surface-variant": "#dae2fd",
+        "on-secondary-fixed": "#341100",
+        "tertiary": "#004c76",
+        "on-tertiary": "#ffffff",
+        "surface-container-highest": "#dae2fd",
+        "outline-variant": "#c7c4d8",
+        "primary": "#3525cd",
+        "on-surface": "#131b2e",
+        "on-primary-fixed": "#0f0069",
+        "on-secondary": "#ffffff"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "margin": "1rem",
+        "space-xs": "0.25rem",
+        "gutter-md": "1.25rem",
+        "space-xl": "1.5rem",
+        "gutter": "1rem",
+        "space-sm": "0.5rem",
+        "margin-md": "1.5rem",
+        "space-lg": "1.25rem",
+        "gutter-lg": "1.5rem",
+        "space-md": "1rem",
+        "margin-lg": "2rem"
+      },
+      "fontFamily": {
+        "body-md": ["Inter"],
+        "display-lg-mobile": ["Inter"],
+        "display-lg": ["Inter"],
+        "headline-md": ["Inter"],
+        "label-md": ["Inter"],
+        "title-md": ["Inter"],
+        "body-sm": ["Inter"],
+        "label-lg": ["Inter"],
+        "label-sm": ["Inter"],
+        "headline-lg-mobile": ["Inter"],
+        "headline-lg": ["Inter"],
+        "body-lg": ["Inter"]
+      },
+      "fontSize": {
+        "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400"}],
+        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700"}],
+        "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600"}],
+        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+        "title-md": ["18px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600"}],
+        "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600"}],
+        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}]
+      }
+    }
+  }
+};</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-xl flex items-center gap-space-sm bg-surface-container-lowest"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface leading-none tracking-tight">ShopSphere</span><span class="font-label-sm text-label-sm text-outline tracking-wider uppercase mt-1">Global Admin</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-md py-space-xs rounded-lg bg-surface-container-low flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary-container"></span>US-East-1 Prod</span><span class="font-label-sm text-label-sm text-primary uppercase font-bold">Zero-Trust</span></div></div><nav class="flex flex-col gap-space-xs px-space-md mt-space-sm" data-active-classes="bg-primary-container text-on-primary font-bold rounded-xl shadow-sm"><div class="px-space-md pt-space-sm pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Core Platform</div><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="overview" href="#"><span class="font-label-lg text-label-lg">Overview</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm transition-all bg-primary-container text-on-primary font-bold rounded-xl shadow-sm" data-path="sellers" href="#"><span class="font-label-lg text-label-lg">Sellers</span><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary font-label-sm text-label-sm font-semibold">84 pending</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="products" href="#"><span class="font-label-lg text-label-lg">Products</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="orders" href="#"><span class="font-label-lg text-label-lg">Orders</span><span class="px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">24</span></a><div class="px-space-md pt-space-md pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Intelligence &amp; Operations</div><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="returns-and-damages" href="#"><span class="font-label-lg text-label-lg">Returns &amp; Damages</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reels-and-reviews" href="#"><span class="font-label-lg text-label-lg">Reels &amp; Reviews</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="ads-and-promotions" href="#"><span class="font-label-lg text-label-lg">Ads &amp; Promotions</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="payouts" href="#"><span class="font-label-lg text-label-lg">Payouts</span></a><div class="px-space-md pt-space-md pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Governance &amp; Security</div><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="staff-and-roles" href="#"><span class="font-label-lg text-label-lg">Staff &amp; Roles</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="audit-log" href="#"><span class="font-label-lg text-label-lg">Audit Log</span></a></nav></div><div class="p-space-md bg-surface-container-low mx-space-md mb-space-md rounded-xl flex flex-col gap-space-sm"><div class="flex items-center justify-between font-label-sm text-label-sm text-outline"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>SOC2 / ISO 27001</span><span class="font-bold text-on-surface-variant">ACTIVE</span></div><div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Session Expiry</span><span class="font-label-sm text-label-sm text-error font-bold">14:28</span></div><a class="w-full flex items-center justify-center gap-space-xs py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" data-path="sign-out" href="#"><span class="material-symbols-outlined text-[16px]">logout</span><span>Quick Sign Out</span></a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40"><div class="h-16 w-full px-gutter-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-1 min-w-0 mr-space-md"><nav aria-label="Breadcrumb" class="flex items-center gap-space-xs font-label-sm text-label-sm text-outline whitespace-nowrap overflow-hidden text-ellipsis"><span class="hover:text-on-surface transition-colors cursor-pointer">Admin Console</span><span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span><span class="hover:text-on-surface transition-colors cursor-pointer">Governance &amp; Monitoring</span><span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span><span class="font-semibold text-primary">Seller Applications &amp; Approvals</span></nav><div class="relative flex items-center max-w-xs xl:max-w-md w-full"><span class="material-symbols-outlined absolute left-3 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-16 bg-surface-container-low text-on-surface placeholder:text-outline rounded-xl font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" placeholder="Search applicants, sellers, GST..." type="text"/><span class="absolute right-3 px-space-xs py-0.5 rounded bg-surface-container-highest text-outline font-label-sm text-label-sm font-semibold tracking-wide">⌘K</span></div></div><div class="flex items-center gap-space-md flex-shrink-0"><div class="hidden xl:flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-secondary-container"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Systems Normal</span><span class="text-outline font-label-sm text-label-sm">•</span><span class="font-label-sm text-label-sm text-tertiary font-semibold">99.99% Uptime</span></div><div class="relative"><button class="w-9 h-9 rounded-xl bg-surface-container-low hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-secondary-container text-on-secondary font-label-sm text-label-sm flex items-center justify-center font-bold">5</span></div><button class="w-9 h-9 rounded-xl bg-surface-container-low hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-sm"><div class="text-right hidden sm:flex flex-col"><span class="font-label-lg text-label-lg text-on-surface leading-tight font-semibold">Alex Vance</span><span class="font-label-sm text-label-sm text-outline leading-tight">Super Admin / SecOps</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-label-md"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-gutter-lg py-space-lg flex flex-col gap-space-lg">
+<!-- Header Section -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col max-w-2xl">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">SecOps Onboarding Gate</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-outline">Merchant Trust Pipeline v4.2</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-0.5">Seller Applications &amp; Verification</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Review merchant registrations, trade compliance, KYC identities, and automated fraud scores before onboarding to ShopSphere Marketplace.</p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="px-space-md py-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors flex items-center gap-space-xs shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">policy</span>
+<span>Verification Rules</span>
+</button>
+<button class="px-space-md py-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors flex items-center gap-space-xs shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Export CSV</span>
+</button>
+<button class="px-space-md py-space-sm rounded-xl bg-secondary-container hover:bg-secondary text-on-secondary font-label-lg text-label-lg transition-all flex items-center gap-space-xs shadow-md" type="button">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span>Batch Auto-Approve Low Risk (14)</span>
+</button>
+</div>
+</div>
+<!-- Top KPI Summary Chips Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Pending Review -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[24px]">pending_actions</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Queue Depth</span>
+<span class="font-headline-md text-headline-md text-on-surface">84 Sellers</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-bold">Pending Review</span>
+</div>
+<!-- Turnaround SLA -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">speed</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Avg Turnaround</span>
+<span class="font-headline-md text-headline-md text-on-surface">4.8 Hours</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold">-32m vs SLA</span>
+</div>
+<!-- Auto-Approved -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Automated Trust</span>
+<span class="font-headline-md text-headline-md text-on-surface">142 This Week</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">Low Risk (&lt;15)</span>
+</div>
+<!-- Flagged / High Risk -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-xl bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[24px]">shield_with_heart</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">SecOps Escalations</span>
+<span class="font-headline-md text-headline-md text-error">9 Flagged</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">Action Req.</span>
+</div>
+</div>
+<!-- Filter Tabs & Quick Search Bar -->
+<div class="flex flex-col gap-space-md">
+<!-- Tabs Strip -->
+<div class="flex items-center justify-between border-b border-surface-container overflow-x-auto pb-1 gap-space-md">
+<div class="flex items-center gap-space-sm whitespace-nowrap">
+<button class="px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center gap-space-xs shadow-sm" type="button">
+<span>All Pending</span>
+<span class="px-1.5 py-0.5 rounded-full bg-on-primary/20 text-on-primary font-label-sm text-label-sm">84</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-lg text-label-lg transition-colors flex items-center gap-space-xs" type="button">
+<span>Action Required / Flagged</span>
+<span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">18</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-lg text-label-lg transition-colors flex items-center gap-space-xs" type="button">
+<span>Under Identity Check</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">26</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-lg text-label-lg transition-colors flex items-center gap-space-xs" type="button">
+<span>Approved Today</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container text-tertiary font-label-sm text-label-sm">42</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-lg text-label-lg transition-colors flex items-center gap-space-xs" type="button">
+<span>Rejected / Disqualified</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container text-outline font-label-sm text-label-sm">12</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>Live feed auto-refreshed (2m ago)</span>
+</div>
+</div>
+<!-- Controls & Dropdown Filters Bar -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col lg:flex-row items-center gap-space-sm">
+<div class="relative flex-1 w-full">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[20px]">search</span>
+<input class="w-full h-10 pl-10 pr-4 bg-surface-container-low text-on-surface placeholder:text-outline rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" placeholder="Search store name, legal entity, tax ID / EIN, founder name, or ticket ID..." type="text" value=""/>
+</div>
+<div class="flex items-center gap-space-xs w-full lg:w-auto flex-wrap sm:flex-nowrap">
+<div class="relative flex-1 sm:w-44">
+<select class="w-full h-10 pl-3 pr-8 bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary-container cursor-pointer">
+<option>Category: All (42)</option>
+<option>Audio &amp; Electronics</option>
+<option>Home &amp; Furniture</option>
+<option>Beauty &amp; Skincare</option>
+<option>Apparel &amp; Fashion</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+<div class="relative flex-1 sm:w-40">
+<select class="w-full h-10 pl-3 pr-8 bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary-container cursor-pointer">
+<option>Region: Global</option>
+<option>United States (US)</option>
+<option>European Union (EU)</option>
+<option>United Kingdom (UK)</option>
+<option>South Korea (KR)</option>
+<option>Singapore (SG)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+<div class="relative flex-1 sm:w-44">
+<select class="w-full h-10 pl-3 pr-8 bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-primary-container cursor-pointer">
+<option>Risk Heuristic: All</option>
+<option>Low Risk (&lt; 15)</option>
+<option>Medium Risk (15 - 50)</option>
+<option>High Risk (&gt; 50)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+<button class="h-10 px-space-sm rounded-lg bg-surface-container-high hover:bg-surface-container text-on-surface-variant flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">filter_alt_off</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Workspace Split Layout: 2/3 Table + 1/3 Interactive Detailed Review Panel -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Pending Applications Table (lg:col-span-7 xl:col-span-7) -->
+<div class="lg:col-span-7 xl:col-span-7 flex flex-col gap-space-sm">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Controls Header -->
+<div class="px-space-md py-space-sm bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Queue Ingestion: Prioritized</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-outline font-label-sm text-label-sm">5 displayed</span>
+</div>
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">sort</span>
+<span>Sorted by SLA Risk Urgency</span>
+</div>
+</div>
+<!-- Applications Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="p-space-md w-8">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary-container" type="checkbox"/>
+</th>
+<th class="py-space-md pr-space-md font-semibold">Store &amp; Brand</th>
+<th class="py-space-md pr-space-md font-semibold">Applicant Contact</th>
+<th class="py-space-md pr-space-md font-semibold">Submission / SLA</th>
+<th class="py-space-md pr-space-md font-semibold">Risk Score</th>
+<th class="py-space-md pr-space-md font-semibold">KYC Status</th>
+<th class="py-space-md pr-space-md font-semibold text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- ROW 1 (SELECTED / ACTIVE HIGHLIGHT) -->
+<tr class="bg-primary-fixed/30 hover:bg-primary-fixed/40 transition-colors cursor-pointer group">
+<td class="p-space-md">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary-container" type="checkbox"/>
+</td>
+<td class="py-space-md pr-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-center font-bold text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">headphones</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">Aura Sound Labs LLC</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Audio &amp; Wearables • US</span>
+</div>
+</div>
+</td>
+<td class="py-space-md pr-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Marcus Vance</span>
+<span class="font-body-sm text-body-sm text-outline">marcus@aurasoundlabs.com</span>
+</div>
+</td>
+<td class="py-space-md pr-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Today, 09:15 AM</span>
+<span class="font-label-sm text-label-sm text-secondary-container font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">alarm</span>
+<span>2h 45m SLA Left</span>
+</span>
+</div>
+</td>
+<td class="py-space-md pr-space-md whitespace-nowrap">
+<span class="px-space-xs py-1 rounded-full bg-surface-container-high text-tertiary font-label-sm text-label-sm font-bold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>8/100 Low</span>
+</span>
+</td>
+<td class="py-space-md pr-space-md whitespace-nowrap">
+<span class="px-space-xs py-1 rounded-lg bg-surface-container text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+<span>Pass 4/4</span>
+</span>
+</td>
+<td class="py-space-md pr-space-md text-right whitespace-nowrap">
+<button class="px-space-sm py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm shadow-sm hover:bg-primary-container transition-all" type="button">
+                      Inspect
+                    </button>
+</td>
+</tr>
+<!-- ROW 2: Nordic Living Collective -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="p-space-md">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary-container" type="checkbox"/>
+</td>
+<td class="py-space-md pr-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center font-bold text-on-surface flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">chair</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Nordic Living Collective</span>
+<span class="font-label-sm text-label-sm text-outline">Home &amp; Furniture • SE</span>
+</div>
+</div>
+</td>
+<td class="py-space-md pr-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Freja Lindqvist</span>
+<span class="font-body-sm text-body-sm text-outline">freja@nordicliving.se</span>
+</div>
+</td>
+<td class="py-space-md pr-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Today, 08:30 AM</span>
+<span class="font-label-sm text-label-sm text-outline">3h 30m SLA Left</span>
+</div>
+</td>
+<td class="py-space-md pr-space-md whitespace-nowrap">
+<span class="px-space-xs py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-bold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+<span>34/100 Mid</span>
+</span>
+</td>
+<td class="py-space-md pr-space-md whitespace-nowrap">
+<span class="px-space-xs py-1 rounded-lg bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+<span>Tax Pending</span>
+</span>
+</td>
+<td class="py-space-md pr-space-md text-right whitespace-nowrap">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm transition-all" type="button">
+                      Review
+                    </button>
+</td>
+</tr>
+<!-- ROW 3: K-Glow Skincare Direct -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="p-space-md">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary-container" type="checkbox"/>
+</td>
+<td class="py-space-md pr-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center font-bold text-tertiary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">spa</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">K-Glow Skincare Direct</span>
+<span class="font-label-sm text-label-sm text-outline">Beauty &amp; Health • KR</span>
+</div>
+</div>
+</td>
+<td class="py-space-md pr-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Ji-hoon Park</span>
+<span class="font-body-sm text-body-sm text-outline">contact@kglow.kr</span>
+</div>
+</td>
+<td class="py-space-md pr-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Yesterday, 04:20 PM</span>
+<span class="font-label-sm text-label-sm text-outline">19h In Queue</span>
+</div>
+</td>
+<td class="py-space-md pr-space-md whitespace-nowrap">
+<span class="px-space-xs py-1 rounded-full bg-surface-container-high text-tertiary font-label-sm text-label-sm font-bold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>12/100 Low</span>
+</span>
+</td>
+<td class="py-space-md pr-space-md whitespace-nowrap">
+<span class="px-space-xs py-1 rounded-lg bg-surface-container text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+<span>Pass 4/4</span>
+</span>
+</td>
+<td class="py-space-md pr-space-md text-right whitespace-nowrap">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm transition-all" type="button">
+                      Review
+                    </button>
+</td>
+</tr>
+<!-- ROW 4: Apex Gaming Gear -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer bg-error-container/10">
+<td class="p-space-md">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary-container" type="checkbox"/>
+</td>
+<td class="py-space-md pr-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-error-container text-error flex items-center justify-center font-bold flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">sports_esports</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-error font-bold truncate">Apex Gaming Gear</span>
+<span class="material-symbols-outlined text-[16px] text-error">warning</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">PC Hardware • US</span>
+</div>
+</div>
+</td>
+<td class="py-space-md pr-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Derrick Cole</span>
+<span class="font-body-sm text-body-sm text-outline">derrick@apexgaminggear.io</span>
+</div>
+</td>
+<td class="py-space-md pr-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Yesterday, 02:10 PM</span>
+<span class="font-label-sm text-label-sm text-error font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">flag</span>
+<span>SecOps Escalated</span>
+</span>
+</div>
+</td>
+<td class="py-space-md pr-space-md whitespace-nowrap">
+<span class="px-space-xs py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span>78/100 High</span>
+</span>
+</td>
+<td class="py-space-md pr-space-md whitespace-nowrap">
+<span class="px-space-xs py-1 rounded-lg bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">report</span>
+<span>Doc Dispute</span>
+</span>
+</td>
+<td class="py-space-md pr-space-md text-right whitespace-nowrap">
+<button class="px-space-sm py-1.5 rounded-lg bg-error-container hover:bg-error text-error hover:text-on-error font-label-sm text-label-sm font-bold transition-all" type="button">
+                      Audit
+                    </button>
+</td>
+</tr>
+<!-- ROW 5: Velvet Thread Studio -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="p-space-md">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary-container" type="checkbox"/>
+</td>
+<td class="py-space-md pr-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center font-bold text-on-surface flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">styler</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Velvet Thread Studio</span>
+<span class="font-label-sm text-label-sm text-outline">Apparel &amp; Fashion • UK</span>
+</div>
+</div>
+</td>
+<td class="py-space-md pr-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Chloe Bennet</span>
+<span class="font-body-sm text-body-sm text-outline">chloe@velvetthread.co.uk</span>
+</div>
+</td>
+<td class="py-space-md pr-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Oct 29, 2024</span>
+<span class="font-label-sm text-label-sm text-outline">Auto-verified</span>
+</div>
+</td>
+<td class="py-space-md pr-space-md whitespace-nowrap">
+<span class="px-space-xs py-1 rounded-full bg-surface-container-high text-tertiary font-label-sm text-label-sm font-bold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>5/100 Low</span>
+</span>
+</td>
+<td class="py-space-md pr-space-md whitespace-nowrap">
+<span class="px-space-xs py-1 rounded-lg bg-surface-container text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+<span>Pass 4/4</span>
+</span>
+</td>
+<td class="py-space-md pr-space-md text-right whitespace-nowrap">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm transition-all" type="button">
+                      Review
+                    </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Bar -->
+<div class="px-space-md py-space-sm bg-surface-container-low flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Showing 1 to 5 of 84 pending applicants</span>
+<div class="flex items-center gap-space-xs">
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold flex items-center justify-center">1</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center">2</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center">3</button>
+<span class="text-outline text-label-sm font-label-sm px-1">...</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center">17</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Compliance & SLA Metrics Micro-Card -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-9 h-9 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">IRS TIN &amp; FinCEN Match Engine Online</span>
+<span class="font-body-sm text-body-sm text-outline">Automated real-time matching against OFAC, PEP, and domestic tax registries active.</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold px-space-xs py-0.5 rounded bg-tertiary-fixed">Latency: 280ms</span>
+</div>
+</div>
+<!-- Right Docked Detail Panel (Active Application: Aura Sound Labs LLC) -->
+<div class="lg:col-span-5 xl:col-span-5 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl shadow-lg overflow-hidden flex flex-col">
+<!-- Docked Header -->
+<div class="p-space-lg bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-primary-fixed text-primary font-label-sm text-label-sm font-bold uppercase">Active Inspection</span>
+<span class="font-label-sm text-label-sm text-outline">#APP-88419</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-8 h-8 rounded-lg bg-surface-container-highest hover:bg-surface-container-low text-on-surface-variant flex items-center justify-center transition-colors" title="Open in dedicated tab" type="button">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-highest hover:bg-surface-container-low text-on-surface-variant flex items-center justify-center transition-colors" title="Close Panel" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-2xl bg-primary text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[28px]">headphones</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface font-bold">Aura Sound Labs LLC</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Applied Oct 30, 2024 • Submission #204</span>
+</div>
+</div>
+<div class="text-right">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-tertiary font-label-md text-label-md font-bold block">
+                  Score: 8/100
+                </span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5 block">Ultra Low Risk</span>
+</div>
+</div>
+</div>
+<div class="p-space-lg flex flex-col gap-space-lg max-h-[820px] overflow-y-auto">
+<!-- Section 1: Merchant & Business Details -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">storefront</span>
+<span>Legal &amp; Business Profile</span>
+</h2>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Delaware SOS Active</span>
+</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm bg-surface-container-low p-space-md rounded-xl">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Legal Entity</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Aura Sound Technologies Inc.</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Jurisdiction</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Delaware, United States</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">IRS EIN / Tax ID</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold font-mono">XX-XXX4910</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">TIN Name Match</span>
+<span class="font-label-md text-label-md text-tertiary font-semibold">IRS 100% Match</span>
+</div>
+<div class="col-span-2 flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Registered Operating Address</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">742 Evergreen Terrace, Suite 300, Austin, TX 78701</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Planned Catalog</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">42 SKUs (ANC, DACs)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Projected Monthly GMV</span>
+<span class="font-label-md text-label-md text-primary font-bold">$150,000 – $300,000</span>
+</div>
+</div>
+</div>
+<!-- Section 2: Automated KYC & Risk Intelligence -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">security</span>
+<span>Automated Verification Pipeline</span>
+</h2>
+<span class="font-label-sm text-label-sm text-outline">Score 8/100 (Pass)</span>
+</div>
+<!-- Automated Checks List -->
+<div class="flex flex-col gap-space-xs">
+<!-- Check 1 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-tertiary">verified</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">IRS TIN Database Verification</span>
+<span class="font-body-sm text-body-sm text-outline">Exact match on IRS Master Business File (SS-4)</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-label-sm text-label-sm font-bold">Valid</span>
+</div>
+<!-- Check 2 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-tertiary">face</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Biometric Government ID Matching</span>
+<span class="font-body-sm text-body-sm text-outline">Selfie liveness check matched passport photo</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-label-sm text-label-sm font-bold">99.4% Match</span>
+</div>
+<!-- Check 3 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-tertiary">public</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">OFAC, PEP &amp; Sanctions Screening</span>
+<span class="font-body-sm text-body-sm text-outline">Global AML Watchlist, Interpol, UN Sanctions</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-label-sm text-label-sm font-bold">0 Hits</span>
+</div>
+<!-- Check 4 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-tertiary">account_balance</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Corporate Settlement Bank Link</span>
+<span class="font-body-sm text-body-sm text-outline">JPMorgan Chase Business Checking (****3921)</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-label-sm text-label-sm font-bold">Plaid Verified</span>
+</div>
+</div>
+</div>
+<!-- Section 3: Document Uploads & Live Previews -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">description</span>
+<span>Uploaded Credentials (3 Files)</span>
+</h2>
+<span class="font-label-sm text-label-sm text-outline">All OCR Parsed</span>
+</div>
+<!-- Document 1: Articles of Organization -->
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">DE_Articles_Of_Organization_AuraSound.pdf</span>
+<span class="font-body-sm text-body-sm text-outline">2.4 MB • OCR Confirmed • Legible</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Quick View" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Download" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<!-- Document 2: Photo ID Passport Preview -->
+<div class="p-space-sm bg-surface-container-low rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">badge</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Gov_Passport_Marcus_Vance.jpg</span>
+<span class="font-body-sm text-body-sm text-outline">High-res front page • Hologram Check: Passed</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-label-sm text-label-sm font-bold">Biometric Match</span>
+</div>
+<!-- Realistic Mini ID Mock Preview Card -->
+<div class="relative w-full h-24 rounded-lg bg-surface-container overflow-hidden p-space-sm flex items-center gap-space-md">
+<div class="w-16 h-20 rounded bg-outline-variant/40 flex items-center justify-center overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A passport photo showing the head and shoulders of a confident business founder Marcus Vance, professional neutral lighting, navy blue suit, clean white backdrop, biometric scan framing overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8tXQ2C-8m-GZStudrns6_ZxutFnCkyr1EsBIwcl9BIa7VV2R5xNcH_KTvmPX9SFEXdYhK4sBQWuYDyRXaKap1PStzXkHoOnzGB01kitbeS5gnF6caHa3dDocSwphXJEd2ydx7ICZiCwlOlXoiG1e2cSC3b6jvj9-JtxXJMPkt2RtpznPef0k3htnfu3CjxRsS3tVqBpv3ZycDmg1sSLkxQuTeDGe0uO7o4FG1rry1"/>
+</div>
+<div class="flex flex-col justify-center gap-0.5 min-w-0">
+<span class="font-label-sm text-label-sm text-outline uppercase">PASSPORT • UNITED STATES OF AMERICA</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">VANCE, MARCUS E.</span>
+<span class="font-body-sm text-body-sm font-mono text-outline">DOB: 14 NOV 1988 • EXP: 22 AUG 2031</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">format_image_left</span>
+<span>Digital Seal Verified via ICAO Public Key</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Document 3: Bank Verification Statement -->
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">account_balance_wallet</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Chase_Business_VoidedCheck_2024.pdf</span>
+<span class="font-body-sm text-body-sm text-outline">Routing #021000021 • Account Match Confirmed</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Quick View" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Download" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 4: Underwriter Notes & Review Log -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider flex items-center gap-1.5" for="review-notes">
+<span class="material-symbols-outlined text-[18px] text-primary">edit_note</span>
+<span>SecOps Underwriting Notes</span>
+</label>
+<span class="font-label-sm text-label-sm text-outline">Audit Log Attached</span>
+</div>
+<!-- Quick Tags Chips -->
+<div class="flex items-center gap-space-xs flex-wrap mb-1">
+<button class="px-space-xs py-0.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" type="button">+ Clean Docs</button>
+<button class="px-space-xs py-0.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" type="button">+ Fast Track</button>
+<button class="px-space-xs py-0.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" type="button">+ Cross-Check USPTO</button>
+<button class="px-space-xs py-0.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" type="button">+ High Volume Seller</button>
+</div>
+<textarea class="w-full p-space-sm bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-container leading-relaxed resize-none" id="review-notes" rows="3">Applicant has established trademark for Aura Sound in USPTO class 09. Bank verification via Chase corporate checking and Delaware good standing certificates confirmed. Safe for tier 1 merchant account rollout.</textarea>
+</div>
+<!-- Section 5: Decision Actions Footer -->
+<div class="flex flex-col gap-space-sm pt-space-xs border-t border-surface-container">
+<div class="flex flex-col sm:flex-row items-center gap-space-xs">
+<!-- Primary Approval CTA -->
+<button class="w-full sm:flex-1 h-12 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs shadow-md transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>Approve Merchant Account</span>
+</button>
+<!-- Request Info CTA -->
+<button class="w-full sm:w-auto h-12 px-space-md rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary">help</span>
+<span>Request Info</span>
+</button>
+<!-- Reject Button -->
+<button class="w-full sm:w-auto h-12 px-space-md rounded-xl bg-error-container hover:bg-error text-error hover:text-on-error font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">block</span>
+<span>Reject</span>
+</button>
+</div>
+<!-- Audit Stamp -->
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm pt-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>Signed by: Alex Vance (SecOps SuperAdmin)</span>
+</span>
+<span class="font-mono">IP: 198.51.100.42</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

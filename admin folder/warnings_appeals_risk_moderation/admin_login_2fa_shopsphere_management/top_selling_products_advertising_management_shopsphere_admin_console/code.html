@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-tertiary-fixed-variant": "#004b73",
+        "on-background": "#131b2e",
+        "on-secondary": "#ffffff",
+        "primary-container": "#4f46e5",
+        "secondary": "#9d4300",
+        "on-secondary-container": "#5c2400",
+        "on-error-container": "#93000a",
+        "on-primary-container": "#dad7ff",
+        "tertiary-fixed": "#cce5ff",
+        "surface-container-low": "#f2f3ff",
+        "inverse-surface": "#283044",
+        "on-surface-variant": "#464555",
+        "on-secondary-fixed-variant": "#783200",
+        "surface-container-lowest": "#ffffff",
+        "tertiary": "#004c76",
+        "primary-fixed-dim": "#c3c0ff",
+        "surface": "#faf8ff",
+        "on-secondary-fixed": "#341100",
+        "primary-fixed": "#e2dfff",
+        "surface-tint": "#4d44e3",
+        "secondary-container": "#fd761a",
+        "surface-variant": "#dae2fd",
+        "tertiary-container": "#00659a",
+        "inverse-primary": "#c3c0ff",
+        "on-tertiary": "#ffffff",
+        "tertiary-fixed-dim": "#93ccff",
+        "surface-container-high": "#e2e7ff",
+        "surface-dim": "#d2d9f4",
+        "on-tertiary-container": "#bedfff",
+        "on-primary-fixed": "#0f0069",
+        "surface-container": "#eaedff",
+        "surface-container-highest": "#dae2fd",
+        "on-tertiary-fixed": "#001d31",
+        "error-container": "#ffdad6",
+        "background": "#faf8ff",
+        "error": "#ba1a1a",
+        "secondary-fixed-dim": "#ffb690",
+        "on-surface": "#131b2e",
+        "outline": "#777587",
+        "inverse-on-surface": "#eef0ff",
+        "on-primary": "#ffffff",
+        "surface-bright": "#faf8ff",
+        "secondary-fixed": "#ffdbca",
+        "on-primary-fixed-variant": "#3323cc",
+        "on-error": "#ffffff",
+        "primary": "#3525cd",
+        "outline-variant": "#c7c4d8"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "gutter-lg": "1.5rem",
+        "margin-md": "1.5rem",
+        "gutter-md": "1.25rem",
+        "space-md": "1rem",
+        "margin": "1rem",
+        "margin-lg": "2rem",
+        "space-sm": "0.5rem",
+        "space-lg": "1.25rem",
+        "space-xs": "0.25rem",
+        "space-xl": "1.5rem",
+        "gutter": "1rem"
+      },
+      "fontFamily": {
+        "label-md": ["Inter"],
+        "headline-lg": ["Inter"],
+        "headline-lg-mobile": ["Inter"],
+        "body-sm": ["Inter"],
+        "display-lg": ["Inter"],
+        "body-md": ["Inter"],
+        "label-sm": ["Inter"],
+        "title-md": ["Inter"],
+        "display-lg-mobile": ["Inter"],
+        "headline-md": ["Inter"],
+        "body-lg": ["Inter"],
+        "label-lg": ["Inter"]
+      },
+      "fontSize": {
+        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+        "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+        "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600"}],
+        "title-md": ["18px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600"}],
+        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700"}],
+        "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600"}],
+        "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}]
+      }
+    }
+  }
+};</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-xl flex items-center gap-space-sm bg-surface-container-lowest"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface leading-none tracking-tight">ShopSphere</span><span class="font-label-sm text-label-sm text-outline tracking-wider uppercase mt-1">Global Admin</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-md py-space-xs rounded-lg bg-surface-container-low flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary-container"></span>US-East-1 Prod</span><span class="font-label-sm text-label-sm text-primary uppercase font-bold">Zero-Trust</span></div></div><nav class="flex flex-col gap-space-xs px-space-md mt-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-xl shadow-sm"><div class="px-space-md pt-space-sm pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Core Platform</div><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="overview" href="#"><span class="font-label-lg text-label-lg">Overview</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="sellers" href="#"><span class="font-label-lg text-label-lg">Sellers</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="products" href="#"><span class="font-label-lg text-label-lg">Products</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="orders" href="#"><span class="font-label-lg text-label-lg">Orders</span></a><div class="px-space-md pt-space-md pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Intelligence &amp; Operations</div><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="returns-and-damages" href="#"><span class="font-label-lg text-label-lg">Returns &amp; Damages</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reels-and-reviews" href="#"><span class="font-label-lg text-label-lg">Reels &amp; Reviews</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-bold rounded-xl shadow-sm" data-path="ads-and-promotions" href="#"><span class="font-label-lg text-label-lg">Ads &amp; Promotions</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="payouts" href="#"><span class="font-label-lg text-label-lg">Payouts</span></a><div class="px-space-md pt-space-md pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Governance &amp; Security</div><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="staff-and-roles" href="#"><span class="font-label-lg text-label-lg">Staff &amp; Roles</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="audit-log" href="#"><span class="font-label-lg text-label-lg">Audit Log</span></a></nav></div><div class="p-space-md bg-surface-container-low mx-space-md mb-space-md rounded-xl flex flex-col gap-space-sm"><div class="flex items-center justify-between font-label-sm text-label-sm text-outline"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>SOC2 / ISO 27001</span><span class="font-bold text-on-surface-variant">ACTIVE</span></div><div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Session Expiry</span><span class="font-label-sm text-label-sm text-error font-bold">14:28</span></div><a class="w-full flex items-center justify-center gap-space-xs py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" data-path="sign-out" href="#"><span>Quick Sign Out</span></a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40"><div class="h-16 w-full px-gutter-lg flex items-center justify-between gap-space-md"><div class="flex-1 max-w-xl"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-20 bg-surface-container-low text-on-surface placeholder:text-outline rounded-xl font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" placeholder="Search sellers, orders, SKU, incident ID, audit logs..." type="text"/><span class="absolute right-3 px-space-xs py-0.5 rounded bg-surface-container-highest text-outline font-label-sm text-label-sm font-semibold tracking-wide">⌘K</span></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-secondary-container"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Systems Normal</span><span class="text-outline font-label-sm text-label-sm">•</span><span class="font-label-sm text-label-sm text-tertiary font-semibold">99.99% Uptime</span></div><div class="relative"><button class="w-9 h-9 rounded-xl bg-surface-container-low hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" title="SecOps Alerts" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-secondary-container text-on-secondary font-label-sm text-label-sm flex items-center justify-center font-bold">5</span></div><button class="w-9 h-9 rounded-xl bg-surface-container-low hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" title="System Settings" type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-sm"><div class="text-right hidden sm:flex flex-col"><span class="font-label-lg text-label-lg text-on-surface leading-tight font-semibold">Alex Vance</span><span class="font-label-sm text-label-sm text-outline leading-tight">Super Admin / SecOps</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Command & Breadcrumb Strip -->
+<div class="px-margin-lg pt-space-md pb-space-sm bg-surface-container-lowest shadow-sm">
+<div class="max-w-[1560px] mx-auto flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<span>Admin Console</span>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+<span>Intelligence &amp; Operations</span>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+<span class="text-primary font-semibold">Ads &amp; Promotions</span>
+</nav>
+<!-- Dynamic Status Tag -->
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-semibold text-on-surface">Ad Engine: Auto-Bidding Active</span>
+<span class="text-outline">•</span>
+<span class="text-primary font-bold">ROAS 4.65x Target Beat</span>
+</div>
+</div>
+<!-- Main Section Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg pb-space-xs">
+<div class="space-y-1">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">
+            Top-Selling Catalog &amp; Ad Campaign Management
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+            Monitor high-velocity marketplace inventory, boost top performers with algorithmic ad placements, and track platform-wide promotional ROI.
+          </p>
+</div>
+<!-- Action Ribbon -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="inline-flex items-center gap-1.5 px-space-md py-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Placement Settings</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Export Analytics CSV</span>
+</button>
+<button class="inline-flex items-center gap-2 px-space-lg py-2.5 rounded-xl bg-secondary-container hover:bg-secondary text-on-secondary font-label-lg text-label-lg font-bold shadow-md hover:shadow-lg transition-all" onclick="document.getElementById('ad-creation-modal').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>+ Quick Campaign</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Canvas Space -->
+<div class="px-margin-lg py-space-xl max-w-[1560px] mx-auto w-full flex flex-col gap-space-xl">
+<!-- 4 Platform Ad & Velocity KPI Summary Cards -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Spend & Budget -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider font-semibold">Total Ad Spend</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg font-bold text-on-surface">$482,900</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold bg-tertiary-fixed px-2 py-0.5 rounded-full">+14.2% MoM</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-3 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 74%"></div>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-2">74% of $650,000 monthly target cap</p>
+</div>
+</div>
+<!-- GMV Attributed Revenue -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider font-semibold">Attributed GMV</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg font-bold text-on-surface">$2,248,500</span>
+</div>
+<div class="flex items-center gap-2 mt-3">
+<span class="inline-flex items-center gap-1 text-on-secondary font-label-sm text-label-sm font-bold bg-secondary-container px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-[14px]">bolt</span> 4.65x Blended ROAS
+            </span>
+<span class="font-body-sm text-body-sm text-outline">Vs. 3.8x baseline target</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-2">Net promotional multiplier 31.8%</p>
+</div>
+</div>
+<!-- Impressions & CTR -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider font-semibold">Impressions &amp; CTR</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">ads_click</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg font-bold text-on-surface">18.4M</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold bg-tertiary-fixed px-2 py-0.5 rounded-full">+0.45% CTR</span>
+</div>
+<div class="flex items-center justify-between text-body-sm mt-3">
+<span class="text-on-surface-variant font-medium">Avg CTR: <strong class="text-on-surface font-bold">3.82%</strong></span>
+<span class="text-outline">Top: Reels (5.8%)</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-2">702,880 direct clicks converted</p>
+</div>
+</div>
+<!-- Active Campaigns -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider font-semibold">Active Campaigns</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg font-bold text-on-surface">28 Live</span>
+<span class="font-label-sm text-label-sm text-outline font-semibold">/ 35 total</span>
+</div>
+<div class="flex items-center gap-1.5 mt-3 font-label-sm text-label-sm text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container font-semibold">12 Listings</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-semibold">9 Reels</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-semibold">7 Banners</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-2">4 campaigns expiring within 48h</p>
+</div>
+</div>
+</section>
+<!-- Top-Selling Products Catalog Section -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Section Header & Filter Toolbar -->
+<div class="p-space-lg flex flex-col gap-space-md bg-surface-container-low/50">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-title-md text-title-md font-bold text-on-surface">Top-Performing Marketplace SKUs</h2>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">Real-Time GMV Index</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Ranked by sales volume and GMV across all registered merchants. One-click promote high-conversion items.
+            </p>
+</div>
+<div class="flex items-center gap-2 self-start md:self-auto">
+<span class="font-label-sm text-label-sm text-outline">Quick Action:</span>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition-colors" type="button">
+              Boost All Unpromoted Tier-1
+            </button>
+</div>
+</div>
+<!-- Filter Bar -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-space-sm pt-space-xs">
+<!-- Search SKU/Name -->
+<div class="lg:col-span-4 relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">search</span>
+<input class="w-full h-10 pl-9 pr-3 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container shadow-sm" placeholder="Search by SKU, UPC, or title..." type="text"/>
+</div>
+<!-- Category Filter -->
+<div class="lg:col-span-3">
+<select class="w-full h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container shadow-sm">
+<option>Category: All Departments</option>
+<option>Audio &amp; Wearables</option>
+<option>Peripherals &amp; Keyboards</option>
+<option>Smart Home &amp; Lighting</option>
+<option>Accessories &amp; Comfort</option>
+</select>
+</div>
+<!-- Velocity Tier Filter -->
+<div class="lg:col-span-2">
+<select class="w-full h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container shadow-sm">
+<option>Velocity: All</option>
+<option>Hyper (Tier A+)</option>
+<option>High (Tier A)</option>
+<option>Moderate (Tier B)</option>
+</select>
+</div>
+<!-- Sort Filter -->
+<div class="lg:col-span-3">
+<select class="w-full h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container shadow-sm">
+<option>Sort: Highest Revenue (GMV)</option>
+<option>Sort: Most Units Sold (30D)</option>
+<option>Sort: Lowest Return Rate</option>
+<option>Sort: Best Customer Rating</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Table Container with Dense Data Hierarchy -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-body-md text-body-md border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md font-semibold">Product &amp; SKU</th>
+<th class="py-3 px-space-md font-semibold">Seller / Merchant</th>
+<th class="py-3 px-space-md font-semibold">Units Sold (30D)</th>
+<th class="py-3 px-space-md font-semibold">GMV Revenue</th>
+<th class="py-3 px-space-md font-semibold">Avg Rating</th>
+<th class="py-3 px-space-md font-semibold">Return Rate</th>
+<th class="py-3 px-space-md font-semibold">Promotion Status</th>
+<th class="py-3 px-space-md font-semibold text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors bg-surface-container-lowest">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3 min-w-[280px]">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container flex-shrink-0" data-alt="Close-up studio shot of sleek matte-black wireless over-ear headphones resting on a minimalist display stand with subtle neon violet edge highlights and soft studio rim light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSIdQb3Q4-yIVKzZpMbQpllNO2dVuUB4hxyC-ugGpyNZGk5sDOHkmwzkuUBoqmFfqBZe9dDgp0sdBYELVhES0VKqQhuoQm5HbyJPGQ0Qj8BRcUOGTFUbRtocWcQE45LTQQNsWWVXCyGr7k9Sj180UB1hyFqXfNsRPVI-OH9a76Z8wCH1c2zzBWU-1QCSo6fq83HwpwjopF0OJX04cu39LYmh1dpQOPzJrDWxty28IC"/>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg font-bold text-on-surface truncate">Aura Studio Pro Wireless ANC</p>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm text-outline font-mono">SKU: AURA-ANC-BLI</span>
+<span class="text-outline">•</span>
+<span class="font-label-sm text-label-sm text-outline">$199.99</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Aura Sound Labs LLC</span>
+<span class="px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">Tier 1</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">99.4% Fulfillment Rate</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">14,200</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5 font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +28.4%
+                  </span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">$2,839,858</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">4.89</span>
+<span class="font-body-sm text-body-sm text-outline">(1,840)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-tertiary font-label-sm text-label-sm font-bold">
+                  1.6% Healthy
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">smart_display</span> Reels Boost Active (ROAS 5.2x)
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1.5">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm font-bold transition-colors" onclick="document.getElementById('ad-creation-modal').classList.remove('hidden')" type="button">
+                    Edit Ad
+                  </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors" title="Telemetry" type="button">
+<span class="material-symbols-outlined text-[16px]">monitoring</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors bg-surface-container-low/20">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3 min-w-[280px]">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container flex-shrink-0" data-alt="Futuristic ceramic white smartwatch displaying an activity metric ring with an elegant sport strap on reflective glass surface with ambient indigo illumination" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ2t3Am9WTaiAjxEeSDb08P5UlPyAKcSi9UR300Vq2VLyeu8Nno1JvZtbHVLr10hRHzEb3H-in92lbj4FtWC6-yxStqnbOhoNe8XpC0CKeXu4KIEXngbIBPJoCB1p7OBfOH1zYLAMidcuyvmhB3G5uArnxygr6oaaHU1mjR3MdiuRkPfErtmH762zoQ5zgM4BpDUtIcAk1lgdhuBXAdo2LC74LueipS2nKf7UDEbK8"/>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg font-bold text-on-surface truncate">Ceramic Ultra Smartwatch Gen 2</p>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm text-outline font-mono">SKU: AURA-SW-BLK</span>
+<span class="text-outline">•</span>
+<span class="font-label-sm text-label-sm text-outline">$250.00</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Aura Sound Labs LLC</span>
+<span class="px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">Tier 1</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">98.9% Fulfillment Rate</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">9,450</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5 font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +19.1%
+                  </span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">$2,362,500</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">4.85</span>
+<span class="font-body-sm text-body-sm text-outline">(920)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-bold">
+                  2.1% Normal
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-outline font-label-sm text-label-sm font-semibold">
+                  Not Promoted
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1.5">
+<button class="px-3.5 py-1.5 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-sm text-label-sm font-bold shadow-sm transition-all flex items-center gap-1" onclick="document.getElementById('ad-creation-modal').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-[16px]">rocket_launch</span>
+<span>Promote</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors" title="Telemetry" type="button">
+<span class="material-symbols-outlined text-[16px]">monitoring</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors bg-surface-container-lowest">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3 min-w-[280px]">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container flex-shrink-0" data-alt="Custom mechanical gaming keyboard with aluminum chassis, dual-tone keycaps, and warm amber underglow backlighting captured from high angle perspective" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByJV7EnJ-Zq_KAjmZlNaVITgLP9QLSL_R_f7CNq4X9uCrG4sx-QN_Gl5GXzwB6DBh0OdrrQ6ScjQRNXD5itaaL5Kw2fWbV-Er1mTGi4wxVJnJDbgWUWVdUW2ks6F4DhxFtb8aULXhv86TLZ4KVJUo5cmedC_y4wH1xzvSGBWvzyceYD0JrM6Ty6C_zfeVi397OxZ3MTIQr8YeBi_vkAVuES4FzGCvhEwG_QBjrdeNT"/>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg font-bold text-on-surface truncate">Aura Tactile Mechanical Keyboard RGB</p>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm text-outline font-mono">SKU: AURA-KB-BRW</span>
+<span class="text-outline">•</span>
+<span class="font-label-sm text-label-sm text-outline">$129.50</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Aura Sound Labs LLC</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">97.8% Fulfillment Rate</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">7,810</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5 font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +11.2%
+                  </span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">$1,011,395</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">4.92</span>
+<span class="font-body-sm text-body-sm text-outline">(640)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-tertiary font-label-sm text-label-sm font-bold">
+                  1.4% Healthy
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">search_spark</span> Sponsored Listing
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1.5">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm font-bold transition-colors" onclick="document.getElementById('ad-creation-modal').classList.remove('hidden')" type="button">
+                    Edit Ad
+                  </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors" title="Telemetry" type="button">
+<span class="material-symbols-outlined text-[16px]">monitoring</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors bg-surface-container-low/20">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3 min-w-[280px]">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container flex-shrink-0" data-alt="Modern geometric aluminum smart lightbar emitting a subtle gradient of peach and warm indigo over a Scandinavian minimalist wooden workspace desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALX85Cem9YL8X1ZyznszBUeYQahbs16ekCBlFpiJeqTVYgy5IXRpqduHMiAph2F5sbQYKzWqQtCqs_xcF_F-nJw_bwPcBa2CF-FUK8HcqAZLdsvB7siJg2IlxuZ9AUB_7RxMVUlaCUC9RWDexE9zb7aGdPGuV_0jUrJcOPZowsi5A79t5WqVX9rvWdvxsWeSTt_OpyVYW8TcK4W3--_-IQxy5-uZ4ip6lsCAqy6x6S"/>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg font-bold text-on-surface truncate">Lumina Nordic Ambient Smart Lightbar</p>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm text-outline font-mono">SKU: LUM-AMB-04</span>
+<span class="text-outline">•</span>
+<span class="font-label-sm text-label-sm text-outline">$90.00</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Lumina Home Studios</span>
+<span class="px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">Tier 1</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">99.1% Fulfillment Rate</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">6,920</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5 font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +34.0%
+                  </span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">$622,800</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">4.78</span>
+<span class="font-body-sm text-body-sm text-outline">(1,150)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-tertiary font-label-sm text-label-sm font-bold">
+                  1.8% Healthy
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">view_carousel</span> Home Banner Active
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1.5">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm font-bold transition-colors" onclick="document.getElementById('ad-creation-modal').classList.remove('hidden')" type="button">
+                    Edit Ad
+                  </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors" title="Telemetry" type="button">
+<span class="material-symbols-outlined text-[16px]">monitoring</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors bg-surface-container-lowest">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3 min-w-[280px]">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container flex-shrink-0" data-alt="High precision stainless steel wrist watch with minimalist dial and brushed metal finish on neutral dark slate backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvJfuT8y-nncUZIN_RRzshEJEdGDpyjzHyfM2bcy6A1UwwwMWBvj4Rh1PMAFQYaBSC8pdACvae2kiqWY9f4L4NxSmnF_t26PX1gq274uRbCnhbQWnyX7d3QfWNUul9YO0PGWF4RwO7prIZFrhjR-4z2OtH-D0IfK97DSxRZGzvmitJoH66hoatJy9mbsRvMGocejimIbq5jnhCNiOOodUoiIf7gt0QF6jLt2d_CzbS"/>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg font-bold text-on-surface truncate">Chrono Precision Minimalist Watch</p>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm text-outline font-mono">SKU: CHR-M-320</span>
+<span class="text-outline">•</span>
+<span class="font-label-sm text-label-sm text-outline">$200.00</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Chrono Precision</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">95.4% Fulfillment Rate</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">5,400</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5 font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +6.5%
+                  </span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">$1,080,000</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">4.72</span>
+<span class="font-body-sm text-body-sm text-outline">(480)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-bold">
+                  2.4% Normal
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-outline font-label-sm text-label-sm font-semibold">
+                  Not Promoted
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1.5">
+<button class="px-3.5 py-1.5 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-sm text-label-sm font-bold shadow-sm transition-all flex items-center gap-1" onclick="document.getElementById('ad-creation-modal').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-[16px]">rocket_launch</span>
+<span>Promote</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors" title="Telemetry" type="button">
+<span class="material-symbols-outlined text-[16px]">monitoring</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors bg-surface-container-low/20">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3 min-w-[280px]">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container flex-shrink-0" data-alt="Ergonomic memory foam dark grey wrist cushion placed along mechanical keyboard on a textured felt desk pad" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwXBSYOE7WGjuJKaFQbCLZ1RpAMGl_1pnTjUClzgqKZoiNC-iig69v382LITjEIJs_Ug-4MKCfA9854ICLR1aDcjWt1QLSSRla7bgxqCvkva1G62p-p9AAIeEBero3188bNJK59slg9uCQX_dYWcXAu5Yy6BgHgS9VvlhFhAjlX4RwIT6G3f-FLyRb2pcKSL8Ya_dOIknWhZHOjbO8PgPEcsnCJTZ7DrERmntX6bKk"/>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg font-bold text-on-surface truncate">Ergonomic Memory Foam Wrist Rest</p>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm text-outline font-mono">SKU: AURA-ACC-WRS</span>
+<span class="text-outline">•</span>
+<span class="font-label-sm text-label-sm text-outline">$29.99</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Aura Sound Labs LLC</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">99.8% Fulfillment Rate</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">12,400</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5 font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +42.1%
+                  </span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">$371,880</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">4.90</span>
+<span class="font-body-sm text-body-sm text-outline">(2,100)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-tertiary font-label-sm text-label-sm font-bold">
+                  0.8% Pristine
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-outline font-label-sm text-label-sm font-semibold">
+                  Not Promoted
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1.5">
+<button class="px-3.5 py-1.5 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-sm text-label-sm font-bold shadow-sm transition-all flex items-center gap-1" onclick="document.getElementById('ad-creation-modal').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-[16px]">rocket_launch</span>
+<span>Promote</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors" title="Telemetry" type="button">
+<span class="material-symbols-outlined text-[16px]">monitoring</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Footer -->
+<div class="p-space-md bg-surface-container-low/40 flex flex-wrap items-center justify-between gap-space-md">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Showing 1 to 6 of 842 top-ranking catalog items</span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-bold" type="button">1</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold" type="button">2</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold" type="button">3</button>
+<span class="px-2 text-outline">...</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold" type="button">141</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Active Advertising Campaigns Table -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-md bg-surface-container-low/50">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-title-md text-title-md font-bold text-on-surface">Active Marketplace Ad Campaigns &amp; Performance</h2>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container animate-pulse"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Real-time delivery telemetry, budget utilization, and attributed customer conversions.
+          </p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline">Telemetry:</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold px-2 py-0.5 bg-tertiary-fixed rounded-md">Live Stream Synced</span>
+</div>
+</div>
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-body-md text-body-md border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md font-semibold">Campaign Name &amp; SKU</th>
+<th class="py-3 px-space-md font-semibold">Placement Type</th>
+<th class="py-3 px-space-md font-semibold">Flight Duration</th>
+<th class="py-3 px-space-md font-semibold">Budget &amp; Spend</th>
+<th class="py-3 px-space-md font-semibold">Impressions &amp; CTR</th>
+<th class="py-3 px-space-md font-semibold">Conversions &amp; GMV</th>
+<th class="py-3 px-space-md font-semibold">ROAS</th>
+<th class="py-3 px-space-md font-semibold">Status</th>
+<th class="py-3 px-space-md font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface">
+<!-- Campaign 1 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors bg-surface-container-lowest">
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Black Friday Warm-up: Aura Studio ANC</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">Target: SKU: AURA-ANC-BLI</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">smart_display</span> Reels Boost
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Nov 01 - Nov 30</span>
+<span class="font-label-sm text-label-sm text-outline">15 days remaining</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col min-w-[130px]">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="font-bold text-on-surface">$4,820</span>
+<span class="text-outline">/ $6,000</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-1 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 80%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">420K impr.</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">24.3K clicks (5.78% CTR)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">1,420 orders</span>
+<span class="font-body-sm text-body-sm text-outline">$283.9K GMV</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container text-tertiary font-label-lg text-label-lg font-bold">
+                  5.88x
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 font-label-sm text-label-sm font-bold text-tertiary">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-ping"></span> LIVE
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Pause Campaign" type="button">
+<span class="material-symbols-outlined text-[16px]">pause</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Edit Campaign" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Analytics Graph" type="button">
+<span class="material-symbols-outlined text-[16px]">insights</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Campaign 2 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors bg-surface-container-low/20">
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Holiday Tech Showcase: Lumina Lightbar</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">Target: SKU: LUM-AMB-04</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">view_carousel</span> Home Banner
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Nov 10 - Dec 05</span>
+<span class="font-label-sm text-label-sm text-outline">20 days remaining</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col min-w-[130px]">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="font-bold text-on-surface">$2,400</span>
+<span class="text-outline">/ $5,000</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-1 overflow-hidden">
+<div class="bg-secondary-container h-1.5 rounded-full" style="width: 48%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">310K impr.</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">12.8K clicks (4.12% CTR)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">580 orders</span>
+<span class="font-body-sm text-body-sm text-outline">$52.2K GMV</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container text-tertiary font-label-lg text-label-lg font-bold">
+                  4.35x
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 font-label-sm text-label-sm font-bold text-tertiary">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-ping"></span> LIVE
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Pause Campaign" type="button">
+<span class="material-symbols-outlined text-[16px]">pause</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Edit Campaign" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Analytics Graph" type="button">
+<span class="material-symbols-outlined text-[16px]">insights</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Campaign 3 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors bg-surface-container-lowest">
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Mechanical Keyboard Prime Rank</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">Target: SKU: AURA-KB-BRW</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">search_spark</span> Sponsored Listing
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Oct 20 - Nov 20</span>
+<span class="font-label-sm text-label-sm text-error font-bold">5 days remaining</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col min-w-[130px]">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="font-bold text-on-surface">$1,250</span>
+<span class="text-outline">/ $1,500</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-1 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 83%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">185K impr.</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">11.8K clicks (6.38% CTR)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">490 orders</span>
+<span class="font-body-sm text-body-sm text-outline">$63.4K GMV</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container text-tertiary font-label-lg text-label-lg font-bold">
+                  5.07x
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 font-label-sm text-label-sm font-bold text-tertiary">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-ping"></span> LIVE
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Pause Campaign" type="button">
+<span class="material-symbols-outlined text-[16px]">pause</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Edit Campaign" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Analytics Graph" type="button">
+<span class="material-symbols-outlined text-[16px]">insights</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Campaign 4 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors bg-surface-container-low/20">
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Smartwatch Fitness Push</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">Target: SKU: AURA-SW-BLK</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">smart_display</span> Reels Boost
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Nov 12 - Nov 28</span>
+<span class="font-label-sm text-label-sm text-outline">13 days remaining</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col min-w-[130px]">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="font-bold text-on-surface">$1,100</span>
+<span class="text-outline">/ $3,500</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-1 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 31%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">142K impr.</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">7.6K clicks (5.35% CTR)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">260 orders</span>
+<span class="font-body-sm text-body-sm text-outline">$65.0K GMV</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container text-tertiary font-label-lg text-label-lg font-bold">
+                  5.91x
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 font-label-sm text-label-sm font-bold text-tertiary">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-ping"></span> LIVE
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Pause Campaign" type="button">
+<span class="material-symbols-outlined text-[16px]">pause</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Edit Campaign" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Analytics Graph" type="button">
+<span class="material-symbols-outlined text-[16px]">insights</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<!-- Interactive Create Ad Campaign Modal (Docked/Visible overlay) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-space-md sm:p-space-lg bg-on-surface/40 backdrop-blur-sm overflow-y-auto" id="ad-creation-modal">
+<div class="relative w-full max-w-4xl bg-surface-container-lowest rounded-2xl shadow-xl overflow-hidden my-auto flex flex-col max-h-[942px]">
+<!-- Modal Header -->
+<div class="p-space-lg bg-surface-container-lowest flex items-start justify-between">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Create Promotional Campaign</h3>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold uppercase">Multi-Channel</span>
+</div>
+<!-- Target Product Pill -->
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>Targeting: <strong class="font-semibold">Aura Studio Pro Wireless ANC Headphones</strong></span>
+<span class="text-outline">•</span>
+<span class="font-mono text-outline font-label-sm text-label-sm">SKU: AURA-ANC-BLI</span>
+<span class="text-outline">•</span>
+<span class="text-tertiary font-bold">$199.99</span>
+</div>
+</div>
+<button class="w-9 h-9 rounded-xl bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" onclick="document.getElementById('ad-creation-modal').classList.add('hidden')" title="Close Modal" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body (Scrollable form) -->
+<div class="p-space-lg overflow-y-auto space-y-space-xl bg-surface">
+<!-- Step 1: Choose Ad Placement -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg font-bold text-on-surface flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">1</span>
+              Choose Placement Channel
+            </label>
+<span class="font-label-sm text-label-sm text-outline">Optimized for maximum click-through yield</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<!-- Option A: Home Banner (Selected state) -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm cursor-pointer relative transition-all group hover:shadow-md">
+<div class="flex items-center justify-between">
+<div class="w-9 h-9 rounded-lg bg-secondary-container text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">view_carousel</span>
+</div>
+<span class="w-5 h-5 rounded-full bg-secondary-container text-on-secondary flex items-center justify-center font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface mt-space-sm">Home Banner</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Featured top carousel placement. Maximum brand discovery.</p>
+<div class="mt-space-md pt-space-xs bg-surface-container-low p-2 rounded-lg flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">4.2% Est. CTR</span>
+<span class="text-tertiary font-bold">$2.40 CPM</span>
+</div>
+</div>
+<!-- Option B: Reels Boost -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm cursor-pointer relative transition-all group hover:bg-surface-container-low">
+<div class="flex items-center justify-between">
+<div class="w-9 h-9 rounded-lg bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">smart_display</span>
+</div>
+<span class="w-5 h-5 rounded-full bg-surface-container"></span>
+</div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface mt-space-sm">Reels Boost</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Algorithmic video reel stream insertion with 1-tap checkout CTA.</p>
+<div class="mt-space-md pt-space-xs bg-surface-container-low p-2 rounded-lg flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">5.8% Est. CTR</span>
+<span class="text-tertiary font-bold">$1.80 CPM</span>
+</div>
+</div>
+<!-- Option C: Sponsored Listing -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm cursor-pointer relative transition-all group hover:bg-surface-container-low">
+<div class="flex items-center justify-between">
+<div class="w-9 h-9 rounded-lg bg-surface-container text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">search_spark</span>
+</div>
+<span class="w-5 h-5 rounded-full bg-surface-container"></span>
+</div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface mt-space-sm">Sponsored Search</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Priority pinned ranking on category and exact keyword queries.</p>
+<div class="mt-space-md pt-space-xs bg-surface-container-low p-2 rounded-lg flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">6.4% Est. CTR</span>
+<span class="text-tertiary font-bold">$0.65 CPC</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 2: Budget & Bidding Strategy -->
+<div class="space-y-space-sm">
+<label class="font-label-lg text-label-lg font-bold text-on-surface flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">2</span>
+            Budget &amp; Bidding Strategy
+          </label>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Left: Strategy radio cards -->
+<div class="space-y-space-sm">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-3">
+<input class="text-primary focus:ring-primary w-4 h-4" id="daily-budget" name="budget-type" type="radio"/>
+<label class="cursor-pointer" for="daily-budget">
+<span class="font-label-md text-label-md font-bold text-on-surface block">Daily Pacing Budget</span>
+<span class="font-body-sm text-body-sm text-outline">Cap maximum daily promotional burn</span>
+</label>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">$150 / day</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-3">
+<input checked="" class="text-primary focus:ring-primary w-4 h-4" id="total-budget" name="budget-type" type="radio"/>
+<label class="cursor-pointer" for="total-budget">
+<span class="font-label-md text-label-md font-bold text-on-surface block">Lifetime Total Budget</span>
+<span class="font-body-sm text-body-sm text-outline">Distribute fluidly across campaign schedule</span>
+</label>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">$2,400</span>
+</div>
+<!-- Max Bid Ceiling -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Target Bid Ceiling (CPC)</span>
+<span class="font-label-lg text-label-lg font-bold text-primary">$1.20</span>
+</div>
+<input class="w-full accent-primary cursor-pointer" max="3.00" min="0.40" step="0.05" type="range" value="1.20"/>
+<div class="flex justify-between text-outline font-label-sm text-label-sm mt-1">
+<span>$0.40 min</span>
+<span>Market Avg: $1.15</span>
+<span>$3.00 max</span>
+</div>
+</div>
+</div>
+<!-- Right: Dynamic Reach Forecast Box -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-md text-label-md font-bold text-on-surface uppercase tracking-wider">Algorithmic Reach Forecast</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary font-bold bg-tertiary-fixed px-2 py-0.5 rounded-full">
+                    High Confidence
+                  </span>
+</div>
+<div class="space-y-space-sm mt-space-sm">
+<div class="flex justify-between items-baseline py-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Estimated Impressions:</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">62,000 – 85,000</span>
+</div>
+<div class="flex justify-between items-baseline py-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Projected Clicks:</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">2,400 – 3,100</span>
+</div>
+<div class="flex justify-between items-baseline py-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Est. Conversion Orders:</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">115 – 160 units</span>
+</div>
+<div class="flex justify-between items-baseline py-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Projected ROAS:</span>
+<span class="font-headline-md text-headline-md font-bold text-secondary-container">4.8x – 5.4x</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container-low font-body-sm text-body-sm text-outline flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">info</span>
+<span>Spend is dynamically throttled based on real-time SKU inventory balance.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 3 & 4: Campaign Schedule & Objectives (Grid) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Step 3: Flight Dates -->
+<div class="space-y-space-sm">
+<label class="font-label-lg text-label-lg font-bold text-on-surface flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">3</span>
+              Campaign Schedule
+            </label>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm space-y-space-sm">
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-outline block mb-1">Start Date</span>
+<div class="h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md flex items-center justify-between">
+<span>Nov 15, 2024</span>
+<span class="material-symbols-outlined text-[16px] text-outline">calendar_today</span>
+</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline block mb-1">End Date</span>
+<div class="h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md flex items-center justify-between">
+<span>Dec 01, 2024</span>
+<span class="material-symbols-outlined text-[16px] text-outline">event</span>
+</div>
+</div>
+</div>
+<!-- Dayparting Toggle -->
+<div class="flex items-center justify-between pt-space-xs">
+<div>
+<span class="font-label-md text-label-md font-semibold text-on-surface block">Dayparting Optimization</span>
+<span class="font-body-sm text-body-sm text-outline">Serve during peak hours (11:00 AM - 10:00 PM EST)</span>
+</div>
+<div class="w-10 h-6 bg-primary rounded-full relative cursor-pointer">
+<div class="w-4 h-4 bg-on-primary rounded-full absolute right-1 top-1"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 4: Campaign Objective -->
+<div class="space-y-space-sm">
+<label class="font-label-lg text-label-lg font-bold text-on-surface flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">4</span>
+              Optimization Goal
+            </label>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm space-y-2">
+<label class="flex items-center gap-3 p-2.5 rounded-lg bg-primary-fixed text-on-primary-fixed cursor-pointer font-label-md text-label-md font-semibold">
+<input checked="" class="text-primary focus:ring-primary w-4 h-4" name="objective" type="radio"/>
+<span>Maximize Total GMV Sales (High Conversion Target)</span>
+</label>
+<label class="flex items-center gap-3 p-2.5 rounded-lg bg-surface-container-low text-on-surface cursor-pointer font-label-md text-label-md">
+<input class="text-primary focus:ring-primary w-4 h-4" name="objective" type="radio"/>
+<span>Catalog Discovery &amp; Product Impressions</span>
+</label>
+<label class="flex items-center gap-3 p-2.5 rounded-lg bg-surface-container-low text-on-surface cursor-pointer font-label-md text-label-md">
+<input class="text-primary focus:ring-primary w-4 h-4" name="objective" type="radio"/>
+<span>Clear Low Stock / Inventory Turnover</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="p-space-lg bg-surface-container-lowest flex flex-wrap items-center justify-between gap-space-md">
+<button class="px-space-md py-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-semibold transition-colors" onclick="document.getElementById('ad-creation-modal').classList.add('hidden')" type="button">
+          Cancel
+        </button>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-colors" type="button">
+            Save as Draft
+          </button>
+<button class="px-space-lg py-2.5 rounded-xl bg-secondary-container hover:bg-secondary text-on-secondary font-label-lg text-label-lg font-bold shadow-md hover:shadow-lg transition-all flex items-center gap-2" onclick="document.getElementById('ad-creation-modal').classList.add('hidden')" type="button">
+<span>Launch Campaign &amp; Authorize Spend ($2,400)</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

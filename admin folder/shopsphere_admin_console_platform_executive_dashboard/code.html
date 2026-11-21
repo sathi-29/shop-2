@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-surface-variant": "#464555",
+        "on-primary-fixed-variant": "#3323cc",
+        "secondary-fixed-dim": "#ffb690",
+        "tertiary-container": "#00659a",
+        "tertiary-fixed-dim": "#93ccff",
+        "on-error": "#ffffff",
+        "outline": "#777587",
+        "surface-bright": "#faf8ff",
+        "on-primary": "#ffffff",
+        "primary-container": "#4f46e5",
+        "surface": "#faf8ff",
+        "surface-container-low": "#f2f3ff",
+        "inverse-surface": "#283044",
+        "inverse-on-surface": "#eef0ff",
+        "on-tertiary-fixed": "#001d31",
+        "surface-container-high": "#e2e7ff",
+        "secondary": "#9d4300",
+        "on-secondary-fixed-variant": "#783200",
+        "surface-dim": "#d2d9f4",
+        "background": "#faf8ff",
+        "inverse-primary": "#c3c0ff",
+        "on-primary-container": "#dad7ff",
+        "surface-container": "#eaedff",
+        "on-tertiary-container": "#bedfff",
+        "on-background": "#131b2e",
+        "on-error-container": "#93000a",
+        "tertiary-fixed": "#cce5ff",
+        "on-secondary-container": "#5c2400",
+        "surface-tint": "#4d44e3",
+        "on-tertiary-fixed-variant": "#004b73",
+        "error-container": "#ffdad6",
+        "primary-fixed": "#e2dfff",
+        "secondary-container": "#fd761a",
+        "secondary-fixed": "#ffdbca",
+        "error": "#ba1a1a",
+        "surface-container-lowest": "#ffffff",
+        "primary-fixed-dim": "#c3c0ff",
+        "surface-variant": "#dae2fd",
+        "on-secondary-fixed": "#341100",
+        "tertiary": "#004c76",
+        "on-tertiary": "#ffffff",
+        "surface-container-highest": "#dae2fd",
+        "outline-variant": "#c7c4d8",
+        "primary": "#3525cd",
+        "on-surface": "#131b2e",
+        "on-primary-fixed": "#0f0069",
+        "on-secondary": "#ffffff"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "margin": "1rem",
+        "space-xs": "0.25rem",
+        "gutter-md": "1.25rem",
+        "space-xl": "1.5rem",
+        "gutter": "1rem",
+        "space-sm": "0.5rem",
+        "margin-md": "1.5rem",
+        "space-lg": "1.25rem",
+        "gutter-lg": "1.5rem",
+        "space-md": "1rem",
+        "margin-lg": "2rem"
+      },
+      "fontFamily": {
+        "body-md": ["Inter"],
+        "display-lg-mobile": ["Inter"],
+        "display-lg": ["Inter"],
+        "headline-md": ["Inter"],
+        "label-md": ["Inter"],
+        "title-md": ["Inter"],
+        "body-sm": ["Inter"],
+        "label-lg": ["Inter"],
+        "label-sm": ["Inter"],
+        "headline-lg-mobile": ["Inter"],
+        "headline-lg": ["Inter"],
+        "body-lg": ["Inter"]
+      },
+      "fontSize": {
+        "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400"}],
+        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700"}],
+        "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600"}],
+        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+        "title-md": ["18px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600"}],
+        "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600"}],
+        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}]
+      }
+    }
+  }
+};</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-xl flex items-center gap-space-sm bg-surface-container-lowest"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface leading-none tracking-tight">ShopSphere</span><span class="font-label-sm text-label-sm text-outline tracking-wider uppercase mt-1">Global Admin</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-md py-space-xs rounded-lg bg-surface-container-low flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary-container"></span>US-East-1 Prod</span><span class="font-label-sm text-label-sm text-primary uppercase font-bold">Zero-Trust</span></div></div><nav class="flex flex-col gap-space-xs px-space-md mt-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-xl shadow-sm"><div class="px-space-md pt-space-sm pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Core Platform</div><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-bold rounded-xl shadow-sm" data-path="overview" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-label-lg text-label-lg">Overview</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="sellers" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">store</span><span class="font-label-lg text-label-lg">Sellers</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="products" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-lg text-label-lg">Products</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="orders" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">shopping_cart</span><span class="font-label-lg text-label-lg">Orders</span></div><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary font-label-sm text-label-sm">24</span></a><div class="px-space-md pt-space-md pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Intelligence & Operations</div><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="returns-and-damages" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">warning</span><span class="font-label-lg text-label-lg">Returns & Damages</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reels-and-reviews" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">movie</span><span class="font-label-lg text-label-lg">Reels & Reviews</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="ads-and-promotions" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">campaign</span><span class="font-label-lg text-label-lg">Ads & Promotions</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="payouts" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">account_balance</span><span class="font-label-lg text-label-lg">Payouts</span></div></a><div class="px-space-md pt-space-md pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Governance & Security</div><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="staff-and-roles" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-label-lg text-label-lg">Staff & Roles</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="audit-log" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-label-lg text-label-lg">Audit Log</span></div></a></nav></div><div class="p-space-md bg-surface-container-low mx-space-md mb-space-md rounded-xl flex flex-col gap-space-sm"><div class="flex items-center justify-between font-label-sm text-label-sm text-outline"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>SOC2 / ISO 27001</span><span class="font-bold text-on-surface-variant">ACTIVE</span></div><div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Session Expiry</span><span class="font-label-sm text-label-sm text-error font-bold">14:28</span></div><a class="w-full flex items-center justify-center gap-space-xs py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" data-path="sign-out" href="#"><span class="material-symbols-outlined text-[16px]">logout</span><span>Quick Sign Out</span></a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40"><div class="h-16 w-full px-gutter-lg flex items-center justify-between gap-space-md"><div class="flex-1 max-w-xl"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-20 bg-surface-container-low text-on-surface placeholder:text-outline rounded-xl font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" placeholder="Search sellers, orders, SKU, incident ID, audit logs..." type="text"/><span class="absolute right-3 px-space-xs py-0.5 rounded bg-surface-container-highest text-outline font-label-sm text-label-sm font-semibold tracking-wide">⌘K</span></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-secondary-container"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Systems Normal</span><span class="text-outline font-label-sm text-label-sm">•</span><span class="font-label-sm text-label-sm text-tertiary font-semibold">99.99% Uptime</span></div><div class="relative"><button class="w-9 h-9 rounded-xl bg-surface-container-low hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-secondary-container text-on-secondary font-label-sm text-label-sm flex items-center justify-center font-bold">5</span></div><button class="w-9 h-9 rounded-xl bg-surface-container-low hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-sm"><div class="text-right hidden sm:flex flex-col"><span class="font-label-lg text-label-lg text-on-surface leading-tight font-semibold">Alex Vance</span><span class="font-label-sm text-label-sm text-outline leading-tight">Super Admin / SecOps</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Sub-header / Command Bar Area -->
+<section class="px-gutter-lg py-space-lg flex flex-col gap-space-lg">
+<!-- Breadcrumb & Status Pill -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-outline">
+<span>Admin Console</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Governance & Monitoring</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-semibold">Overview</span>
+</div>
+<div class="flex items-center gap-space-md">
+<!-- Live stream indicator -->
+<div class="flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm shadow-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-medium">Real-time Stream • 1.2s lag</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified_user</span>
+<span>Zero-Trust Enforced</span>
+</div>
+</div>
+</div>
+<!-- Main Title & Action Bar -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-lg pb-space-xs">
+<div class="max-w-3xl">
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">Platform Executive Overview</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Real-time marketplace telemetry, transaction volume, seller compliance, and risk containment across global commerce nodes.
+        </p>
+</div>
+<!-- Action Group -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Date Selector Preset Dropdown -->
+<div class="relative bg-surface-container-lowest rounded-xl shadow-sm px-space-md py-2 flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-outline text-[18px]">calendar_today</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Timeline</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Oct 1 - Oct 31, 2024</span>
+</div>
+<div class="hidden md:flex items-center gap-1 ml-space-sm bg-surface-container-low px-1.5 py-1 rounded-lg">
+<button class="px-2 py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button">7D</button>
+<button class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-primary text-on-primary font-semibold" type="button">30D</button>
+<button class="px-2 py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button">QTD</button>
+<button class="px-2 py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button">YTD</button>
+</div>
+</div>
+<!-- Currency Selector -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm px-space-md py-2 flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-outline text-[18px]">payments</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer">
+<option>USD ($)</option>
+<option>EUR (€)</option>
+<option>GBP (£)</option>
+<option>JPY (¥)</option>
+</select>
+</div>
+<!-- Export Secondary Action -->
+<button class="h-12 px-space-md bg-surface-container-lowest hover:bg-surface-container text-on-surface rounded-xl shadow-sm flex items-center gap-space-xs font-label-lg text-label-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">summarize</span>
+<span class="hidden sm:inline">Executive Report</span>
+</button>
+<!-- Platform Incident Mode Primary Danger/Alert -->
+<button class="h-12 px-space-md bg-secondary-container hover:bg-secondary text-on-secondary rounded-xl shadow-sm flex items-center gap-space-xs font-label-lg text-label-lg transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">security_update_warning</span>
+<span class="font-bold">Incident Mode</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 1. KPI Cards Row (5 Primary Indicators) -->
+<section class="px-gutter-lg pb-space-lg">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Card 1: Total Sales (GMV) -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Total GMV</span>
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">$42,890,620</div>
+</div>
+<div class="w-9 h-9 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">currency_exchange</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1 text-tertiary font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+18.4%</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Proj: $48.2M</span>
+</div>
+<!-- Sparkline -->
+<div class="w-full h-8 mt-2">
+<svg class="w-full h-full text-primary" fill="none" preserveaspectratio="none" viewbox="0 0 120 28">
+<path d="M0 24 Q 20 20, 35 15 T 70 12 T 95 6 T 120 2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.2"></path>
+<path d="M0 24 Q 20 20, 35 15 T 70 12 T 95 6 T 120 2 L 120 28 L 0 28 Z" fill="currentColor" fill-opacity="0.08"></path>
+</svg>
+</div>
+</div>
+<!-- Card 2: Active Sellers -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Active Sellers</span>
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">14,820</div>
+</div>
+<div class="w-9 h-9 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1 text-tertiary font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>+420 mo</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">98.2% healthy</span>
+</div>
+<!-- Mini Progress representation -->
+<div class="w-full bg-surface-container-low rounded-full h-1.5 mt-3">
+<div class="bg-tertiary-container h-1.5 rounded-full" style="width: 98.2%"></div>
+</div>
+</div>
+<!-- Card 3: Total Orders -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Fulfilled Orders</span>
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">582,410</div>
+</div>
+<div class="w-9 h-9 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1 text-tertiary font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]">speed</span>
+<span>+12.7% vel</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Avg 4.2h SLA</span>
+</div>
+<div class="w-full h-8 mt-2">
+<svg class="w-full h-full text-tertiary" fill="none" preserveaspectratio="none" viewbox="0 0 120 28">
+<path d="M0 20 Q 25 22, 45 14 T 80 18 T 105 8 T 120 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.2"></path>
+<path d="M0 20 Q 25 22, 45 14 T 80 18 T 105 8 T 120 4 L 120 28 L 0 28 Z" fill="currentColor" fill-opacity="0.08"></path>
+</svg>
+</div>
+</div>
+<!-- Card 4: Return & RMA Rate -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Marketplace Return</span>
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">2.14%</div>
+</div>
+<div class="w-9 h-9 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">published_with_changes</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1 text-tertiary font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]">south_east</span>
+<span>-0.32%</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-tertiary font-bold">Target <2.5%</span>
+</div>
+<div class="w-full bg-surface-container-low rounded-full h-1.5 mt-3">
+<div class="bg-tertiary h-1.5 rounded-full" style="width: 68%"></div>
+</div>
+</div>
+<!-- Card 5: Pending Approvals Queue -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Pending Review</span>
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">84 Sellers</div>
+</div>
+<div class="w-9 h-9 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">assignment_late</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">312 Catalog SKUs</span>
+<a class="font-label-sm text-label-sm text-secondary font-bold hover:underline flex items-center gap-0.5" href="#">
+            Review Queue →
+          </a>
+</div>
+<div class="flex items-center gap-1.5 mt-3">
+<span class="h-2 w-2 rounded-full bg-secondary-container"></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">High Priority Backlog</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Sales Analytics & Revenue Velocity Section -->
+<section class="px-gutter-lg pb-space-lg">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-lg">
+<!-- Section Tabs & Overview -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-sm border-b border-surface-container-low">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-title-md text-title-md text-on-surface">Revenue Velocity & Channel Dynamics</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm font-semibold">Oct 2024</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline mt-0.5">Comparative analytics across platform acquisition channels and checkout interfaces</span>
+</div>
+<!-- Metric Switchers -->
+<div class="flex flex-wrap items-center gap-1.5 bg-surface-container-low p-1 rounded-xl">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md font-bold shadow-sm" type="button">
+            Gross Merchandise Value
+          </button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">
+            Take Rate Fees (11.8%)
+          </button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">
+            Reels & Social Commerce
+          </button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">
+            AI Voice Checkout
+          </button>
+</div>
+</div>
+<!-- Channel Breakdown Chips -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Direct Web</div>
+<div class="font-title-md text-title-md text-on-surface font-semibold">$23,160,934</div>
+</div>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">54%</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Mobile App</div>
+<div class="font-title-md text-title-md text-on-surface font-semibold">$11,151,561</div>
+</div>
+</div>
+<span class="font-label-md text-label-md text-tertiary font-bold">26%</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Shoppable Reels</div>
+<div class="font-title-md text-title-md text-on-surface font-semibold">$6,004,686</div>
+</div>
+</div>
+<span class="font-label-md text-label-md text-secondary font-bold">14%</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-outline"></span>
+<div>
+<div class="font-label-sm text-label-sm text-outline">AI Voice Orders</div>
+<div class="font-title-md text-title-md text-on-surface font-semibold">$2,573,437</div>
+</div>
+</div>
+<span class="font-label-md text-label-md text-outline font-bold">6%</span>
+</div>
+</div>
+<!-- Main Interactive Multi-Series Area Graph (SVG) -->
+<div class="relative w-full h-72 sm:h-80 bg-surface-container-lowest flex flex-col justify-end">
+<!-- Legend & Peak Callouts Overlay -->
+<div class="absolute top-0 left-0 right-0 flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5 text-on-surface font-semibold">
+<span class="w-3 h-1.5 rounded-full bg-primary inline-block"></span>
+              Current 30 Days ($42.9M)
+            </span>
+<span class="flex items-center gap-1.5 text-outline">
+<span class="w-3 h-1.5 rounded-full bg-surface-variant inline-block"></span>
+              Prior Period ($36.2M)
+            </span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 bg-secondary-fixed rounded-lg text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Peak Day: Oct 18 Flash Commerce ($2.84M)</span>
+</div>
+</div>
+<!-- Inline Area Chart Graphic -->
+<svg class="w-full h-56 pt-6" fill="none" preserveaspectratio="none" viewbox="0 0 1000 240">
+<!-- Prior Period Dotted Underline -->
+<path d="M0,190 C60,185 120,200 180,180 C240,160 300,175 360,150 C420,125 480,160 540,140 C600,120 660,135 720,110 C780,85 840,105 900,90 C950,80 1000,95 1000,95" fill="none" stroke="#c7c4d8" stroke-dasharray="4 4" stroke-width="2"></path>
+<!-- Current Period Gradient Area -->
+<defs>
+<lineargradient id="gmvAreaGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4f46e5" stop-opacity="0.28"></stop>
+<stop offset="100%" stop-color="#4f46e5" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,170 C70,160 140,180 210,130 C280,80 340,145 420,110 C480,80 520,35 600,25 C660,20 720,80 800,60 C870,40 930,70 1000,35 L1000,240 L0,240 Z" fill="url(#gmvAreaGrad)"></path>
+<!-- Current Period Line -->
+<path d="M0,170 C70,160 140,180 210,130 C280,80 340,145 420,110 C480,80 520,35 600,25 C660,20 720,80 800,60 C870,40 930,70 1000,35" fill="none" stroke="#3525cd" stroke-linecap="round" stroke-width="3"></path>
+<!-- Marker Dot on Peak -->
+<circle cx="600" cy="25" fill="#fd761a" r="5" stroke="#ffffff" stroke-width="2"></circle>
+</svg>
+<!-- X-Axis Labels -->
+<div class="flex justify-between font-label-sm text-label-sm text-outline pt-2 border-t border-surface-container-high">
+<span>Oct 01</span>
+<span>Oct 06</span>
+<span>Oct 11</span>
+<span>Oct 16</span>
+<span class="text-primary font-bold">Oct 21 (Reel Spike)</span>
+<span>Oct 26</span>
+<span>Oct 31</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Dual Grid: Seller Risk Governance + Regional Geographic Sales -->
+<section class="px-gutter-lg pb-space-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Panel A: Seller Risk & Fraud Monitoring (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between">
+<div>
+<!-- Header -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-md border-b border-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">policy</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Seller Risk & Compliance Containment</h3>
+<p class="font-body-sm text-body-sm text-outline">Real-time heuristics, high return velocities & IP anomalies</p>
+</div>
+</div>
+<span class="px- space-md py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold">
+              3 Urgent Flags
+            </span>
+</div>
+<!-- Flagged Seller List -->
+<div class="flex flex-col divide-y divide-surface-container-low mt-space-sm">
+<!-- Flagged 1 -->
+<div class="py-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm hover:bg-surface-container-low/50 px-2 rounded-lg transition-colors">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Apex Electro Direct</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant">ID: #99482</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                    High return velocity (14.2% RMA) & counterfeit claim reported on SKU #89421.
+                  </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 self-end sm:self-center">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+                  Audit Store
+                </button>
+<button class="px-3 py-1.5 rounded-lg bg-secondary-container hover:bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold transition-colors" type="button">
+                  Freeze Payouts
+                </button>
+</div>
+</div>
+<!-- Flagged 2 -->
+<div class="py-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm hover:bg-surface-container-low/50 px-2 rounded-lg transition-colors">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">crisis_alert</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">K-Beauty Velvet Hub</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant">ID: #43105</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                    Suspicious transaction spike (+640% in 3h) originating from untrusted proxy IPs.
+                  </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 self-end sm:self-center">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+                  Investigate
+                </button>
+<button class="px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold transition-colors" type="button">
+                  Enforce 2FA & Hold
+                </button>
+</div>
+</div>
+<!-- Flagged 3 -->
+<div class="py-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm hover:bg-surface-container-low/50 px-2 rounded-lg transition-colors">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">SwiftDrop Global</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant">ID: #77812</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                    Late dispatch SLA breach (>48h unfulfilled backlog: 218 pending customer orders).
+                  </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 self-end sm:self-center">
+<button class="px-3 py-1.5 rounded-lg bg-secondary-fixed text-secondary hover:bg-secondary-fixed-dim font-label-sm text-label-sm font-semibold transition-colors" type="button">
+                  Issue Warning
+                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Risk Metric Summary Footer -->
+<div class="mt-space-md pt-space-sm bg-surface-container-low p-space-md rounded-xl flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">shield</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Automated AI Shield</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Platform Fraud Index: 0.04% (Minimal Risk)</span>
+</div>
+</div>
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:underline" href="#">
+            View All 42 Monitored Accounts →
+          </a>
+</div>
+</div>
+<!-- Panel B: Regional Geographic Sales (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-md border-b border-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">public</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Regional Breakdown</h3>
+<p class="font-body-sm text-body-sm text-outline">Cross-border logistics & currency settlement</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Global Nodes</span>
+</div>
+<!-- Regional Rows -->
+<div class="flex flex-col gap-space-md mt-space-md">
+<!-- Region 1 -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="font-semibold text-on-surface">North America (US & CA)</span>
+<div class="flex items-center gap-space-sm">
+<span class="text-on-surface font-bold">$24.8M</span>
+<span class="text-tertiary font-bold text-label-sm">+16.2%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-2 rounded-full" style="width: 58%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline self-end">58% share</span>
+</div>
+<!-- Region 2 -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="font-semibold text-on-surface">Europe (UK, DE, FR)</span>
+<div class="flex items-center gap-space-sm">
+<span class="text-on-surface font-bold">$10.2M</span>
+<span class="text-tertiary font-bold text-label-sm">+21.4%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-2 rounded-full" style="width: 24%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline self-end">24% share</span>
+</div>
+<!-- Region 3 -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-on-surface">Asia-Pacific (JP, KR, SG, IN)</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">Fastest</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="text-on-surface font-bold">$5.6M</span>
+<span class="text-tertiary font-bold text-label-sm">+34.8%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-2 rounded-full" style="width: 13%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline self-end">13% share</span>
+</div>
+<!-- Region 4 -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="font-semibold text-on-surface">LATAM & Rest of World</span>
+<div class="flex items-center gap-space-sm">
+<span class="text-on-surface font-bold">$2.2M</span>
+<span class="text-tertiary font-bold text-label-sm">+11.0%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-2 rounded-full overflow-hidden">
+<div class="bg-outline h-2 rounded-full" style="width: 5%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline self-end">5% share</span>
+</div>
+</div>
+</div>
+<!-- Global Map Preview CTA -->
+<div class="mt-space-lg pt-space-sm border-t border-surface-container-low">
+<a class="w-full py-2.5 px-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-space-xs transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">map</span>
+<span>View Interactive Global Geo Heatmap →</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Tables Section - Top-Performing Sellers & Top Products Showcase -->
+<section class="px-gutter-lg pb-space-lg">
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-space-lg">
+<!-- Table A: Top-Performing Sellers -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-md">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Top Marketplace Sellers</h3>
+<p class="font-body-sm text-body-sm text-outline">Ranked by 30-day fulfilled merchandise volume</p>
+</div>
+<a class="font-label-sm text-label-sm text-primary font-bold hover:underline" href="#">
+              View All 14.8k →
+            </a>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-surface-container-high font-label-sm text-label-sm text-outline uppercase tracking-wider">
+<th class="py-2.5 px-2">Store</th>
+<th class="py-2.5 px-2">Category</th>
+<th class="py-2.5 px-2 text-right">GMV</th>
+<th class="py-2.5 px-2 text-right">Orders</th>
+<th class="py-2.5 px-2 text-center">RMA</th>
+<th class="py-2.5 px-2 text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-sm text-body-sm">
+<!-- Seller 1 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3 px-2">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm flex items-center justify-center font-bold">1</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold flex items-center gap-1">
+                          Aura Sound Tech
+                          <span class="material-symbols-outlined text-primary text-[14px]">verified</span>
+</div>
+<div class="text-outline font-label-sm text-label-sm">Rating 4.9 ★</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-2 text-on-surface-variant">Electronics</td>
+<td class="py-3 px-2 text-right font-semibold text-on-surface">$3,840,200</td>
+<td class="py-3 px-2 text-right text-on-surface-variant">18,920</td>
+<td class="py-3 px-2 text-center text-tertiary font-medium">1.8%</td>
+<td class="py-3 px-2 text-right">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm font-semibold">Elite</span>
+</td>
+</tr>
+<!-- Seller 2 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3 px-2">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center font-bold">2</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold flex items-center gap-1">
+                          Lumina Home
+                          <span class="material-symbols-outlined text-tertiary text-[14px]">verified</span>
+</div>
+<div class="text-outline font-label-sm text-label-sm">Rating 4.8 ★</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-2 text-on-surface-variant">Home Decor</td>
+<td class="py-3 px-2 text-right font-semibold text-on-surface">$2,410,800</td>
+<td class="py-3 px-2 text-right text-on-surface-variant">24,150</td>
+<td class="py-3 px-2 text-center text-tertiary font-medium">1.9%</td>
+<td class="py-3 px-2 text-right">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">Partner</span>
+</td>
+</tr>
+<!-- Seller 3 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3 px-2">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center font-bold">3</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold flex items-center gap-1">
+                          Chrono Precision
+                          <span class="material-symbols-outlined text-tertiary text-[14px]">verified</span>
+</div>
+<div class="text-outline font-label-sm text-label-sm">Rating 4.7 ★</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-2 text-on-surface-variant">Fashion Watches</td>
+<td class="py-3 px-2 text-right font-semibold text-on-surface">$1,980,400</td>
+<td class="py-3 px-2 text-right text-on-surface-variant">8,120</td>
+<td class="py-3 px-2 text-center text-tertiary font-medium">2.2%</td>
+<td class="py-3 px-2 text-right">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">Partner</span>
+</td>
+</tr>
+<!-- Seller 4 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3 px-2">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center font-bold">4</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold flex items-center gap-1">
+                          Zenith Activewear
+                          <span class="material-symbols-outlined text-tertiary text-[14px]">verified</span>
+</div>
+<div class="text-outline font-label-sm text-label-sm">Rating 4.8 ★</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-2 text-on-surface-variant">Sports Apparel</td>
+<td class="py-3 px-2 text-right font-semibold text-on-surface">$1,650,000</td>
+<td class="py-3 px-2 text-right text-on-surface-variant">19,400</td>
+<td class="py-3 px-2 text-center text-tertiary font-medium">2.0%</td>
+<td class="py-3 px-2 text-right">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">Partner</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-outline border-t border-surface-container-low">
+<span>Top 4 sellers account for 23.0% of network GMV</span>
+<button class="text-primary hover:underline font-semibold" type="button">Download Seller Roster</button>
+</div>
+</div>
+<!-- Table B: Top-Selling Products Across Marketplace -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-md">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Fastest Moving Catalog SKUs</h3>
+<p class="font-body-sm text-body-sm text-outline">Omnichannel volume across web, mobile and social reels</p>
+</div>
+<a class="font-label-sm text-label-sm text-primary font-bold hover:underline" href="#">
+              Inventory Ledger →
+            </a>
+</div>
+<div class="flex flex-col divide-y divide-surface-container-low">
+<!-- Product 1 -->
+<div class="py-2.5 flex items-center justify-between gap-space-sm hover:bg-surface-container-low/40 px-2 rounded-lg transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container shrink-0" data-alt="High-end matte black over-ear noise-cancelling headphones resting on a minimalist concrete pedestal with soft indigo studio lighting and sharp product edge details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqtL-RHrZ0ixYdFPgkobnnQAhNupgw_JfKXCQRE82093IfTy1ccHk-qd2jPQfnaWtV32pHigg6jIZBZNlvTx0FewEG8u24vuAR7rOVPa5oKLpO-BGCTmR6NdmRTFRKyomyy_iNJ4uvq7-VSxc6NkvTGf3OAsTnhtx0rGgHC2s7umPKWcIWuA35pElSw-UedorbAUD8VflEg84hK-EMNY3X1tasRjrE1h97iUNODV76"/>
+<div class="min-w-0">
+<div class="font-label-md text-label-md text-on-surface font-bold truncate">Aura Studio Pro ANC Headphones</div>
+<div class="font-label-sm text-label-sm text-outline truncate">Aura Sound Technologies • Electronics</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-label-md text-label-md text-on-surface font-bold">$2,839,858</div>
+<div class="font-label-sm text-label-sm text-outline">14,200 units • <span class="text-tertiary font-semibold">In Stock</span></div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="py-2.5 flex items-center justify-between gap-space-sm hover:bg-surface-container-low/40 px-2 rounded-lg transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container shrink-0" data-alt="Luxury ceramic smart fitness smartwatch with glowing AMOLED sapphire crystal screen display positioned against a subtle deep navy reflective surface with soft dramatic rim lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJIJVxmx43H8BSQtvW_WNevi7SyXFsXHLnI28rnnOErGQ20ht84OVukkurjjcBTO2f9sCwzPK3H1yE3tkX52J3yHqPlw3AdF0wYIBZicyM-HzG3UOeYKACJdlRcFCj9bqLc93ko9u5eidt5b3Ema0Qjm6RPO7qixEZmvSCiiDf8pxwqllet6UoVZ8hjcFRQ_HNe-ZPex6GXvv18AooCm45WVd_ChEEBxpqk33u9bYB"/>
+<div class="min-w-0">
+<div class="font-label-md text-label-md text-on-surface font-bold truncate">Ceramic Ultra Smartwatch Gen 2</div>
+<div class="font-label-sm text-label-sm text-outline truncate">Aura Sound Technologies • Wearables</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-label-md text-label-md text-on-surface font-bold">$2,362,500</div>
+<div class="font-label-sm text-label-sm text-outline">9,450 units • <span class="text-tertiary font-semibold">In Stock</span></div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="py-2.5 flex items-center justify-between gap-space-sm hover:bg-surface-container-low/40 px-2 rounded-lg transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container shrink-0" data-alt="Compact custom mechanical keyboard with custom per-key violet backlighting and anodized aluminum chassis on a sleek minimal workspace table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCH9gJTRzI26zSKGEC6xi6L9dTrD5r124i1z9F0HnzjYog8qFCqalJTQDnK29rM2Or2a7217xeW5I1CJWi0YLQuimmLlkNWa0SN-oyyKinejGRbujhUNWFo985uWC5yMwoQP1HU-a-HSTwMKXKHXG2m1WIxqWn7cp1NGxNCLBGeANB_LSfl_SeTC06SRNOXrvsvSlM-57TvVMagWn3OQoVQ02BEZpksp9ZVJkexZn4"/>
+<div class="min-w-0">
+<div class="font-label-md text-label-md text-on-surface font-bold truncate">Aura Tactile Keyboard RGB</div>
+<div class="font-label-sm text-label-sm text-outline truncate">Aura Sound Technologies • Computing</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-label-md text-label-md text-on-surface font-bold">$1,011,395</div>
+<div class="font-label-sm text-label-sm text-secondary font-semibold">7,810 units • Low Stock (12 left)</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="py-2.5 flex items-center justify-between gap-space-sm hover:bg-surface-container-low/40 px-2 rounded-lg transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container shrink-0" data-alt="Sleek cooling memory foam ergonomic wrist cushion with textured dark grey fabric finish on clean modern office desk environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdqzLe0CFwB4vWMU2wSIFmxnOL1VU8jeOKh6rpwylTfrSzVbUVxCJhf6jHNML_BFFRri8IHn6Bd_i0ATEupFWfKpY5a3yOV6zFN-7f9jmAhuCR8aXQfMIGF1lZ-jXEezkQZ4fNxWAN9Zj9KfCRZrHqy7h2FnA9G4RfmQFf3PMOzbFtkGZcCjq40LfwSvtqc4WcbGfLRBFbVGgFO-n9F4Rmo6tNVOklgBiQHUsLm0Yg"/>
+<div class="min-w-0">
+<div class="font-label-md text-label-md text-on-surface font-bold truncate">Ergonomic Memory Foam Wrist Rest</div>
+<div class="font-label-sm text-label-sm text-outline truncate">Aura Sound Technologies • Accessories</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-label-md text-label-md text-on-surface font-bold">$855,600</div>
+<div class="font-label-sm text-label-sm text-outline">12,400 units • <span class="text-tertiary font-semibold">Optimal</span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-outline border-t border-surface-container-low">
+<span>Replenishment webhook SLA: 99.8% compliance</span>
+<button class="text-primary hover:underline font-semibold" type="button">SKU Stock Allocation</button>
+</div>
+</div>
+</div>
+</section>
+</div></main></div></body></html>

@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-surface-variant": "#464555",
+        "on-primary-fixed-variant": "#3323cc",
+        "secondary-fixed-dim": "#ffb690",
+        "tertiary-container": "#00659a",
+        "tertiary-fixed-dim": "#93ccff",
+        "on-error": "#ffffff",
+        "outline": "#777587",
+        "surface-bright": "#faf8ff",
+        "on-primary": "#ffffff",
+        "primary-container": "#4f46e5",
+        "surface": "#faf8ff",
+        "surface-container-low": "#f2f3ff",
+        "inverse-surface": "#283044",
+        "inverse-on-surface": "#eef0ff",
+        "on-tertiary-fixed": "#001d31",
+        "surface-container-high": "#e2e7ff",
+        "secondary": "#9d4300",
+        "on-secondary-fixed-variant": "#783200",
+        "surface-dim": "#d2d9f4",
+        "background": "#faf8ff",
+        "inverse-primary": "#c3c0ff",
+        "on-primary-container": "#dad7ff",
+        "surface-container": "#eaedff",
+        "on-tertiary-container": "#bedfff",
+        "on-background": "#131b2e",
+        "on-error-container": "#93000a",
+        "tertiary-fixed": "#cce5ff",
+        "on-secondary-container": "#5c2400",
+        "surface-tint": "#4d44e3",
+        "on-tertiary-fixed-variant": "#004b73",
+        "error-container": "#ffdad6",
+        "primary-fixed": "#e2dfff",
+        "secondary-container": "#fd761a",
+        "secondary-fixed": "#ffdbca",
+        "error": "#ba1a1a",
+        "surface-container-lowest": "#ffffff",
+        "primary-fixed-dim": "#c3c0ff",
+        "surface-variant": "#dae2fd",
+        "on-secondary-fixed": "#341100",
+        "tertiary": "#004c76",
+        "on-tertiary": "#ffffff",
+        "surface-container-highest": "#dae2fd",
+        "outline-variant": "#c7c4d8",
+        "primary": "#3525cd",
+        "on-surface": "#131b2e",
+        "on-primary-fixed": "#0f0069",
+        "on-secondary": "#ffffff"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "margin": "1rem",
+        "space-xs": "0.25rem",
+        "gutter-md": "1.25rem",
+        "space-xl": "1.5rem",
+        "gutter": "1rem",
+        "space-sm": "0.5rem",
+        "margin-md": "1.5rem",
+        "space-lg": "1.25rem",
+        "gutter-lg": "1.5rem",
+        "space-md": "1rem",
+        "margin-lg": "2rem"
+      },
+      "fontFamily": {
+        "body-md": ["Inter"],
+        "display-lg-mobile": ["Inter"],
+        "display-lg": ["Inter"],
+        "headline-md": ["Inter"],
+        "label-md": ["Inter"],
+        "title-md": ["Inter"],
+        "body-sm": ["Inter"],
+        "label-lg": ["Inter"],
+        "label-sm": ["Inter"],
+        "headline-lg-mobile": ["Inter"],
+        "headline-lg": ["Inter"],
+        "body-lg": ["Inter"]
+      },
+      "fontSize": {
+        "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400"}],
+        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700"}],
+        "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600"}],
+        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+        "title-md": ["18px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600"}],
+        "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600"}],
+        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}]
+      }
+    }
+  }
+};</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-xl flex items-center gap-space-sm bg-surface-container-lowest"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface leading-none tracking-tight">ShopSphere</span><span class="font-label-sm text-label-sm text-outline tracking-wider uppercase mt-1">Global Admin</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-md py-space-xs rounded-lg bg-surface-container-low flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary-container"></span>US-East-1 Prod</span><span class="font-label-sm text-label-sm text-primary uppercase font-bold">Zero-Trust</span></div></div><nav class="flex flex-col gap-space-xs px-space-md mt-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-xl shadow-sm"><div class="px-space-md pt-space-sm pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Core Platform</div><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="overview" href="#"><span class="font-label-lg text-label-lg">Overview</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="sellers" href="#"><span class="font-label-lg text-label-lg">Sellers</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="products" href="#"><span class="font-label-lg text-label-lg">Products</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="orders" href="#"><span class="font-label-lg text-label-lg">Orders</span><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary font-label-sm text-label-sm">24</span></a><div class="px-space-md pt-space-md pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Intelligence &amp; Operations</div><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="returns-and-damages" href="#"><span class="font-label-lg text-label-lg">Returns &amp; Damages</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reels-and-reviews" href="#"><span class="font-label-lg text-label-lg">Reels &amp; Reviews</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="ads-and-promotions" href="#"><span class="font-label-lg text-label-lg">Ads &amp; Promotions</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="payouts" href="#"><span class="font-label-lg text-label-lg">Payouts</span></a><div class="px-space-md pt-space-md pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Governance &amp; Security</div><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="staff-and-roles" href="#"><span class="font-label-lg text-label-lg">Staff &amp; Roles</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="audit-log" href="#"><span class="font-label-lg text-label-lg">Audit Log</span></a></nav></div><div class="p-space-md bg-surface-container-low mx-space-md mb-space-md rounded-xl flex flex-col gap-space-sm"><div class="flex items-center justify-between font-label-sm text-label-sm text-outline"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>SOC2 / ISO 27001</span><span class="font-bold text-on-surface-variant">ACTIVE</span></div><div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Session Expiry</span><span class="font-label-sm text-label-sm text-error font-bold">14:28</span></div><a class="w-full flex items-center justify-center gap-space-xs py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" data-path="sign-out" href="#"><span class="material-symbols-outlined text-[16px]">logout</span><span>Quick Sign Out</span></a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40"><div class="h-16 w-full px-gutter-lg flex items-center justify-between gap-space-md"><div class="flex-1 max-w-xl"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-20 bg-surface-container-low text-on-surface placeholder:text-outline rounded-xl font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" placeholder="Search sellers, orders, SKU, incident ID, audit logs..." type="text"/><span class="absolute right-3 px-space-xs py-0.5 rounded bg-surface-container-highest text-outline font-label-sm text-label-sm font-semibold tracking-wide">⌘K</span></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-secondary-container"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Systems Normal</span><span class="text-outline font-label-sm text-label-sm">•</span><span class="font-label-sm text-label-sm text-tertiary font-semibold">99.99% Uptime</span></div><div class="relative"><button class="w-9 h-9 rounded-xl bg-surface-container-low hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-secondary-container text-on-secondary font-label-sm text-label-sm flex items-center justify-center font-bold">5</span></div><button class="w-9 h-9 rounded-xl bg-surface-container-low hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-sm"><div class="text-right hidden sm:flex flex-col"><span class="font-label-lg text-label-lg text-on-surface leading-tight font-semibold">Alex Vance</span><span class="font-label-sm text-label-sm text-outline leading-tight">Super Admin / SecOps</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Style / Behavioral Tweaks -->
+<style>
+    .reel-scrub:hover::-webkit-slider-thumb {
+      transform: scale(1.2);
+    }
+    .custom-scroll::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+<!-- Content Container -->
+<div class="p-gutter-lg flex flex-col gap-space-lg max-w-[1720px] mx-auto w-full">
+<!-- Top KPI Summary Bento -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- KPI 1: Queue -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary/5 rounded-full blur-xl group-hover:scale-125 transition-transform duration-500"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+            Pending Moderation
+          </div>
+<span class="px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Live Queue</span>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight">184</span>
+<span class="font-label-md text-label-md text-on-surface-variant">items total</span>
+</div>
+<div class="mt-space-sm flex items-center gap-space-sm pt-space-xs">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface font-semibold bg-surface-container-low px-2 py-1 rounded-md">
+<span class="material-symbols-outlined text-[16px] text-primary">smart_display</span>
+            112 Reels
+          </div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface font-semibold bg-surface-container-low px-2 py-1 rounded-md">
+<span class="material-symbols-outlined text-[16px] text-tertiary">rate_review</span>
+            72 Reviews
+          </div>
+</div>
+</div>
+<!-- KPI 2: AI Accuracy -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-tertiary/5 rounded-full blur-xl group-hover:scale-125 transition-transform duration-500"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+            AI Flag Precision
+          </div>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary font-bold">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span> v4.2 NeuNet
+          </span>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight">94.6%</span>
+<span class="font-label-md text-label-md text-tertiary font-semibold flex items-center">
+<span class="material-symbols-outlined text-[16px]">arrow_drop_up</span>+1.4%
+          </span>
+</div>
+<div class="mt-space-sm flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>Zero-shot visual/audio filters</span>
+<span class="font-semibold text-on-surface">5,410 / day</span>
+</div>
+</div>
+<!-- KPI 3: Avg Review Time -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-secondary-container/10 rounded-full blur-xl group-hover:scale-125 transition-transform duration-500"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+            Avg Review Speed
+          </div>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">SLA: &lt; 5m</span>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight">1.8</span>
+<span class="font-headline-md text-headline-md text-outline">mins</span>
+</div>
+<div class="mt-space-sm flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden flex">
+<div class="bg-secondary-container h-full rounded-full" style="width: 36%;"></div>
+</div>
+<span class="font-bold text-on-surface text-[10px]">36% SLA</span>
+</div>
+</div>
+<!-- KPI 4: High Priority Breaches -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-error/10 rounded-full blur-xl group-hover:scale-125 transition-transform duration-500"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+            Critical Breaches
+          </div>
+<span class="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">gavel</span> P0/P1
+          </span>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg text-error tracking-tight">28</span>
+<span class="font-label-md text-label-md text-on-surface-variant">urgent priority</span>
+</div>
+<div class="mt-space-sm flex items-center gap-space-xs text-outline font-label-sm text-label-sm truncate">
+<span class="material-symbols-outlined text-[16px] text-error shrink-0">copyright</span>
+<span class="truncate">Copyright, medical claims, toxic intent</span>
+</div>
+</div>
+</div>
+<!-- Navigation Sub-tabs & Global Moderation Quick Actions -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<!-- Sub-tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 xl:pb-0 custom-scroll">
+<button class="flex items-center gap-2 px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg font-semibold shrink-0 shadow-sm transition-transform active:scale-95">
+<span>All Moderation Queue</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-lowest/20 font-label-sm text-label-sm">184</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 rounded-lg hover:bg-surface-container text-on-surface-variant font-label-lg text-label-lg font-medium shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[18px]">smart_display</span>
+<span>Shoppable Video Reels</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold">112</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 rounded-lg hover:bg-surface-container text-on-surface-variant font-label-lg text-label-lg font-medium shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[18px]">rate_review</span>
+<span>Customer Reviews</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold">72</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 rounded-lg hover:bg-surface-container text-on-surface-variant font-label-lg text-label-lg font-medium shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">priority_high</span>
+<span>Escalated &amp; Appeals</span>
+<span class="px-1.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">16</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 rounded-lg hover:bg-surface-container text-on-surface-variant font-label-lg text-label-lg font-medium shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Auto-Approved Audit Log</span>
+</button>
+</div>
+<!-- Batch Header CTAs -->
+<div class="flex items-center gap-space-xs shrink-0 self-end xl:self-auto">
+<button class="h-9 px-space-md rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary">done_all</span>
+          Approve Low Risk
+        </button>
+<button class="h-9 px-space-md rounded-lg bg-error-container hover:opacity-90 text-on-error-container font-label-sm text-label-sm font-semibold flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">block</span>
+          Bulk Reject
+        </button>
+<button class="h-9 px-space-md rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">download</span>
+          Export Telemetry
+        </button>
+</div>
+</div>
+<!-- Filter & Matrix Ribbon -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Severity Selector -->
+<div class="flex items-center bg-surface-container-low rounded-lg p-0.5">
+<button class="px-space-md py-1.5 rounded-md text-on-primary bg-primary font-label-sm text-label-sm font-semibold shadow-sm">All</button>
+<button class="px-space-md py-1.5 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>Critical Risk
+          </button>
+<button class="px-space-md py-1.5 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>Medium Policy
+          </button>
+<button class="px-space-md py-1.5 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>Low Conf
+          </button>
+</div>
+<div class="h-6 w-px bg-surface-container-high hidden md:block"></div>
+<!-- Filter Dropdown Simulation -->
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline">Reason:</span>
+<div class="relative inline-block">
+<select class="h-9 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm border-0 focus:ring-2 focus:ring-primary-container outline-none cursor-pointer appearance-none">
+<option>All Violations (5 Active Categories)</option>
+<option>Misleading Product Demonstration</option>
+<option selected="">Copyright Audio (High Queue)</option>
+<option>Inappropriate / Toxic Content</option>
+<option>Spam / Fake Reviews</option>
+<option>Competitor Promotion &amp; External Links</option>
+</select>
+<span class="material-symbols-outlined text-[18px] text-outline absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Merchant Type Filter -->
+<div class="flex items-center gap-space-xs">
+<div class="relative inline-block">
+<select class="h-9 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm border-0 focus:ring-2 focus:ring-primary-container outline-none cursor-pointer appearance-none">
+<option>All Merchants</option>
+<option>Verified Brands</option>
+<option>Probation Sellers</option>
+</select>
+<span class="material-symbols-outlined text-[18px] text-outline absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-outline">
+<span>Showing <strong>4</strong> of 184</span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Two-Column Moderation Workstation -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT / CENTER COLUMN: MODERATION QUEUE CARDS (60% ~ 7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- ITEM 1: Shoppable Reel (ACTIVE FOCUS) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg relative overflow-hidden transition-all duration-200">
+<!-- Active Highlight Strip -->
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex flex-col gap-space-md pl-2">
+<!-- Header meta -->
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">videocam</span> Shoppable Reel
+                </span>
+<span class="font-label-sm text-label-sm text-outline">•</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">storefront</span> Aura Sound Labs
+                </span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Score 98/100</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline shrink-0">12 mins ago</span>
+</div>
+<!-- Content preview split -->
+<div class="flex flex-col sm:flex-row gap-space-md items-start">
+<!-- Reel Thumbnail Preview -->
+<div class="relative w-full sm:w-44 h-56 rounded-xl overflow-hidden bg-surface-container-highest shrink-0 group cursor-pointer shadow-inner">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Close up cinematic shot of modern matte black wireless over-ear headphones sitting on a minimal wooden studio stand with moody indigo and amber neon studio lights in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB07qkzMU81Bb8ALtCk6LczqL_t-PO5X39cHkfF3le0QWD0JsroPNCIIsYPzR0VXedz1kKgcD2wnrwW0_cdKk8jlJgwYjJl-MRBx1juevkQBmtoykaPUBisG9bMdI3tf4ycnNoAK2KEeOMz88TyJib5pGdCvtXLEqBRdPs0DRzoUyVmD1LBVwfF174tbIN_aFsxg0Qj6cOgAeacvjh8-Q0F59-d3BZzPFCyWg_Vm_hP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex flex-col justify-between p-2.5">
+<div class="self-end px-1.5 py-0.5 rounded bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">schedule</span> 0:24
+                  </div>
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest/90 text-primary flex items-center justify-center mx-auto my-auto shadow-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</div>
+<div class="flex items-center justify-between text-inverse-on-surface font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">visibility</span> 14.2k</span>
+<span class="flex items-center gap-1 text-secondary-container font-bold"><span class="material-symbols-outlined text-[14px]">report</span> 3</span>
+</div>
+</div>
+</div>
+<!-- Reel Details & Policy Alert -->
+<div class="flex-1 flex flex-col justify-between self-stretch gap-space-sm min-w-0">
+<div class="flex flex-col gap-space-xs">
+<!-- Tagged Product Pill -->
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low max-w-fit">
+<span class="material-symbols-outlined text-[16px] text-primary">sell</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">Aura Studio Pro Wireless ANC Headphones</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$199.99</span>
+</div>
+<!-- Caption -->
+<p class="font-body-md text-body-md text-on-surface mt-1 line-clamp-2">
+                    "Unboxing the deepest bass headphones you'll ever own! Use code <span class="font-semibold text-secondary-container">BASS20</span> for 20% off today only 🔥 #audiophile #tech #unboxing"
+                  </p>
+</div>
+<!-- AI Heuristics Warning -->
+<div class="p-space-sm rounded-lg bg-secondary-fixed/50 flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">copyright</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-secondary-fixed">Audio Copyright Infringement Detected</span>
+<span class="font-body-sm text-body-sm text-on-secondary-fixed-variant leading-snug">
+                      Unlicensed track detected: "Midnight Pulse" (Match: Universal Music Catalog #8812, 84.2% match confidence).
+                    </span>
+</div>
+</div>
+<!-- Live Quick Action Row -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<button class="h-9 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span> Approve Reel
+                  </button>
+<button class="h-9 px-space-md rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-sm hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[16px]">volume_off</span> Mute Audio &amp; Approve
+                  </button>
+<button class="h-9 px-space-md rounded-lg bg-surface-container-low hover:bg-surface-container-high text-error font-label-sm text-label-sm font-medium flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">warning</span> Remove &amp; Warn
+                  </button>
+<button class="h-9 px-space-xs rounded-lg hover:bg-error/10 text-error flex items-center justify-center transition-colors" title="Strike Account">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ITEM 2: Shoppable Reel (Misleading Health Claims) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg relative overflow-hidden transition-all duration-200 hover:shadow-md">
+<div class="flex flex-col gap-space-md">
+<!-- Header meta -->
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">videocam</span> Shoppable Reel
+                </span>
+<span class="font-label-sm text-label-sm text-outline">•</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">storefront</span> Lumina Home Studios
+                </span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Score 89/100</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline shrink-0">44 mins ago</span>
+</div>
+<div class="flex flex-col sm:flex-row gap-space-md items-start">
+<div class="relative w-full sm:w-44 h-48 rounded-xl overflow-hidden bg-surface-container-highest shrink-0 group cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Scandinavian minimalist bedroom desk setup at dusk featuring an elegant illuminated lightbar glowing warm amber over a monitor setup with cozy neutral aesthetics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3fRpw6iT9u2VhZjaV9mvDSsHzVBNx3iUHX02gVxJwsk----FGDUqfjGnqdvuXA0TwLkw3uSrJ6PjRqBvHanMOIBf-A560fKkZvxM-fhkw7nZcTCvwC91JRmFKVmvKl4uxagENWJT20zUZNzzBGhR4xRwqzYGkmsAaJAKCb0caAFYRJMwxNuROO6FoKTTfYpmGIyyCOC6I0t9qQq-4owEpccdHih-X856RXKWFbgBo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex flex-col justify-between p-2.5">
+<div class="self-end px-1.5 py-0.5 rounded bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm">0:38</div>
+<div class="w-9 h-9 rounded-full bg-surface-container-lowest/90 text-primary flex items-center justify-center mx-auto my-auto shadow">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</div>
+<span class="text-inverse-on-surface font-label-sm text-label-sm flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">visibility</span> 8.9k</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between self-stretch gap-space-sm min-w-0">
+<div>
+<div class="flex items-center gap-2 p-1.5 rounded-lg bg-surface-container-low max-w-fit mb-2">
+<span class="material-symbols-outlined text-[16px] text-primary">sell</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">Lumina Nordic Ambient Lightbar</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$79.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface line-clamp-2">
+                    "Say goodbye to fatigue! This lightbar emits patented circadian frequencies that completely heal migraines and insomnia in 10 minutes ✨"
+                  </p>
+</div>
+<!-- Alert -->
+<div class="p-space-sm rounded-lg bg-error-container/60 flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">health_and_safety</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-error-container">Unsubstantiated Medical Claim Violation</span>
+<span class="font-body-sm text-body-sm text-on-error-container leading-snug">
+                      Claim "heals insomnia and migraines" violates FDA / FTC compliance section 4.1.
+                    </span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs pt-1">
+<button class="h-8 px-space-md rounded-lg bg-error text-on-error font-label-sm text-label-sm font-semibold flex items-center gap-1 hover:opacity-90">
+<span class="material-symbols-outlined text-[16px]">close</span> Reject with Notice
+                  </button>
+<button class="h-8 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">edit</span> Edit Tags / Strip Claims
+                  </button>
+<button class="h-8 px-space-sm rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface">Dismiss</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ITEM 3: Customer Review (Competitor Link / Spam) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg relative overflow-hidden transition-all duration-200 hover:shadow-md">
+<div class="flex flex-col gap-space-sm">
+<!-- Meta Header -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">rate_review</span> Product Review
+                </span>
+<span class="font-label-sm text-label-sm text-outline">•</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Reviewer: Marcus G. (Unverified Buyer)</span>
+<div class="flex items-center text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-surface-container-highest">star</span>
+<span class="material-symbols-outlined text-[16px] text-surface-container-highest">star</span>
+<span class="material-symbols-outlined text-[16px] text-surface-container-highest">star</span>
+<span class="material-symbols-outlined text-[16px] text-surface-container-highest">star</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">1h ago</span>
+</div>
+<!-- Target Product Context -->
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+<span>Target: <strong class="text-on-surface">Ceramic Ultra Smartwatch Gen 2</strong> (SKU: WCH-808)</span>
+</div>
+<!-- Review Text with Flagged Highlight -->
+<div class="p-space-sm rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md">
+              "Complete garbage do not buy this, go buy the competitor Watch from XYZ Brand at half price on their website! Direct link: <mark class="bg-error-container text-on-error-container px-1 py-0.5 rounded font-medium">xyz-gadgets.com/deal</mark>"
+            </div>
+<!-- Flag Tag -->
+<div class="p-2 rounded-lg bg-error-container/40 flex items-center gap-2 text-on-error-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px] text-error shrink-0">link_off</span>
+<span>Flag Reason: <strong>Competitor External URL &amp; Sybil Spam Pattern</strong> (Confidence: 99.4%)</span>
+</div>
+<!-- Action buttons -->
+<div class="flex flex-wrap items-center justify-between pt-2">
+<div class="flex items-center gap-space-xs">
+<button class="h-8 px-space-md rounded-lg bg-error text-on-error font-label-sm text-label-sm font-semibold flex items-center gap-1 hover:opacity-90">
+<span class="material-symbols-outlined text-[16px]">delete</span> Delete Review
+                </button>
+<button class="h-8 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-error font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">person_off</span> Ban Marcus G.
+                </button>
+</div>
+<button class="h-8 px-space-md rounded-lg text-outline hover:text-on-surface font-label-sm text-label-sm">
+                Ignore &amp; Keep Live
+              </button>
+</div>
+</div>
+</div>
+<!-- ITEM 4: Customer Review (Profanity in Attached Photo) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg relative overflow-hidden transition-all duration-200 hover:shadow-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">rate_review</span> Product Review
+                </span>
+<span class="font-label-sm text-label-sm text-outline">•</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Reviewer: Elena R. (Verified Purchase)</span>
+<div class="flex items-center text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">2h ago</span>
+</div>
+<!-- Target Product Context -->
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+<span>Target: <strong class="text-on-surface">Aura Tactile Custom Mechanical Keyboard</strong></span>
+</div>
+<div class="flex flex-col sm:flex-row gap-space-md items-start">
+<div class="relative w-28 h-28 rounded-lg overflow-hidden bg-surface-container-highest shrink-0 group">
+<img class="w-full h-full object-cover filter blur-[2px] hover:blur-none transition-all duration-300" data-alt="Overhead flatlay photography of an illuminated mechanical keyboard on an artisan desk mat with custom pastel keycaps and computer peripherals" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDAsd1ylL9OvF69PVy7qMyIrkDtCeQlq0H3UdOWD-nrNK-tGGp_WjNB2NJYRNSVYpGxnAENdpmmvMUJxymW31NSmn51k-4HK6u8arateCcKeknkzB390kJOble1vrsyHPhtHJZ3hI4pdXggDiBlOWkPnAezsSWurOdrKx-7fXn2CU9ETdwvImNfNOcDcTgEjwiSKZoIvcQHAWwML7GkfGIVQUq9a2s3RPAqLSpoGiX"/>
+<div class="absolute inset-0 bg-inverse-surface/40 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
+<span class="material-symbols-outlined text-inverse-on-surface text-[24px]">visibility_off</span>
+</div>
+<span class="absolute bottom-1 right-1 px-1 py-0.5 rounded bg-error text-on-error font-label-sm text-[10px] font-bold">NSFW Text</span>
+</div>
+<div class="flex-1 flex flex-col justify-between gap-space-xs">
+<p class="font-body-md text-body-md text-on-surface">
+                  "Absolutely stellar typing experience. Switches are super crisp, build quality is 10/10. Here is how it looks on my work desk!"
+                </p>
+<div class="p-2 rounded-lg bg-surface-container-high flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">policy</span>
+<span>OCR Detected offensive sticker text in photo background. Review text is 100% compliant.</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs pt-1">
+<button class="h-8 px-space-md rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold flex items-center gap-1 hover:opacity-90">
+<span class="material-symbols-outlined text-[16px]">crop</span> Approve Text &amp; Remove Photo
+                  </button>
+<button class="h-8 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+                    Approve All
+                  </button>
+<button class="h-8 px-space-md rounded-lg bg-surface-container-low text-error hover:bg-error-container font-label-sm text-label-sm">
+                    Reject Review
+                  </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: MODERATION INSPECTOR WORKBENCH (40% ~ 5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md sticky top-20">
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col gap-space-lg">
+<!-- Inspector Header -->
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-primary animate-pulse"></span>
+<h2 class="font-title-md text-title-md text-on-surface tracking-tight">Active Item Inspector</h2>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-mono font-semibold">
+              ID: #RL-2024-9981
+            </span>
+</div>
+<!-- Video Player & Audio Scrubber Sandbox -->
+<div class="flex flex-col gap-space-xs">
+<div class="relative w-full aspect-video rounded-xl overflow-hidden bg-inverse-surface shadow-inner group">
+<img class="w-full h-full object-cover" data-alt="High quality studio recording screenshot of an audio engineer wearing modern black headphones while holding a smartphone in a soundproof studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgsuQ8EAzLbfDUc_JWKFYC9lZ559-EkBZwrno4h6_7jg1-I4LStceKRzO7aljYObdQo1OQb8qWVhLoMYa4BkiVK8-7CPg_Dvp0pqZBRJZOdVM-7qlj7b6X5b_zyeXLp3dGtIMmthWTfrjwEDd9XUzSbyiWY3Q6iBUvYEdhs6fjbPqvXTFbeC0yeUREmmNIGWqbpb4oWo4qb51BI5RKlULEeiIjVVw91GVLqKRXbA0T"/>
+<!-- Scrub overlay UI -->
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-transparent to-inverse-surface/40 flex flex-col justify-between p-space-md">
+<div class="flex items-center justify-between text-inverse-on-surface font-label-sm text-label-sm">
+<span class="flex items-center gap-1 bg-inverse-surface/60 px-2 py-0.5 rounded-full backdrop-blur-sm">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span> Live Playhead
+                  </span>
+<span class="font-mono">00:14 / 00:24</span>
+</div>
+<!-- Center play/pause -->
+<button class="w-12 h-12 rounded-full bg-surface-container-lowest/90 text-primary flex items-center justify-center mx-auto shadow-xl hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">pause</span>
+</button>
+<!-- Audio Scrubber & Waveform visualizer -->
+<div class="flex flex-col gap-1.5">
+<!-- Simulated SVG Audio Waveform with Red Copyright Breach Zone -->
+<div class="w-full h-9 flex items-end gap-1 px-1 bg-inverse-surface/50 rounded-lg p-1">
+<span class="w-1 bg-surface-variant h-4 rounded-full"></span>
+<span class="w-1 bg-surface-variant h-6 rounded-full"></span>
+<span class="w-1 bg-surface-variant h-8 rounded-full"></span>
+<span class="w-1 bg-surface-variant h-5 rounded-full"></span>
+<span class="w-1 bg-secondary-container h-7 rounded-full"></span>
+<span class="w-1 bg-secondary-container h-8 rounded-full"></span>
+<!-- BREACH ZONE (0:08 - 0:20) -->
+<span class="w-1 bg-error h-9 rounded-full"></span>
+<span class="w-1 bg-error h-7 rounded-full"></span>
+<span class="w-1 bg-error h-9 rounded-full"></span>
+<span class="w-1 bg-error h-8 rounded-full"></span>
+<span class="w-1 bg-error h-9 rounded-full"></span>
+<span class="w-1 bg-error h-6 rounded-full"></span>
+<span class="w-1 bg-error h-8 rounded-full"></span>
+<span class="w-1 bg-error h-9 rounded-full"></span>
+<span class="w-1 bg-error h-7 rounded-full"></span>
+<span class="w-1 bg-error h-9 rounded-full"></span>
+<span class="w-1 bg-secondary-container h-6 rounded-full"></span>
+<span class="w-1 bg-surface-variant h-5 rounded-full"></span>
+<span class="w-1 bg-surface-variant h-3 rounded-full"></span>
+<span class="w-1 bg-surface-variant h-6 rounded-full"></span>
+<span class="w-1 bg-surface-variant h-4 rounded-full"></span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline-variant">
+<span class="text-error font-semibold">⚠️ Audio Match 0:08-0:20</span>
+<span>1080p 60fps</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Keyframe Analysis Bar -->
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm pt-1">
+<span>Keyframe Safety OCR:</span>
+<span class="text-tertiary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> 12/12 Clean Frames
+              </span>
+</div>
+</div>
+<!-- Policy Violation Heuristic Matrix -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low p-space-md rounded-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">Policy Safety Matrix</span>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Visual Safety -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Visual Safety</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified_user</span>
+</div>
+<div class="mt-1 flex items-baseline justify-between">
+<span class="font-title-md text-title-md text-on-surface font-bold">99.8%</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">PASS</span>
+</div>
+</div>
+<!-- Audio Copyright -->
+<div class="bg-error-container/40 p-space-sm rounded-lg flex flex-col justify-between border-l-2 border-error">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-error">
+<span class="font-bold">Audio Copyright</span>
+<span class="material-symbols-outlined text-[16px] text-error">warning</span>
+</div>
+<div class="mt-1 flex items-baseline justify-between">
+<span class="font-title-md text-title-md text-error font-bold">84.2%</span>
+<span class="font-label-sm text-label-sm text-error font-bold">BREACH</span>
+</div>
+</div>
+<!-- Claim Accuracy -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Claim Accuracy</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">fact_check</span>
+</div>
+<div class="mt-1 flex items-baseline justify-between">
+<span class="font-title-md text-title-md text-on-surface font-bold">98.0%</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">PASS</span>
+</div>
+</div>
+<!-- Spam / Bot Detection -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Spam / Bots</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">fingerprint</span>
+</div>
+<div class="mt-1 flex items-baseline justify-between">
+<span class="font-title-md text-title-md text-on-surface font-bold">99.9%</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">PASS</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Merchant Compliance Record Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center font-bold">
+                AS
+              </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Aura Sound Labs</span>
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Merchant ID #SE-8091 • Tier 1 Partner</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Strike Status</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold bg-surface-container-high px-2 py-0.5 rounded">0 Strikes</span>
+</div>
+</div>
+<!-- Moderation Decision & Enforcement Console -->
+<div class="flex flex-col gap-space-md pt-2">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">
+                Automated Policy Template
+              </label>
+<div class="relative">
+<select class="w-full h-11 pl-3 pr-8 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm border-0 focus:ring-2 focus:ring-primary-container outline-none appearance-none">
+<option selected="">Copyrighted Audio - Audio Replacement Required</option>
+<option>Product Description Misalignment</option>
+<option>Prohibited Medical or Therapeutic Claim</option>
+<option>Unqualified Promotion Code / Pricing Discrepancy</option>
+</select>
+<span class="material-symbols-outlined text-[20px] text-outline absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Merchant Notification Preview -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline font-medium">Merchant In-App Dispatch:</span>
+<button class="font-label-sm text-label-sm text-primary hover:underline">Edit Text</button>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-xl text-on-surface-variant font-body-sm text-body-sm border-l-2 border-primary leading-relaxed">
+                "Your reel 'Unboxing the deepest bass...' contains unlicensed music. We've temporarily muted the audio. You can re-upload audio in Seller Studio without losing engagement statistics."
+              </div>
+</div>
+<!-- Main Tri-Action Enforcement Buttons -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<!-- Primary Action -->
+<button class="h-12 w-full rounded-xl bg-secondary-container hover:opacity-95 text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-sm transition-transform active:scale-[0.99]">
+<span class="material-symbols-outlined text-[20px]">volume_off</span>
+                Mute Audio &amp; Notify Merchant
+              </button>
+<!-- Secondary Action -->
+<button class="h-11 w-full rounded-xl bg-primary-container text-on-primary hover:opacity-90 font-label-sm text-label-sm font-semibold flex items-center justify-center gap-2 shadow-sm transition-opacity">
+<span class="material-symbols-outlined text-[18px]">queue_music</span>
+                Replace with Royalty-Free Audio &amp; Publish
+              </button>
+<!-- Tertiary Actions Split -->
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="h-10 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check</span>
+                  Dismiss &amp; Approve
+                </button>
+<button class="h-10 rounded-lg bg-error-container hover:opacity-90 text-on-error-container font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">delete_forever</span>
+                  Takedown &amp; Strike
+                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Demo Script -->
+<script>
+    // Simple micro-interaction for demonstration switching and visual feedback
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('button');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          // If it's a quick action button, simulate a tactile pulse
+          if(this.innerText.includes('Approve') || this.innerText.includes('Reject') || this.innerText.includes('Mute')) {
+            const originalText = this.innerHTML;
+            this.innerHTML = `<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span> Processing...`;
+            setTimeout(() => {
+              this.innerHTML = `<span class="material-symbols-outlined text-[16px]">done</span> Saved`;
+              setTimeout(() => {
+                this.innerHTML = originalText;
+              }, 1200);
+            }, 600);
+          }
+        });
+      });
+    });
+  </script>
+</div></main></div></body></html>
