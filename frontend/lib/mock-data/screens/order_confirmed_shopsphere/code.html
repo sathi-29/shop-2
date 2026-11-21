@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container": "#eaedff", "on-primary-container": "#dad7ff", "surface-container-high": "#e2e7ff", "surface-bright": "#faf8ff", "primary-fixed-dim": "#c3c0ff", "primary": "#3525cd", "secondary-fixed": "#ffdbca", "inverse-on-surface": "#eef0ff", "on-secondary-fixed-variant": "#783200", "on-surface": "#131b2e", "on-error": "#ffffff", "tertiary-fixed-dim": "#93ccff", "surface-dim": "#d2d9f4", "surface-variant": "#dae2fd", "on-secondary-fixed": "#341100", "secondary-container": "#fd761a", "secondary": "#9d4300", "tertiary": "#004c76", "inverse-surface": "#283044", "on-primary-fixed-variant": "#3323cc", "on-secondary-container": "#5c2400", "surface": "#faf8ff", "surface-tint": "#4d44e3", "inverse-primary": "#c3c0ff", "on-primary-fixed": "#0f0069", "on-background": "#131b2e", "surface-container-highest": "#dae2fd", "outline": "#777587", "background": "#faf8ff", "outline-variant": "#c7c4d8", "secondary-fixed-dim": "#ffb690", "primary-container": "#4f46e5", "on-secondary": "#ffffff", "on-primary": "#ffffff", "surface-container-low": "#f2f3ff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#004b73", "on-tertiary-container": "#bedfff", "tertiary-container": "#00659a", "on-surface-variant": "#464555", "error": "#ba1a1a", "on-error-container": "#93000a", "error-container": "#ffdad6", "on-tertiary": "#ffffff", "primary-fixed": "#e2dfff", "tertiary-fixed": "#cce5ff", "on-tertiary-fixed": "#001d31" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.25rem", "margin-md": "1.5rem", "margin-lg": "2rem", "gutter-lg": "1.5rem", "margin": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-xl": "1.5rem", "gutter-md": "1.25rem", "gutter": "1rem", "space-md": "1rem" }, fontFamily: { "title-md": ["Inter"], "label-sm": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "display-lg-mobile": ["Inter"], "body-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "label-lg": ["Inter"], "label-md": ["Inter"], "display-lg": ["Inter"] }, fontSize: { "title-md": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go Back" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-title-md text-title-md text-on-surface">Order Confirmation</h1></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1 bg-surface-container-low px-space-sm py-1 rounded-full"><span class="material-symbols-outlined text-primary text-[16px]">lock</span><span class="font-label-sm text-label-sm text-primary">Encrypted</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full pb-safe">
+<!-- Celebration Top Stage -->
+<div class="relative w-full px-gutter pt-space-md pb-space-lg flex flex-col items-center text-center overflow-hidden">
+<!-- Ambient Radiance Background -->
+<div class="absolute inset-0 pointer-events-none flex items-center justify-center -z-10">
+<div class="w-64 h-64 rounded-full bg-primary/10 blur-3xl transform scale-125 animate-pulse"></div>
+<div class="w-48 h-48 rounded-full bg-secondary-container/10 blur-2xl transform translate-y-4"></div>
+</div>
+<!-- Interactive Confetti Particles Canvas Container -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden -z-0" id="confetti-zone">
+<span class="absolute w-2.5 h-2.5 rounded-full bg-secondary-container opacity-80 animate-ping" style="top: 18%; left: 16%; animation-duration: 2.4s;"></span>
+<span class="absolute w-2 h-3.5 rounded-sm bg-primary opacity-70 rotate-45 animate-bounce" style="top: 24%; right: 18%; animation-duration: 3s;"></span>
+<span class="absolute w-3 h-1.5 rounded-full bg-tertiary-container opacity-75 -rotate-12 animate-pulse" style="top: 36%; left: 24%; animation-duration: 1.8s;"></span>
+<span class="absolute w-2 h-2 rounded-full bg-secondary-fixed-dim opacity-90 animate-ping" style="top: 15%; right: 28%; animation-duration: 2.8s;"></span>
+<span class="absolute w-2.5 h-1.5 rounded-sm bg-primary-fixed-dim opacity-70 rotate-12 animate-bounce" style="top: 42%; right: 14%; animation-duration: 2.2s;"></span>
+</div>
+<!-- Glowing Success Badge -->
+<div class="relative mb-space-md">
+<!-- Expanding aura rings -->
+<div class="absolute -inset-2 rounded-full bg-surface-container-high opacity-70 animate-ping" style="animation-duration: 3s;"></div>
+<div class="absolute -inset-4 rounded-full bg-primary-fixed/40 blur-md"></div>
+<!-- Central Checkmark Node -->
+<div class="relative w-20 h-20 rounded-full bg-surface-container-lowest shadow-xl flex items-center justify-center text-primary">
+<div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[36px] text-on-primary font-bold animate-[scale_0.35s_ease-out]">check</span>
+</div>
+</div>
+</div>
+<!-- Headline and Personalized AI Biometric Note -->
+<div class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm mb-space-xs">
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+<span>Biometric Verification Complete</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-space-xs">Order Placed Successfully!</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+      Thank you, <span class="font-label-md text-label-md text-on-surface">Alex</span>! Confirmed instantly via ShopSphere Voice AI & Touch ID.
+    </p>
+</div>
+<!-- Main Content Stack -->
+<div class="px-gutter flex flex-col gap-space-md">
+<!-- Key Order & Live Tracking Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<!-- Card Header: Order ID & Express Pill -->
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Order Reference</span>
+<p class="font-title-md text-title-md text-on-surface">#SPH-8942109</p>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-space-sm py-1 rounded-full text-primary">
+<span class="material-symbols-outlined text-[15px]">electric_bolt</span>
+<span class="font-label-sm text-label-sm">Express Delivery</span>
+</div>
+</div>
+<!-- Estimated Arrival Banner -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">schedule</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-label-sm text-label-sm text-on-surface-variant">Estimated Window</p>
+<p class="font-label-lg text-label-lg text-on-surface truncate">Tomorrow, 2:00 PM – 5:00 PM</p>
+</div>
+</div>
+<!-- Live Tracking Steps Progress Line -->
+<div class="pt-space-xs">
+<div class="relative flex items-center justify-between">
+<!-- Continuous Track Line -->
+<div class="absolute left-4 right-4 top-4 h-1 bg-surface-container -z-0">
+<!-- Active Progress (33% across step 1 to step 2) -->
+<div class="h-full bg-primary rounded-full" style="width: 38%;"></div>
+</div>
+<!-- Step 1: Confirmed -->
+<div class="flex flex-col items-center gap-1.5 z-10 w-16">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary text-center">Confirmed</span>
+</div>
+<!-- Step 2: Preparing (Active Pulse) -->
+<div class="flex flex-col items-center gap-1.5 z-10 w-16">
+<div class="relative w-8 h-8 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center shadow-md">
+<span class="absolute inset-0 rounded-full bg-primary/20 animate-ping"></span>
+<div class="w-4 h-4 rounded-full bg-primary"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface text-center font-semibold">Preparing</span>
+</div>
+<!-- Step 3: Out for Delivery -->
+<div class="flex flex-col items-center gap-1.5 z-10 w-16">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-center opacity-75">Transit</span>
+</div>
+<!-- Step 4: Delivered -->
+<div class="flex flex-col items-center gap-1.5 z-10 w-16">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">home</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-center opacity-75">Delivered</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Voice Concierge Card -->
+<div class="w-full bg-gradient-to-br from-surface-container-low via-surface-container to-surface-container-high rounded-xl p-space-md shadow-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px] animate-pulse">graphic_eq</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-label-lg text-label-lg text-on-surface">ShopSphere Voice AI</span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-1.5 py-0.5 rounded-full font-label-sm text-label-sm">Active Assistant</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            “I’ll proactively ping you the second your package is out for delivery. Try tapping the mic or asking: <strong class="text-on-surface">‘Where is my order?’</strong>”
+          </p>
+<div class="mt-space-sm flex items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest text-primary hover:bg-surface-bright shadow-sm font-label-md text-label-md transition-all active:scale-95" type="button">
+<span class="material-symbols-outlined text-[16px]">mic</span>
+<span>Ask AI Status</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Instant voice lookup</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Order Items Summary Accordion -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Accordion Trigger Button -->
+<button aria-controls="order-items-list" aria-expanded="true" class="w-full px-space-md py-space-md flex items-center justify-between text-left hover:bg-surface-container-low transition-colors" id="accordion-toggle" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Order Items (3)</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tap to hide details</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface">$326.40</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[22px] transition-transform duration-200" id="accordion-arrow">expand_less</span>
+</div>
+</button>
+<!-- Accordion Body List -->
+<div class="px-space-md pb-space-md flex flex-col gap-space-md transition-all duration-300" id="order-items-list">
+<!-- Item 1 -->
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="w-16 h-16 rounded-lg bg-surface-container overflow-hidden flex-shrink-0 shadow-sm">
+<img alt="Aura Studio ANC Headphones" class="w-full h-full object-cover" data-alt="Minimal matte black over-ear ANC premium studio headphones sitting on a pristine neutral studio pedestal, modern high-tech audio styling with indigo ambient reflections, realistic commercial product photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTDueRZIHYUYwJPnyCDTRJnFTZg5HEUPFr4JGrr1EC7kYcQKvT13rxEybmMIZSu1w6mEEyAh4Xgmr8-zgjx2L_dKFd5R2usJjw8YZe7E52eej9maYQWTwY0r8xwfqtXy9om5gMxsjxOlhT59fZAkHURXLEctAEQyRRpHsXWnBrpe-G8GZSkaO2mZE0_wNUO_UAXjX9ph-puTFSSoO-VOsOte7PbZ3C2b7T1y6sDpzi"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-label-lg text-label-lg text-on-surface truncate">Aura Studio ANC Headphones</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Midnight Space Black • Qty 1</p>
+<span class="font-label-sm text-label-sm text-primary">Biometric Warranty Included</span>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg text-on-surface">$189.00</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-space-sm">
+<div class="w-16 h-16 rounded-lg bg-surface-container overflow-hidden flex-shrink-0 shadow-sm">
+<img alt="Aura Mechanical Keyboard" class="w-full h-full object-cover" data-alt="Compact sleek 75 percent mechanical wireless keyboard with subtle RGB backlighting, custom warm indigo dye-sub PBT keycaps, brushed aerospace aluminum casing, soft lighting product photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4JscpWgfr0sz_xhEDxc3EivU3SbDPVlkITMPzGmNXAeqz_kSfl3lgWNexWtYLH6_7HUJW26mh18jzYkBJdGx8RCpcKaf8RQI0MyNIuOE00W1Fq0kSWBbR-jsK4Y6vb565Q_kF7E-Z2lDVCFORowDWBeYBxJ4xgP1hcNxzVAGYDoqRU-MQ3cjRAZggp1uUkDp9pbaatyr54Bv-5Hfi3s6UNnn8UTTveEaQC0avLpwi"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-label-lg text-label-lg text-on-surface truncate">Aura Mechanical Keyboard</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Linear Silent Switches • Qty 1</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Express Pre-configured</span>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg text-on-surface">$99.40</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center gap-space-sm">
+<div class="w-16 h-16 rounded-lg bg-surface-container overflow-hidden flex-shrink-0 shadow-sm">
+<img alt="Ceramic Smart Watch" class="w-full h-full object-cover" data-alt="High-end ceramic white minimalist smart watch with edge-to-edge curved sapphire display, soft fluoroelastomer sporty strap, clean bright neutral studio setup with vivid crisp details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbXCAhQ6xIKS0AVUezXoWHbI19i_-3yietICzWfp5Mhr8j-lMc5chKLiOylBKP9Qxp_hTcFcABk1Cu_7T3nqmJJb0-qJqKAfddM892facQC2glQfDyjmJ4z_gwN6Uwir4i-O-SGWeVXapcJUPhjWPwnv0TsdoIYn-SJWVtjat_TCiO0Z6yFbq_wtWW4vcd1-zvos02rsPRIYC7TwRDfJEIeZj9N9P7gcuiSsst8gW5"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-label-lg text-label-lg text-on-surface truncate">Ceramic Smart Watch</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">42mm Frost White • Qty 1</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fast Charge Dock Added</span>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg text-on-surface">$38.00</span>
+</div>
+</div>
+<!-- Receipt Subtotal Breakdown -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1.5 mt-space-xs">
+<div class="flex justify-between items-center font-body-sm text-body-sm text-on-surface-variant">
+<span>Item Subtotal</span>
+<span>$326.40</span>
+</div>
+<div class="flex justify-between items-center font-body-sm text-body-sm text-on-surface-variant">
+<span>Express Courier Shipping</span>
+<span class="font-label-sm text-label-sm text-primary uppercase">Free (VIP Tier)</span>
+</div>
+<div class="flex justify-between items-center font-body-sm text-body-sm text-on-surface-variant">
+<span>Tax & Recycling Fees</span>
+<span>$0.00</span>
+</div>
+<div class="flex justify-between items-center font-label-lg text-label-lg text-on-surface pt-1">
+<span class="flex items-center gap-1">
+<span>Total Charged</span>
+<span class="material-symbols-outlined text-[16px] text-primary">fingerprint</span>
+</span>
+<span class="font-title-md text-title-md text-primary">$326.40</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm pt-0.5">
+<span class="material-symbols-outlined text-[14px]">contactless</span>
+<span>Authorized via Apple Pay / Touch ID (Auth #8912)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action CTAs Section -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<!-- Primary Vibrant Orange Action CTA -->
+<button class="w-full h-12 bg-secondary-container hover:bg-secondary text-on-primary rounded-xl font-label-lg text-label-lg shadow-sm flex items-center justify-center gap-2 transition-transform active:scale-[0.98]" type="button">
+<span>Track Order Live</span>
+<span class="text-[18px]">📦</span>
+</button>
+<!-- Secondary Navigation Action -->
+<button class="w-full h-12 bg-surface-container-lowest hover:bg-surface-container-low text-on-surface rounded-xl font-label-lg text-label-lg shadow-sm flex items-center justify-center gap-2 transition-colors active:scale-[0.98]" type="button">
+<span>Continue Shopping</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<!-- Subtle PDF Invoice Link -->
+<div class="flex justify-center pt-space-xs pb-space-sm">
+<button class="inline-flex items-center gap-1.5 py-2 px-3 text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>Download Invoice (PDF)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initOrderDelight() {
+    // Accordion interaction
+    var toggleBtn = document.getElementById('accordion-toggle');
+    var itemsList = document.getElementById('order-items-list');
+    var arrowIcon = document.getElementById('accordion-arrow');
+
+    if (toggleBtn && itemsList && arrowIcon) {
+      toggleBtn.addEventListener('click', function() {
+        var isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+        if (isExpanded) {
+          itemsList.classList.add('hidden');
+          arrowIcon.style.transform = 'rotate(180deg)';
+          toggleBtn.setAttribute('aria-expanded', 'false');
+        } else {
+          itemsList.classList.remove('hidden');
+          arrowIcon.style.transform = 'rotate(0deg)';
+          toggleBtn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    }
+
+    // Dynamic celebration confetti spawner
+    var zone = document.getElementById('confetti-zone');
+    if (zone) {
+      var colors = ['#3525cd', '#fd761a', '#00659a', '#c3c0ff', '#ffb690'];
+      for (var i = 0; i < 14; i++) {
+        var piece = document.createElement('div');
+        piece.className = 'absolute rounded-sm pointer-events-none';
+        var sizeW = Math.floor(Math.random() * 6) + 4;
+        var sizeH = Math.floor(Math.random() * 8) + 4;
+        piece.style.width = sizeW + 'px';
+        piece.style.height = sizeH + 'px';
+        piece.style.left = Math.floor(Math.random() * 88) + 6 + '%';
+        piece.style.top = Math.floor(Math.random() * 50) + 10 + '%';
+        piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        piece.style.opacity = (Math.random() * 0.5 + 0.35).toFixed(2);
+        piece.style.transform = 'rotate(' + Math.floor(Math.random() * 360) + 'deg)';
+        zone.appendChild(piece);
+      }
+    }
+  })();
+</script></main></body></html>

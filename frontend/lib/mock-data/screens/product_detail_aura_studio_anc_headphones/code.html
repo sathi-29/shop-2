@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#faf8ff;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#bedfff", "on-primary-fixed": "#0f0069", "tertiary": "#004c76", "surface-container-highest": "#dae2fd", "on-secondary-fixed-variant": "#783200", "secondary-fixed": "#ffdbca", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#001d31", "on-secondary": "#ffffff", "inverse-surface": "#283044", "surface-container": "#eaedff", "on-primary": "#ffffff", "surface-dim": "#d2d9f4", "surface-container-lowest": "#ffffff", "outline": "#777587", "tertiary-container": "#00659a", "on-primary-container": "#dad7ff", "surface-tint": "#4d44e3", "tertiary-fixed-dim": "#93ccff", "on-error": "#ffffff", "error-container": "#ffdad6", "on-secondary-fixed": "#341100", "primary-container": "#4f46e5", "on-background": "#131b2e", "error": "#ba1a1a", "surface": "#faf8ff", "secondary-fixed-dim": "#ffb690", "primary-fixed": "#e2dfff", "background": "#faf8ff", "outline-variant": "#c7c4d8", "inverse-on-surface": "#eef0ff", "on-error-container": "#93000a", "on-surface": "#131b2e", "secondary": "#9d4300", "surface-variant": "#dae2fd", "tertiary-fixed": "#cce5ff", "secondary-container": "#fd761a", "on-surface-variant": "#464555", "surface-container-high": "#e2e7ff", "primary": "#3525cd", "surface-bright": "#faf8ff", "inverse-primary": "#c3c0ff", "primary-fixed-dim": "#c3c0ff", "on-secondary-container": "#5c2400", "on-tertiary-fixed-variant": "#004b73", "on-primary-fixed-variant": "#3323cc", "surface-container-low": "#f2f3ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin-lg": "2rem", "margin-md": "1.5rem", "gutter-md": "1.25rem", "margin": "1rem", "gutter": "1rem", "space-lg": "1.25rem", "space-md": "1rem", "space-xs": "0.25rem", "space-xl": "1.5rem", "gutter-lg": "1.5rem" }, "fontFamily": { "label-md": ["Inter"], "title-md": ["Inter"], "headline-md": ["Inter"], "label-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "display-lg-mobile": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "display-lg": ["Inter"], "label-lg": ["Inter"], "body-md": ["Inter"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "title-md": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center min-w-0 gap-space-xs"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex flex-col min-w-0 pl-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider truncate">ShopSphere</span><h1 class="font-title-md text-title-md text-on-surface font-semibold truncate leading-tight">Product Detail</h1></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Share product" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">share</span></button><button aria-label="Save to wishlist" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-secondary-container hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">favorite</span></button><a aria-label="Shopping Cart with 3 items" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors relative" data-path="cart" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-1.5 right-1.5 min-w-[18px] h-[18px] px-1 bg-secondary-container text-on-secondary rounded-full font-label-sm text-[10px] leading-[18px] text-center font-bold">3</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs shrink-0 shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full pb-32">
+<!-- Top Gallery Section -->
+<section class="relative w-full px-margin pt-space-md">
+<!-- Visual Image Container -->
+<div class="relative w-full aspect-square rounded-xl bg-surface-container-low overflow-hidden shadow-sm flex items-center justify-center">
+<img class="w-full h-full object-cover transition-all duration-300" data-alt="High-end Aura Studio ANC Wireless Pro Headphones in luxurious matte midnight blue with brushed aluminum accents resting on an aesthetic architectural stone podium, soft studio lighting, sharp hyper-realistic product photography, 8k resolution" id="main-product-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9JbY1bUrAdI3_5lebkfUpLj6SxPYSOjt3Gto4oTKkK8AP44QcPVcJbG2hOj_GfvVOOuHuRieSMK_5qidHJy3YybTdG3EZWmaaZG3m-XIp9wqou8FG_AnylqFNNfITsY8kVgkN3WGMizZxazdBNUl65BerHnrrJ46y9aekkdEXa2SJ83Uhtzc-0dxXlrKAEKSnEDOn6sieVbSbZ75IlXAiw2TdHlrAPDbydXuS3-9q"/>
+<!-- Top Badges Floating Overlay -->
+<div class="absolute top-space-md left-space-md flex flex-wrap gap-space-xs z-10">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary font-label-sm shadow-sm">
+          35% OFF
+        </span>
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px] mr-1" style="font-variation-settings: 'FILL' 1;">star</span>
+          Best Seller
+        </span>
+</div>
+<!-- 360 View / Zoom Indicator -->
+<div class="absolute top-space-md right-space-md z-10">
+<button aria-label="360 View" class="w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface flex items-center justify-center shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]">360</span>
+</button>
+</div>
+<!-- Carousel Pagination Dots -->
+<div class="absolute bottom-space-md left-0 right-0 flex justify-center items-center gap-1.5 z-10">
+<span class="w-6 h-1.5 rounded-full bg-primary transition-all"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface/20"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface/20"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface/20"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface/20"></span>
+</div>
+</div>
+<!-- Media Filter Tabs & Video Pill -->
+<div class="flex items-center justify-between mt-space-sm gap-space-xs">
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1">
+<button class="px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-sm flex items-center gap-1 shadow-sm shrink-0" type="button">
+<span class="material-symbols-outlined text-[16px]">photo_camera</span>
+          Photos (4)
+        </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm flex items-center gap-1 hover:bg-surface-container-high transition-colors shrink-0" type="button">
+<span class="material-symbols-outlined text-[16px]">view_in_ar</span>
+          3D Augmented
+        </button>
+</div>
+<!-- Interactive Video Thumbnail Pill -->
+<button class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm hover:bg-surface-variant transition-colors shrink-0 shadow-sm" type="button">
+<span class="w-4 h-4 rounded-full bg-secondary-container text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[11px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</span>
+<span class="font-medium">Video Preview</span>
+<span class="text-outline text-[10px]">0:45</span>
+</button>
+</div>
+</section>
+<!-- Product Header & Title -->
+<section class="px-margin mt-space-md">
+<div class="flex items-center justify-between">
+<a class="font-label-sm text-primary font-semibold tracking-wider uppercase flex items-center gap-0.5" href="#">
+        Aura Pro Series
+        <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+<span class="font-label-sm text-outline">SKU: AU-ANC-90</span>
+</div>
+<h2 class="mt-1 font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-semibold tracking-tight">
+      Aura Studio ANC Wireless Pro Headphones with Spatial Audio &amp; 60h Battery
+    </h2>
+<!-- Ratings Summary -->
+<div class="flex items-center gap-2 mt-2">
+<div class="flex items-center bg-secondary-fixed px-2 py-0.5 rounded-lg text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[16px] text-secondary leading-none mr-1" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-lg text-label-lg font-bold leading-none">4.9</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">
+        (3,842 ratings &amp; 850 reviews)
+      </span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[10px]">
+<span class="material-symbols-outlined text-[12px] text-primary mr-0.5" style="font-variation-settings: 'FILL' 1;">verified</span>
+        Verified
+      </span>
+</div>
+<!-- Pricing Module -->
+<div class="mt-space-md p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-2">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg-mobile text-display-lg-mobile font-bold text-on-surface tracking-tight">$89.00</span>
+<span class="font-title-md text-title-md line-through text-outline">$139.00</span>
+<span class="font-label-md text-label-md font-bold px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed">
+          Save $50 (36% off)
+        </span>
+</div>
+<!-- Flash Deal Urgency Bar -->
+<div class="mt-1 pt-2 bg-surface-container-lowest/80 rounded-lg p-2.5">
+<div class="flex items-center justify-between text-body-sm font-label-sm mb-1.5">
+<span class="flex items-center text-secondary font-semibold">
+<span class="material-symbols-outlined text-[16px] mr-1">local_fire_department</span>
+            Limited Deal ends in 03h 42m
+          </span>
+<span class="text-outline font-label-sm text-[11px]">82% claimed</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full w-4/5"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Color Variant Selector -->
+<section class="px-margin mt-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="font-label-lg text-label-lg text-on-surface">
+        Color: <span class="font-bold text-primary" id="color-name-display">Matte Midnight Blue</span>
+</div>
+<span class="font-label-sm text-secondary font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+        Only 7 left in stock
+      </span>
+</div>
+<!-- Color Swatches Row -->
+<div class="flex items-center gap-space-md">
+<!-- Midnight Blue (Active) -->
+<button class="group relative flex flex-col items-center gap-1.5 focus:outline-none" onclick="selectColor(this, 'Matte Midnight Blue')" type="button">
+<span class="w-12 h-12 rounded-full bg-tertiary-container shadow-sm flex items-center justify-center ring-2 ring-primary ring-offset-2 scale-105 transition-all">
+<span class="material-symbols-outlined text-white text-[18px]">check</span>
+</span>
+<span class="font-label-sm text-[11px] text-on-surface font-semibold">Blue</span>
+</button>
+<!-- Cloud White -->
+<button class="group relative flex flex-col items-center gap-1.5 focus:outline-none" onclick="selectColor(this, 'Cloud White')" type="button">
+<span class="w-12 h-12 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center transition-all"></span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">White</span>
+</button>
+<!-- Slate Gray -->
+<button class="group relative flex flex-col items-center gap-1.5 focus:outline-none" onclick="selectColor(this, 'Slate Gray')" type="button">
+<span class="w-12 h-12 rounded-full bg-outline shadow-sm flex items-center justify-center transition-all"></span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Gray</span>
+</button>
+<!-- Obsidian Black -->
+<button class="group relative flex flex-col items-center gap-1.5 focus:outline-none" onclick="selectColor(this, 'Obsidian Black')" type="button">
+<span class="w-12 h-12 rounded-full bg-inverse-surface shadow-sm flex items-center justify-center transition-all"></span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Black</span>
+</button>
+</div>
+</section>
+<!-- Ask AI Shopping Assistant Banner -->
+<section class="px-margin mt-space-lg">
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary-container via-primary to-tertiary text-on-primary p-space-md shadow-md">
+<!-- Decorative Sparkle Vectors -->
+<div class="absolute -right-4 -bottom-4 opacity-15 pointer-events-none">
+<span class="material-symbols-outlined text-[110px]">auto_awesome</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-7 h-7 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</span>
+<span class="font-label-md text-label-md font-bold uppercase tracking-wider text-on-primary-container">ShopSphere AI Concierge</span>
+</div>
+<h3 class="font-title-md text-title-md font-semibold text-on-primary leading-snug">
+          Ask AI about sound quality, battery, or workout fit
+        </h3>
+<!-- Prompt suggestions -->
+<div class="flex flex-wrap gap-1.5 mt-space-sm">
+<button class="bg-white/15 hover:bg-white/25 active:scale-95 transition-all text-on-primary font-label-sm text-[11px] px-2.5 py-1.5 rounded-full flex items-center gap-1" type="button">
+<span>“Is it good for workouts?”</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+<button class="bg-white/15 hover:bg-white/25 active:scale-95 transition-all text-on-primary font-label-sm text-[11px] px-2.5 py-1.5 rounded-full flex items-center gap-1" type="button">
+<span>“Compare with Sony XM5”</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+<button class="bg-white/15 hover:bg-white/25 active:scale-95 transition-all text-on-primary font-label-sm text-[11px] px-2.5 py-1.5 rounded-full flex items-center gap-1" type="button">
+<span>“Noise cancelling rating”</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+<!-- AI Voice/Text Input bar -->
+<div class="mt-space-md flex items-center bg-white/10 backdrop-blur-md rounded-xl p-1 shadow-inner">
+<span class="material-symbols-outlined text-white/70 ml-2 text-[20px]">chat_bubble</span>
+<input class="bg-transparent border-0 text-white placeholder-white/60 font-body-sm text-body-sm w-full px-2 focus:outline-none" placeholder="Type or tap mic to ask anything..." type="text"/>
+<button aria-label="Voice Ask" class="w-8 h-8 rounded-lg bg-white text-primary flex items-center justify-center shrink-0 shadow-sm active:scale-90 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Delivery & Pincode Checker Card -->
+<section class="px-margin mt-space-lg">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">location_on</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Delivery Options</span>
+</div>
+<span class="font-label-sm text-primary font-semibold">Fastest: Tomorrow</span>
+</div>
+<!-- Pincode Form -->
+<div class="flex items-center gap-2 mb-space-md">
+<div class="relative flex-1">
+<input class="w-full h-11 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg px-3 focus:outline-none shadow-sm font-semibold tracking-wide" type="text" value="11201"/>
+</div>
+<button class="h-11 px-4 bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow-sm active:scale-95 transition-transform" type="button">
+          Check
+        </button>
+</div>
+<!-- ETA Badge -->
+<div class="flex items-start gap-2 bg-surface-container-lowest p-space-sm rounded-lg mb-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">bolt</span>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-surface">FREE Delivery by Tomorrow, 2:00 PM – 5:00 PM</p>
+<p class="font-body-sm text-body-sm text-outline">Order within the next 2 hours 15 mins</p>
+</div>
+</div>
+<!-- Trust Assurance Strip -->
+<div class="grid grid-cols-3 gap-2 pt-2 text-center">
+<div class="flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-lowest">
+<span class="material-symbols-outlined text-[20px] text-primary">local_shipping</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant font-medium leading-tight">Express Delivery</span>
+</div>
+<div class="flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-lowest">
+<span class="material-symbols-outlined text-[20px] text-primary">published_with_changes</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant font-medium leading-tight">30-Day Returns</span>
+</div>
+<div class="flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-lowest">
+<span class="material-symbols-outlined text-[20px] text-primary">verified_user</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant font-medium leading-tight">1-Year Warranty</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Seller Information Card -->
+<section class="px-margin mt-space-lg">
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold text-title-md">
+          A
+        </div>
+<div>
+<div class="flex items-center gap-1">
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface">Aura Audio Official</h4>
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">4.8 ★ Seller Rating | 98% Positive</p>
+</div>
+</div>
+<button class="px-3 py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant font-label-md text-label-md text-on-surface font-semibold transition-colors" type="button">
+        Visit Store
+      </button>
+</div>
+</section>
+<!-- Key Specifications Table -->
+<section class="px-margin mt-space-lg">
+<h3 class="font-title-md text-title-md font-bold text-on-surface mb-space-sm">Technical Specifications</h3>
+<div class="rounded-xl bg-surface-container-low overflow-hidden shadow-sm">
+<div class="flex items-center justify-between p-space-sm px-space-md bg-surface-container-lowest">
+<span class="font-body-md text-body-md text-outline">Form Factor</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Over-Ear, Foldable Design</span>
+</div>
+<div class="flex items-center justify-between p-space-sm px-space-md bg-surface-container-low">
+<span class="font-body-md text-body-md text-outline">Active Noise Cancellation</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Hybrid ANC up to 42dB</span>
+</div>
+<div class="flex items-center justify-between p-space-sm px-space-md bg-surface-container-lowest">
+<span class="font-body-md text-body-md text-outline">Battery Life</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">60h (ANC off) / 45h (ANC on)</span>
+</div>
+<div class="flex items-center justify-between p-space-sm px-space-md bg-surface-container-low">
+<span class="font-body-md text-body-md text-outline">Connectivity</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Bluetooth 5.4, Multipoint, AUX</span>
+</div>
+<div class="flex items-center justify-between p-space-sm px-space-md bg-surface-container-lowest">
+<span class="font-body-md text-body-md text-outline">Charging</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">USB-C Fast (10 min = 5 hours)</span>
+</div>
+<div class="flex items-center justify-between p-space-sm px-space-md bg-surface-container-low">
+<span class="font-body-md text-body-md text-outline">Weight</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">245g Ultralight</span>
+</div>
+</div>
+</section>
+<!-- Customer Reviews & Photos -->
+<section class="px-margin mt-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Verified Customer Reviews</h3>
+<a class="font-label-md text-label-md text-primary font-semibold" href="#">View All</a>
+</div>
+<!-- Rating Breakdown Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="flex flex-col items-center justify-center pr-space-md">
+<span class="font-display-lg-mobile text-display-lg-mobile font-bold text-on-surface">4.9</span>
+<div class="flex items-center text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm text-outline text-[11px] mt-1">3.8k reviews</span>
+</div>
+<!-- Rating Bar Breakdown -->
+<div class="flex-1 flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-[11px] text-outline w-2">5</span>
+<div class="flex-1 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[88%]"></div>
+</div>
+<span class="font-label-sm text-[10px] text-outline w-6 text-right">88%</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-[11px] text-outline w-2">4</span>
+<div class="flex-1 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[9%]"></div>
+</div>
+<span class="font-label-sm text-[10px] text-outline w-6 text-right">9%</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-[11px] text-outline w-2">3</span>
+<div class="flex-1 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[2%]"></div>
+</div>
+<span class="font-label-sm text-[10px] text-outline w-6 text-right">2%</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-[11px] text-outline w-2">2</span>
+<div class="flex-1 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[1%]"></div>
+</div>
+<span class="font-label-sm text-[10px] text-outline w-6 text-right">1%</span>
+</div>
+</div>
+</div>
+<!-- Real-life Customer Photos Strip -->
+<div class="mt-space-md">
+<span class="font-label-md text-label-md font-semibold text-on-surface mb-2 block">Photos from Customers (240+)</span>
+<div class="flex items-center gap-space-sm overflow-x-auto no-scrollbar py-1">
+<div class="w-20 h-20 rounded-xl overflow-hidden bg-surface-container shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Real life unboxing photo of dark blue over-ear wireless headphones resting on a minimalist wooden work desk beside a laptop and specialty coffee mug, warm afternoon window light, candid aesthetic review photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEVwVJl17SckHEckzPxFBSnmD7ZHc7VVmQTjmfx3tgQ_THOhdYg1gO58iRV0rhExGPtWks6oZKB1cMeoj3ZfzmtykoyDuXRd8sK5MKG_QMnXyhS6sueMzsathaLsAnHJhYIvpDxhhjjCq7Qdu5NQHdxqju5YMjGf2cJkUkPKTTgE5OgtHFDrIVJ136zHDwmIr7aMHJOBONPyID1_Qd8xVm6MMfIk0uvG3GuqlOfS-K"/>
+</div>
+<div class="w-20 h-20 rounded-xl overflow-hidden bg-surface-container shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Customer selfie wearing sleek matte navy over-ear headphones during an evening city walk, bokeh street lamps in the background, sharp detail on the headphone earcups and textured ear pads" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYHR9L5Y9OCJn-fRocBOYaxB5LdPvVSCVNfjqGM3R9uRU0QiTI2b9udsLip-39XkKP3d7UZ5jIPz5c8UHY_zJ9gZ7Gjvg_H8tpz9TKmiCoQXIN992urpL3QTKFimmgktuM76rJLIX6zTZtXppGSHCY0YA9q48oSdGI7HxI6tIutskJmRnySa7c9BpTi4akKw0t8qIPs-UuCmReevUobkK2brT0aGcHk_bm22XEW_ts"/>
+</div>
+<div class="w-20 h-20 rounded-xl overflow-hidden bg-surface-container shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Close up lifestyle customer photo showing the headphones folded cleanly inside their compact hard travel case with charging cables neatly tucked in the mesh pouch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaSpa-3MxIWmfS-tMKck7GDfaqW4OKX_DDeZ1FkGeYpgYJFco9-LzHKugUDsgRm0xeUR2VG2ShlO7NfvKFlw5xRTXchh_OWryKrdL4Glw5SXEfAGZRCUDGeyxGpdZxSBIL7wgPFYI5MErzX35TC6de1LZ7wSt7KFQK_Mm_OuVLbBGj-cOzBMVPl18zxQE9NYtA2ir9m9Y7S6zk81U63Nk0tKPG2ICiAWTlsTQjYdrw"/>
+</div>
+<div class="w-20 h-20 rounded-xl overflow-hidden bg-surface-container shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Modern studio desk arrangement featuring headphones resting on an aluminum headphone stand alongside a mechanical keyboard and warm ambient monitor backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjOPsbDMXkX9hUdACeMCObGOeLz2PAhIDaHZIugAaprUrVyHoPR5LuzEE9TGoMfYGb8fhkufHskKDp3qPxEFbY-K2nOQJqW52-v8wt6sHtNzolOsJRLdsUyg9zROAc2BWHDwK2aKgmDY6CREKa7QbQfD_wF7S9wc45ioeW3HzkQ8fiVMZG0Wxj4Bgv26udD1BxOgPD1Sgvj153U6p9N0GZea2aDdQQVMFQMsBNK3T5"/>
+</div>
+<div class="w-20 h-20 rounded-xl bg-surface-container-high flex flex-col items-center justify-center shrink-0 cursor-pointer text-primary">
+<span class="material-symbols-outlined text-[20px]">add_photo_alternate</span>
+<span class="font-label-sm text-[10px] font-bold">+236</span>
+</div>
+</div>
+</div>
+<!-- Review Card 1 -->
+<div class="mt-space-md p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-bold text-label-sm">
+            EL
+          </div>
+<div>
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Elena Rostova</span>
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<span class="font-label-sm text-[11px] text-outline">Verified Buyer • 3 days ago</span>
+</div>
+</div>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-2 leading-relaxed">
+        “The ANC is genuinely incredible for this price tag. I took these on a 6-hour flight and could barely hear the engine hum. The memory foam cushions didn't squeeze my glasses at all.”
+      </p>
+<div class="mt-space-sm flex items-center justify-between text-outline font-label-sm text-[11px]">
+<span>Color: Matte Midnight Blue</span>
+<button class="flex items-center gap-1 hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">thumb_up</span>
+          Helpful (142)
+        </button>
+</div>
+</div>
+<!-- Review Card 2 -->
+<div class="mt-space-sm p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-bold text-label-sm">
+            MC
+          </div>
+<div>
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Marcus Chen</span>
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<span class="font-label-sm text-[11px] text-outline">Verified Buyer • 1 week ago</span>
+</div>
+</div>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-2 leading-relaxed">
+        “Multipoint switching between my MacBook and iPhone is seamless. Battery life easily lasts me a full work week with ANC on. Sound signature is punchy but balanced.”
+      </p>
+<div class="mt-space-sm flex items-center justify-between text-outline font-label-sm text-[11px]">
+<span>Color: Obsidian Black</span>
+<button class="flex items-center gap-1 hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">thumb_up</span>
+          Helpful (89)
+        </button>
+</div>
+</div>
+</section>
+<!-- Similar Products Section -->
+<section class="mt-space-lg">
+<div class="px-margin flex items-center justify-between mb-space-sm">
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Frequently Bought Together</h3>
+<span class="font-label-sm text-outline">Swipe →</span>
+</div>
+<!-- Product Carousel Strip -->
+<div class="flex gap-space-md overflow-x-auto no-scrollbar px-margin py-2">
+<!-- Item 1 -->
+<div class="w-44 bg-surface-container-low p-3 rounded-xl shadow-sm shrink-0 flex flex-col justify-between">
+<div class="w-full aspect-square rounded-lg bg-surface-container-lowest overflow-hidden mb-2 relative">
+<img class="w-full h-full object-cover" data-alt="Minimalist modern ceramic smart watch with seamless dark mesh band resting on clean light stone texture, luxury tech product render" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWy9B1pe8r-adSb-xA29Yhlc4OVlECHXNlsZRp_RZuJRMIei4GBdvDwkgyIQIUeXJMIKfK99BprBhCswj0Kc-OWBF4ZXswDiJ77rT2LkzUv3rw6Ot3aeSY5qY1h4f9BLaDhxNnAyundILNsYDJ0hXFjkHa5mqBY_A4wDrlhQoQ99v6YDzlDI9N0SVNmJf31jyGjN5002wSv4goWppgwbsuyFdfuIvOIzh4EsKt68Nu"/>
+<span class="absolute top-1 right-1 bg-surface-container-lowest/80 backdrop-blur-md text-[10px] font-bold px-1.5 py-0.5 rounded text-on-surface">4.8 ★</span>
+</div>
+<div>
+<span class="font-label-sm text-[10px] text-outline uppercase block truncate">ShopSphere Gear</span>
+<h5 class="font-label-md text-label-md font-semibold text-on-surface truncate">Ceramic Smart Watch</h5>
+<span class="font-title-md text-title-md font-bold text-on-surface mt-1 block">$129.00</span>
+</div>
+<button class="w-full mt-2 py-2 bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md font-semibold rounded-lg transition-colors flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+          Add
+        </button>
+</div>
+<!-- Item 2 -->
+<div class="w-44 bg-surface-container-low p-3 rounded-xl shadow-sm shrink-0 flex flex-col justify-between">
+<div class="w-full aspect-square rounded-lg bg-surface-container-lowest overflow-hidden mb-2 relative">
+<img class="w-full h-full object-cover" data-alt="Aura low profile mechanical keyboard with custom dye-sub blue keycaps and subtle perimeter RGB glow on dark desk mat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk9AzTyQZmIQUZm2JWmsIto1-LisZsfcbhM95RwP2Y15_OfxDlYTja5VGKcR9X965LDYhYTWTtTgZK_oy5H9Kf2dZRfBZuusj6Ei7zLdutLrugAXZ9M4hBOleEvQAuvqNs-mtzVEgZS1cU4sNXX3CfpobnK-f5sgdz7I4LUg0SeG62XyzedcIBpDoG7AzafQhrBR6eWnLf3tRthM9hYzpn5BpAdyrT81OmTOqPEf9E"/>
+<span class="absolute top-1 right-1 bg-surface-container-lowest/80 backdrop-blur-md text-[10px] font-bold px-1.5 py-0.5 rounded text-on-surface">4.9 ★</span>
+</div>
+<div>
+<span class="font-label-sm text-[10px] text-outline uppercase block truncate">Aura Tech</span>
+<h5 class="font-label-md text-label-md font-semibold text-on-surface truncate">Aura Mechanical Keys</h5>
+<span class="font-title-md text-title-md font-bold text-on-surface mt-1 block">$115.00</span>
+</div>
+<button class="w-full mt-2 py-2 bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md font-semibold rounded-lg transition-colors flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+          Add
+        </button>
+</div>
+<!-- Item 3 -->
+<div class="w-44 bg-surface-container-low p-3 rounded-xl shadow-sm shrink-0 flex flex-col justify-between">
+<div class="w-full aspect-square rounded-lg bg-surface-container-lowest overflow-hidden mb-2 relative">
+<img class="w-full h-full object-cover" data-alt="Ultra-thin matte magnetic wireless power bank with integrated LED power indicator ring snapping effortlessly onto a phone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD60AS4s3UE5ChmIJuIGXvb58Zr5uOawgD2Tr1pRyZd9nfXsww09FiO5qGvh8O8tIjnDSOBoM29BKfcr8ptoV_0m89Gd2RbnLHvvV2IZlxp8yxwciEnadhe3goIwPs5XzNzll3GuklHwnY80ID992X2Ggh5A7mk1wnvsXiubURIEoTTfjdA4Tf4EMpfDzavrPb84feqF3zsT57CHtY5NX3pyBLGciSOCVUpHgaaSpf3"/>
+<span class="absolute top-1 right-1 bg-surface-container-lowest/80 backdrop-blur-md text-[10px] font-bold px-1.5 py-0.5 rounded text-on-surface">4.7 ★</span>
+</div>
+<div>
+<span class="font-label-sm text-[10px] text-outline uppercase block truncate">Power Essentials</span>
+<h5 class="font-label-md text-label-md font-semibold text-on-surface truncate">Magnetic Power Bank</h5>
+<span class="font-title-md text-title-md font-bold text-on-surface mt-1 block">$48.00</span>
+</div>
+<button class="w-full mt-2 py-2 bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md font-semibold rounded-lg transition-colors flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+          Add
+        </button>
+</div>
+</div>
+</section>
+<!-- Sticky Bottom Conversion Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface/90 backdrop-blur-xl pb-safe shadow-[0_-4px_20px_rgba(0,0,0,0.06)]">
+<div class="px-margin py-3 flex items-center gap-3">
+<!-- Price & Free Shipping Label -->
+<div class="flex flex-col min-w-[80px]">
+<span class="font-display-lg-mobile text-[22px] leading-tight font-bold text-on-surface">$89.00</span>
+<span class="font-label-sm text-[10px] text-primary font-semibold flex items-center">
+<span class="material-symbols-outlined text-[12px] mr-0.5">check</span>
+          Free Shipping
+        </span>
+</div>
+<!-- Secondary Action: Add to Cart -->
+<button class="h-12 px-4 rounded-xl bg-surface-container-high hover:bg-surface-variant active:scale-95 text-on-surface font-label-lg text-label-lg font-semibold flex items-center justify-center gap-1.5 transition-all shadow-sm" id="btn-add-cart" type="button">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span>Cart</span>
+</button>
+<!-- Primary Conversion CTA: Buy Now -->
+<button class="flex-1 h-12 rounded-xl bg-secondary-container hover:bg-secondary active:scale-95 text-on-secondary font-label-lg text-label-lg font-bold flex items-center justify-center gap-1.5 shadow-md transition-all" id="btn-buy-now" type="button">
+<span>Buy Now</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  function selectColor(btn, colorName) {
+    const display = document.getElementById('color-name-display');
+    if (display) {
+      display.textContent = colorName;
+    }
+    // Update swatch rings
+    const allButtons = btn.parentElement.querySelectorAll('button');
+    allButtons.forEach(b => {
+      const circle = b.querySelector('span');
+      circle.className = circle.className.replace('ring-2 ring-primary ring-offset-2 scale-105', '');
+      const existingCheck = circle.querySelector('.material-symbols-outlined');
+      if (existingCheck) existingCheck.remove();
+    });
+    const selectedCircle = btn.querySelector('span');
+    selectedCircle.className += ' ring-2 ring-primary ring-offset-2 scale-105';
+    const checkIcon = document.createElement('span');
+    checkIcon.className = 'material-symbols-outlined text-[18px] ' + (colorName === 'Cloud White' ? 'text-primary' : 'text-white');
+    checkIcon.textContent = 'check';
+    selectedCircle.appendChild(checkIcon);
+  }
+
+  // Micro-interaction on Add to Cart button
+  document.getElementById('btn-add-cart')?.addEventListener('click', function() {
+    const originalText = this.innerHTML;
+    this.innerHTML = '<span class="material-symbols-outlined text-[20px] text-primary animate-bounce">done</span><span class="text-primary font-bold">Added!</span>';
+    setTimeout(() => {
+      this.innerHTML = originalText;
+    }, 1800);
+  });
+</script></main></body></html>

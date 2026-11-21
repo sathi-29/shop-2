@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jarvis demo shop</title>
+<style>
+  body{margin:0;background:#eeeef8;font-family:Inter,system-ui,sans-serif;color:#14142b;padding-bottom:110px}
+  .wrap{max-width:520px;margin:0 auto;padding:16px}
+  .search{background:#fff;border-radius:16px;padding:14px 16px;color:#888;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+  .c{background:#fff;border-radius:18px;padding:12px;font-weight:700}.c small{display:block;color:#8a8aa8;font-weight:600}
+  .ph{height:110px;border-radius:12px;background:#e3e3f1;margin-bottom:8px}
+  nav{position:fixed;left:0;right:0;bottom:0;max-width:520px;margin:0 auto;background:#fff;display:flex;justify-content:space-around;align-items:center;height:78px;box-shadow:0 -2px 12px rgba(0,0,0,.08);font-size:13px;font-weight:700}
+  #jarvis-mic{width:68px;height:68px;border-radius:50%;border:0;background:#3b2acf;color:#fff;font-size:28px;margin-top:-30px;cursor:pointer;box-shadow:0 6px 16px rgba(59,42,207,.4)}
+  #log{position:fixed;top:8px;left:8px;right:8px;max-width:500px;margin:auto;font:12px monospace;background:#111c;color:#9f9;padding:6px 8px;border-radius:8px;z-index:100000;display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="search">Search available products…</div>
+  <div class="grid">
+    <div class="c"><div class="ph"></div><small>PITARAA</small>Pitaraa Golden Brass…</div>
+    <div class="c"><div class="ph"></div><small>TONGA</small>Tonga Maroon Top</div>
+  </div>
+  <p style="color:#6b6b8c;font-size:14px">Demo page. Tap the mic and try: “I want shoes”, “show me Pitaraa jewellery”, “where is my order?”, “add the first one to my cart”, “place the order”.</p>
+</div>
+<div id="log"></div>
+<nav><span>Home</span><span>Reels</span><button id="jarvis-mic" aria-label="Talk to Jarvis">🎙</button><span>Cart</span><span>Profile</span></nav>
+<script type="module">
+  import { initJarvis } from './jarvis.js';
+  const log = document.getElementById('log');
+  initJarvis({
+    apiUrl: '/api/assistant',
+    micButton: '#jarvis-mic',
+    onAction: (a) => { log.style.display = 'block'; log.textContent = 'jarvis:action ' + JSON.stringify(a); setTimeout(() => log.style.display = 'none', 3500); },
+  });
+</script>
+</body>
+</html>

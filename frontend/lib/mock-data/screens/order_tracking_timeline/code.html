@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container": "#eaedff", "on-primary-container": "#dad7ff", "surface-container-high": "#e2e7ff", "surface-bright": "#faf8ff", "primary-fixed-dim": "#c3c0ff", "primary": "#3525cd", "secondary-fixed": "#ffdbca", "inverse-on-surface": "#eef0ff", "on-secondary-fixed-variant": "#783200", "on-surface": "#131b2e", "on-error": "#ffffff", "tertiary-fixed-dim": "#93ccff", "surface-dim": "#d2d9f4", "surface-variant": "#dae2fd", "on-secondary-fixed": "#341100", "secondary-container": "#fd761a", "secondary": "#9d4300", "tertiary": "#004c76", "inverse-surface": "#283044", "on-primary-fixed-variant": "#3323cc", "on-secondary-container": "#5c2400", "surface": "#faf8ff", "surface-tint": "#4d44e3", "inverse-primary": "#c3c0ff", "on-primary-fixed": "#0f0069", "on-background": "#131b2e", "surface-container-highest": "#dae2fd", "outline": "#777587", "background": "#faf8ff", "outline-variant": "#c7c4d8", "secondary-fixed-dim": "#ffb690", "primary-container": "#4f46e5", "on-secondary": "#ffffff", "on-primary": "#ffffff", "surface-container-low": "#f2f3ff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#004b73", "on-tertiary-container": "#bedfff", "tertiary-container": "#00659a", "on-surface-variant": "#464555", "error": "#ba1a1a", "on-error-container": "#93000a", "error-container": "#ffdad6", "on-tertiary": "#ffffff", "primary-fixed": "#e2dfff", "tertiary-fixed": "#cce5ff", "on-tertiary-fixed": "#001d31" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.25rem", "margin-md": "1.5rem", "margin-lg": "2rem", "gutter-lg": "1.5rem", "margin": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-xl": "1.5rem", "gutter-md": "1.25rem", "gutter": "1rem", "space-md": "1rem" }, fontFamily: { "title-md": ["Inter"], "label-sm": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "display-lg-mobile": ["Inter"], "body-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "label-lg": ["Inter"], "label-md": ["Inter"], "display-lg": ["Inter"] }, fontSize: { "title-md": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go Back" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-title-md text-title-md text-on-surface">Order Details &amp; Timeline Tracking</h1></div><div class="flex items-center gap-space-sm"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Help and Support" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">help_outline</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full pb-safe">
+<!-- Status Banner & Hero Highlight -->
+<div class="px-gutter pt-space-md pb-space-lg flex flex-col gap-space-sm bg-gradient-to-b from-surface-container-high/60 via-surface-container-low/40 to-transparent">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center justify-center w-2.5 h-2.5 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Live Status</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Order #SPH-8942109</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-extrabold flex items-center gap-2">
+        Out for Delivery
+        <span class="material-symbols-outlined text-secondary-container text-[28px]" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+        Estimated today, <strong class="text-on-surface font-semibold">2:45 PM</strong> <span class="inline-block px-2 py-0.5 ml-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">in ~18 mins</span>
+</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant/80 mt-1">Placed on Oct 24, 2024 at 1:15 PM</span>
+</div>
+</div>
+<div class="px-gutter flex flex-col gap-space-lg -mt-2">
+<!-- Live Map Preview Card -->
+<div class="relative w-full rounded-xl overflow-hidden bg-surface-container shadow-sm flex flex-col">
+<!-- Simulated Styled Vector Map Area -->
+<div class="relative w-full h-56 bg-surface-container-highest overflow-hidden">
+<!-- SVG Stylized Route Map -->
+<svg class="absolute inset-0 w-full h-full object-cover" fill="none" viewbox="0 0 360 220" xmlns="http://www.w3.org/2000/svg">
+<!-- Background Grid Roads -->
+<rect fill="#E2E7FF" height="220" opacity="0.6" width="360"></rect>
+<!-- Minor streets -->
+<path d="M-20 40 L380 70 M-20 120 L380 150 M-20 180 L380 200" opacity="0.8" stroke="#FAF8FF" stroke-linecap="round" stroke-width="6"></path>
+<path d="M40 -20 L70 240 M140 -20 L160 240 M240 -20 L220 240 M310 -20 L300 240" opacity="0.8" stroke="#FAF8FF" stroke-linecap="round" stroke-width="7"></path>
+<!-- Water body / Canal decor -->
+<path d="M300 0 C280 60, 310 140, 270 220 L360 220 L360 0 Z" fill="#CCE5FF" opacity="0.45"></path>
+<!-- Atlantic Ave Main Road -->
+<path d="M20 170 C100 150, 160 110, 280 60" stroke="#DAD7FF" stroke-linecap="round" stroke-width="12"></path>
+<!-- Delivery Route Traveled (Indigo) -->
+<path d="M40 165 C80 155, 120 125, 175 100" stroke="#4F46E5" stroke-linecap="round" stroke-width="5"></path>
+<!-- Active Remaining Route (Orange dashed) -->
+<path d="M175 100 C210 85, 245 75, 275 62" stroke="#FD761A" stroke-dasharray="6 6" stroke-linecap="round" stroke-width="4"></path>
+<!-- Origin Hub Marker (Brooklyn Hub) -->
+<g transform="translate(38, 163)">
+<circle fill="#3525CD" r="6"></circle>
+<circle fill="#3525CD" opacity="0.2" r="12"></circle>
+</g>
+<!-- Delivery Van Live Marker -->
+<g class="cursor-pointer" transform="translate(175, 100)">
+<circle class="animate-ping" fill="#FD761A" opacity="0.25" r="18" style="animation-duration: 2s;"></circle>
+<circle fill="#FD761A" r="14"></circle>
+<circle fill="#FFFFFF" r="11"></circle>
+<path d="M-5 -3 L1 -3 L4 0 L4 3 L-5 3 Z" fill="#FD761A"></path>
+<circle cx="-3" cy="3" fill="#341100" r="1.5"></circle>
+<circle cx="2" cy="3" fill="#341100" r="1.5"></circle>
+</g>
+<!-- Destination Marker (742 Evergreen) -->
+<g transform="translate(275, 62)">
+<circle fill="#131B2E" r="8"></circle>
+<path d="M-4 -2 L0 -6 L4 -2 L3 3 L-3 3 Z" fill="#FFFFFF"></path>
+<circle fill="#131B2E" opacity="0.12" r="16"></circle>
+</g>
+</svg>
+<!-- Route Status Floating Pill -->
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+<div class="bg-surface-container-lowest/95 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm flex items-center gap-2 pointer-events-auto">
+<span class="material-symbols-outlined text-[18px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">near_me</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">David is 1.8 mi away on Atlantic Ave</span>
+</div>
+<span class="bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full shadow-sm font-semibold">EV-Van</span>
+</div>
+<!-- View Full Map Button Overlay -->
+<div class="absolute bottom-3 right-3 left-3 flex justify-end">
+<button class="bg-surface-container-lowest/95 hover:bg-surface-container-lowest text-primary font-label-md text-label-md px-3.5 py-2 rounded-lg shadow-sm flex items-center gap-1.5 transition-transform active:scale-95" type="button">
+<span>View Full Live GPS Map</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Courier Mini-Card Embedded within Map Container -->
+<div class="p-space-md bg-surface-container-lowest flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative w-12 h-12 rounded-full overflow-hidden bg-surface-container flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait photo of a cheerful courier driver named David wearing a modern indigo uniform cap, smiling warmly in soft natural morning daylight against a clean city background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1zEoRK0HN5D45Wb0b1rs4Zgq3kC0Yg_ivUTWn2yrFmCCsCcTyRbiMAIiYCSE5_XbciDci5vJLB3PoC2RhREHQVIjQdymwf0j6ndDN_0462BHi7pXPkl9m7YLKnRegWicc1pEN3AbB06AWm9Vyu9wGs3h4DcOE-h_QB1_83p0R7akzfOlWKMPPdeUcWkNqgbpIG0E8LWxeF8CvkzsTfX_H3cqq4CdhX24eKpUOaDfs"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-secondary-container border-2 border-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface truncate">David Ramirez</span>
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md mt-0.5">
+<span class="flex items-center text-secondary font-bold">
+<span class="material-symbols-outlined text-[16px] mr-0.5 text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+                4.9
+              </span>
+<span>•</span>
+<span class="truncate">1,420 deliveries</span>
+</div>
+</div>
+</div>
+<!-- Quick Interaction Actions -->
+<div class="flex items-center gap-2 flex-shrink-0">
+<button aria-label="Call Courier David Ramirez" class="w-11 h-11 rounded-full bg-surface-container-low hover:bg-surface-container text-primary flex items-center justify-center transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">call</span>
+</button>
+<button aria-label="Message Courier David Ramirez" class="w-11 h-11 rounded-full bg-primary text-on-primary flex items-center justify-center transition-transform active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">chat</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Voice AI Prompt Bar Delight -->
+<div class="w-full bg-gradient-to-r from-primary/10 via-surface-container-high to-secondary-container/10 p-3.5 rounded-xl flex items-center justify-between gap-space-sm cursor-pointer shadow-sm active:opacity-90">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">graphic_eq</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">ShopSphere Voice Assistant</span>
+<p class="font-body-md text-body-md text-on-surface italic truncate">"Where is my order right now?"</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+</button>
+</div>
+<!-- Complete Vertical Timeline -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-space-md">
+<h3 class="font-title-md text-title-md text-on-surface">Tracking History</h3>
+<span class="font-label-sm text-label-sm text-primary font-semibold bg-surface-container px-2 py-0.5 rounded-full">Standard Express</span>
+</div>
+<div class="relative flex flex-col">
+<!-- Milestone 1: Order Placed -->
+<div class="flex gap-space-md relative pb-6">
+<!-- Connecting Line -->
+<div class="absolute left-[15px] top-[26px] bottom-0 w-[2px] bg-primary"></div>
+<!-- Node Icon -->
+<div class="relative z-10 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col pt-0.5 min-w-0">
+<div class="flex items-baseline justify-between gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Order Placed</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex-shrink-0">Oct 24, 1:15 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Order confirmed and payment verified.</p>
+</div>
+</div>
+<!-- Milestone 2: Order Packed & Verified -->
+<div class="flex gap-space-md relative pb-6">
+<div class="absolute left-[15px] top-[26px] bottom-0 w-[2px] bg-primary"></div>
+<div class="relative z-10 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+</div>
+<div class="flex flex-col pt-0.5 min-w-0">
+<div class="flex items-baseline justify-between gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Order Packed &amp; Verified</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex-shrink-0">Oct 24, 1:45 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Scanned and securely packaged at Brooklyn Hub.</p>
+</div>
+</div>
+<!-- Milestone 3: Shipped & In Transit -->
+<div class="flex gap-space-md relative pb-6">
+<div class="absolute left-[15px] top-[26px] bottom-0 w-[2px] bg-primary"></div>
+<div class="relative z-10 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">route</span>
+</div>
+<div class="flex flex-col pt-0.5 min-w-0">
+<div class="flex items-baseline justify-between gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Shipped &amp; In Transit</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex-shrink-0">Oct 24, 2:10 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Departed regional sorting facility to local distribution.</p>
+</div>
+</div>
+<!-- Milestone 4: Out for Delivery (ACTIVE) -->
+<div class="flex gap-space-md relative pb-6">
+<!-- Dashed Connecting Line to Pending Milestone -->
+<div class="absolute left-[15px] top-[30px] bottom-0 w-[2px] border-l-2 border-dashed border-outline-variant"></div>
+<div class="relative z-10 w-8 h-8 rounded-full bg-secondary-container text-on-primary flex items-center justify-center flex-shrink-0 ring-4 ring-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+</div>
+<div class="flex flex-col pt-0.5 min-w-0 bg-surface-container-low/70 p-3 rounded-lg -mt-1">
+<div class="flex items-baseline justify-between gap-2">
+<span class="font-label-lg text-label-lg text-secondary-container font-bold flex items-center gap-1.5">
+                Out for Delivery
+                <span class="inline-block w-2 h-2 rounded-full bg-secondary-container animate-ping"></span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold flex-shrink-0">Current</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium mt-1">Courier David is heading to your address with your package.</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Current stop: #4 of 7 in route</span>
+</div>
+</div>
+<!-- Milestone 5: Delivered (PENDING) -->
+<div class="flex gap-space-md relative">
+<div class="relative z-10 w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">home</span>
+</div>
+<div class="flex flex-col pt-1 min-w-0">
+<div class="flex items-baseline justify-between gap-2">
+<span class="font-label-lg text-label-lg text-on-surface-variant font-semibold">Delivered</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/80 flex-shrink-0">Est. 2:45 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant/70 mt-0.5">Estimated arrival and handoff at your door.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Delivery Address & Delivery Instructions -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-2 text-primary font-semibold">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<h3 class="font-title-md text-title-md text-on-surface">Delivery Details</h3>
+</div>
+<div class="flex flex-col gap-1 bg-surface-container-low/60 p-3.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Destination Address</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">742 Evergreen Terrace, Apt 4B</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Brooklyn, NY 11201</p>
+</div>
+<div class="flex items-start gap-3 bg-secondary-fixed/30 p-3.5 rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">info</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-secondary-fixed-variant font-bold">Driver Note</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">"Leave with lobby concierge or ring Apt 4B"</p>
+</div>
+</div>
+</div>
+<!-- Order Items Summary Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface">Items in Package (3)</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Box 1 of 1</span>
+</div>
+<!-- Item List -->
+<div class="flex flex-col gap-space-md">
+<!-- Item 1 -->
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-lg bg-surface-container flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="High-end studio wireless noise-cancelling headphones in space gray matte finish displayed on a clean modern architectural pedestal with subtle indigo reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1G_K8PLW6isBRIG1LYIBVXQ_WFOgKe2xp_gEMTmj_gdxw6dP61lVX0um-7GGC1p0v8BhhGxBPBoeieY_Fxxatug1I4v6QUeTfiSOGEUFYbj1jZfCWvE4p9bO93B_kfZmRpq5qxo5Q8Sf34TlhmhbfepPIHsC0M_ssH4afFj0JaCzcJf7L_TGU28rug1Ws4N1MctDYsUzjHFX8li00sKeQASgrKj0VliQ9A8GWgnWU"/>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<h4 class="font-body-md text-body-md text-on-surface font-semibold truncate">Aura Studio ANC Wireless Pro</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Matte Midnight • Qty 1</span>
+<span class="font-title-md text-title-md text-on-surface font-bold mt-1">$89.00</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-lg bg-surface-container flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Minimalist wireless mechanical keyboard with low-profile keycaps and subtle warm amber RGB backlighting sitting on an organized desk setup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdnks6f4clu4J3qmSWrSQf5B-rdzh3eitsNhahFwYG50pAhZlMmnWob3kM68xGDs2i2vAKLUl8wlNJ_S7MbUE47VFk8d3j6IniCieaeTQD6vVmSzwNoLQEVqKA3SD8vsQwomxuBGu8YeuSDUFkwtgp8SVq-s3jw--UoTO7eQqElu_Ytkkhux4M4d0FH5MysihsNJLv_eL_ZstLYWg1Jq3CiwMVicpqMJg0nV9oAkSU"/>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<h4 class="font-body-md text-body-md text-on-surface font-semibold truncate">Aura Mechanical Keyboard</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Brown Tactile Switch • Qty 1</span>
+<span class="font-title-md text-title-md text-on-surface font-bold mt-1">$115.00</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-lg bg-surface-container flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Luxury ceramic smartwatch with circular high-resolution display and premium woven fabric strap photographed under crisp studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnPpO3nNuQ4qRfEIvSZlts26vQR1sxi8pqGflT5daW3EsrEVaiO4xWWpmlJS9PGN6V6yyfpVk-vk2Z_q-1vFFKAj6-KU_TP4sFT6s5xZvWD210KbgMvjP7ATyZaLYxqKhrDNyQCj8DiVD9zebsH0kmX5gKYLxalHEAW6_On6tceRHKOcMO4w61D8cRwAq2XwLW11uActOllFzsL7vCPNNvF1SSgxRXNMfi4NVwfwgr"/>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<h4 class="font-body-md text-body-md text-on-surface font-semibold truncate">Ceramic Smart Watch</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">42mm Ceramic Black • Qty 1</span>
+<span class="font-title-md text-title-md text-on-surface font-bold mt-1">$129.00</span>
+</div>
+</div>
+</div>
+<!-- Order Financial Summary -->
+<div class="pt-space-sm flex flex-col gap-1.5 bg-surface-container-low/40 p-3.5 rounded-lg mt-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Subtotal</span>
+<span>$333.00</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Member Shipping</span>
+<span class="text-primary font-medium">FREE</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>VIP Promo Discount</span>
+<span class="text-secondary font-medium">-$25.00</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Tax</span>
+<span>$18.40</span>
+</div>
+<div class="flex items-center justify-between pt-2 mt-1">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface font-bold">Total Paid</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">via Apple Pay</span>
+</div>
+<span class="font-headline-md text-headline-md text-primary font-bold">$326.40</span>
+</div>
+</div>
+</div>
+<!-- Bottom Actions / Secondary CTA -->
+<div class="flex flex-col gap-space-sm pt-space-xs pb-space-xl">
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="h-12 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-2 transition-colors active:scale-98" type="button">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+<span>Download Invoice</span>
+</button>
+<button class="h-12 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-2 transition-colors active:scale-98" type="button">
+<span class="material-symbols-outlined text-[20px]">assignment_return</span>
+<span>Return / Help</span>
+</button>
+</div>
+<!-- Quick Delivery Notification Settings Delight -->
+<div class="flex items-center justify-between px-3 py-2 text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">notifications_active</span>
+<span class="font-body-sm text-body-sm">SMS &amp; Push live arrival alerts active</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold cursor-pointer">Manage</span>
+</div>
+</div>
+</div>
+</div></main></body></html>

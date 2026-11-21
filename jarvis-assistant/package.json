@@ -1,0 +1,12 @@
+{
+  "name": "jarvis-assistant",
+  "version": "1.0.0",
+  "description": "Voice shopping assistant (Jarvis) for the e-commerce app: search, product Q&A, cart, ordering, order tracking.",
+  "type": "commonjs",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node test/run.js"
+  },
+  "engines": { "node": ">=18" }
+}

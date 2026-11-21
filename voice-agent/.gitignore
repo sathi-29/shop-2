@@ -1,0 +1,8 @@
+.env
+.voice-agent-sandbox/
+*.sqlite3
+__pycache__/
+*.pyc
+build/
+dist/
+*.egg-info/

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container": "#eaedff", "on-primary-container": "#dad7ff", "surface-container-high": "#e2e7ff", "surface-bright": "#faf8ff", "primary-fixed-dim": "#c3c0ff", "primary": "#3525cd", "secondary-fixed": "#ffdbca", "inverse-on-surface": "#eef0ff", "on-secondary-fixed-variant": "#783200", "on-surface": "#131b2e", "on-error": "#ffffff", "tertiary-fixed-dim": "#93ccff", "surface-dim": "#d2d9f4", "surface-variant": "#dae2fd", "on-secondary-fixed": "#341100", "secondary-container": "#fd761a", "secondary": "#9d4300", "tertiary": "#004c76", "inverse-surface": "#283044", "on-primary-fixed-variant": "#3323cc", "on-secondary-container": "#5c2400", "surface": "#faf8ff", "surface-tint": "#4d44e3", "inverse-primary": "#c3c0ff", "on-primary-fixed": "#0f0069", "on-background": "#131b2e", "surface-container-highest": "#dae2fd", "outline": "#777587", "background": "#faf8ff", "outline-variant": "#c7c4d8", "secondary-fixed-dim": "#ffb690", "primary-container": "#4f46e5", "on-secondary": "#ffffff", "on-primary": "#ffffff", "surface-container-low": "#f2f3ff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#004b73", "on-tertiary-container": "#bedfff", "tertiary-container": "#00659a", "on-surface-variant": "#464555", "error": "#ba1a1a", "on-error-container": "#93000a", "error-container": "#ffdad6", "on-tertiary": "#ffffff", "primary-fixed": "#e2dfff", "tertiary-fixed": "#cce5ff", "on-tertiary-fixed": "#001d31" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.25rem", "margin-md": "1.5rem", "margin-lg": "2rem", "gutter-lg": "1.5rem", "margin": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-xl": "1.5rem", "gutter-md": "1.25rem", "gutter": "1rem", "space-md": "1rem" }, fontFamily: { "title-md": ["Inter"], "label-sm": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "display-lg-mobile": ["Inter"], "body-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "label-lg": ["Inter"], "label-md": ["Inter"], "display-lg": ["Inter"] }, fontSize: { "title-md": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script><style>body{min-height:max(884px,100dvh);}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0 pr-space-xs"><button aria-label="Go Back" class="w-11 h-11 flex-shrink-0 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-title-md text-title-md text-on-surface font-semibold truncate">Wishlist &amp; Saved Items</h1></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Search or Filter" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">tune</span></button><button aria-label="Share" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">share</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full pb-10">
+<!-- Top Summary & Price Drop Tracker -->
+<section class="px-gutter pt-space-md flex flex-col gap-space-sm">
+<div class="bg-surface-container-low rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-md relative overflow-hidden">
+<!-- Decorative Soft Glow -->
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary/5 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold">14 Saved</span>
+<span class="bg-surface-variant text-on-surface-variant px-2.5 py-0.5 rounded-full font-label-sm text-label-sm">3 Boards</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Curated personal items &amp; price alerts</p>
+</div>
+<button class="h-11 px-space-md bg-surface-container-lowest hover:bg-surface-container text-primary font-label-md text-label-md rounded-xl shadow-sm flex items-center gap-1.5 transition-all active:scale-95 flex-shrink-0" id="move-all-btn">
+<span class="material-symbols-outlined text-[18px]">shopping_cart_checkout</span>
+<span>Move All (12)</span>
+</button>
+</div>
+<!-- Price Drop Highlight Cardlet -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex items-center justify-between gap-space-sm shadow-sm">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-9 h-9 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">trending_down</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">2 items dropped in price!</span>
+<span class="inline-flex items-center px-1.5 py-0.2 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded">Save $35</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary truncate font-medium">Auto-synced today at 09:42 AM</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Collection / Board Filter Pills (Horizontal Scroll) -->
+<section class="mt-space-md">
+<div class="flex items-center gap-2 px-gutter overflow-x-auto no-scrollbar py-1">
+<button class="flex-shrink-0 h-9 px-4 rounded-full bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform">
+<span>All Items</span>
+<span class="bg-white/20 text-white rounded-full px-1.5 py-0.2 text-[10px]">14</span>
+</button>
+<button class="flex-shrink-0 h-9 px-4 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors active:scale-95">
+<span>Tech &amp; Desk Setup</span>
+<span class="text-on-surface-variant text-[11px]">6</span>
+</button>
+<button class="flex-shrink-0 h-9 px-4 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors active:scale-95">
+<span>Wearables &amp; Audio</span>
+<span class="text-on-surface-variant text-[11px]">5</span>
+</button>
+<button class="flex-shrink-0 h-9 px-4 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors active:scale-95">
+<span>Gift Ideas</span>
+<span class="text-on-surface-variant text-[11px]">3</span>
+</button>
+<button class="flex-shrink-0 h-9 px-3.5 rounded-full bg-surface-container-lowest hover:bg-surface-container text-primary font-label-md text-label-md flex items-center gap-1 shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>New Board</span>
+</button>
+</div>
+</section>
+<!-- ShopSphere Voice AI Smart Trigger Card -->
+<section class="px-gutter mt-space-md">
+<div class="bg-gradient-to-r from-primary-fixed/60 via-surface-container-low to-secondary-fixed/50 rounded-2xl p-space-md flex items-center justify-between gap-space-sm shadow-sm relative overflow-hidden">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center flex-shrink-0 shadow-sm animate-pulse">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Voice Assistant</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface truncate font-medium mt-0.5">
+            “Did any saved headphones drop under $80?”
+          </p>
+</div>
+</div>
+<button class="h-9 px-3 rounded-xl bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary font-label-sm text-label-sm shadow-sm transition-all flex items-center gap-1 flex-shrink-0">
+<span>Ask</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Wishlist Items List -->
+<section class="px-gutter mt-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Priority Items</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sorted by: Price Drops</span>
+</div>
+<!-- Card 1: Wireless Pro Headphones -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col gap-space-md transition-all relative">
+<div class="flex gap-space-md">
+<!-- Thumbnail -->
+<div class="relative w-28 h-28 rounded-xl overflow-hidden bg-surface-container-low flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="High-end midnight blue matte wireless over-ear noise-cancelling headphones resting on a sculpted minimal stone pedestal with soft studio backlighting and subtle indigo rim highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaWgW9mBl-ftSNuEiXcKtAyhy6a3ZrEsPwukn_AFsCZvWbWAzL-EA4eUPlfXAaghEegt8kI71aLGxzlnWsuKruh7ajHLLRV_jVm6NwNi9x7lQBZpkrsIIyXisdMHyGllj8H9e6fQ0aVFtKiMcqDvEm8sc1-IrPA100Ghf1WRMYHbX_KSe0gWG4ATy7vHpMFXWbPZ-OUSGNhODP-vdJrcVjdhmYfFXQITlV7EWVFN4S"/>
+<button aria-label="Saved Item" class="absolute top-1.5 left-1.5 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-error transition-transform active:scale-75 shadow-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<!-- Details -->
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div>
+<div class="flex items-center justify-between gap-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold truncate">
+                🔥 Price Dropped by $20
+              </span>
+<button aria-label="More options" class="text-on-surface-variant hover:text-on-surface w-8 h-8 flex items-center justify-center -mr-2">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold truncate mt-1">Aura Studio ANC Wireless Pro</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Midnight Blue • Studio Master Audio</p>
+</div>
+<div class="mt-1 flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-on-surface font-bold tabular-nums">$89.00</span>
+<span class="font-body-sm text-body-sm text-outline line-through tabular-nums">$109.00</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<div class="flex items-center text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="ml-0.5 font-bold">4.9</span>
+<span class="text-on-surface-variant ml-1 font-normal">(3.8k)</span>
+</div>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-primary font-medium truncate">Ships Tomorrow</span>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="flex-1 h-12 bg-secondary-container hover:bg-secondary text-on-secondary font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-2 shadow-sm transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+<span>Move to Cart</span>
+</button>
+<button aria-label="Share product" class="w-12 h-12 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">ios_share</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Ceramic Smart Watch -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col gap-space-md transition-all relative">
+<div class="flex gap-space-md">
+<!-- Thumbnail -->
+<div class="relative w-28 h-28 rounded-xl overflow-hidden bg-surface-container-low flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Futuristic luxury obsidian black ceramic smartwatch with modern glowing OLED dial display, macro shot angled softly showing woven sports band in minimal studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe2NsFxcoTitNb1I4rXzRGM13g5IZdIvOzvrfJwcyble2ZRO5eV-oCN3BrQQStGsI4KcemFUp36YxkKJ0DuNWZOmiohKEzDq8SJk26RdjiHaYEQJuIrszlYWGgtVuexNWKyPsnEdvCO41y9iw1kfDELIu5kNUO6ibmCjeFjXthXkPSH4vvXipaNYwPf8UZOFOZMwadJ5yPZZ_sWlqq9AUHoNR-i0IMshkpvIYynLLx"/>
+<button aria-label="Saved Item" class="absolute top-1.5 left-1.5 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-error transition-transform active:scale-75 shadow-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<!-- Details -->
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div>
+<div class="flex items-center justify-between gap-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold truncate">
+                ⚡ Only 3 left
+              </span>
+<button aria-label="More options" class="text-on-surface-variant hover:text-on-surface w-8 h-8 flex items-center justify-center -mr-2">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold truncate mt-1">Ceramic Smart Watch - Series 4</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Obsidian Black • 42mm Cellular</p>
+</div>
+<div class="mt-1 flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-on-surface font-bold tabular-nums">$129.00</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<div class="flex items-center text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="ml-0.5 font-bold">4.8</span>
+</div>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Fast Delivery available</span>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="flex-1 h-12 bg-secondary-container hover:bg-secondary text-on-secondary font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-2 shadow-sm transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+<span>Move to Cart</span>
+</button>
+<button aria-label="Share product" class="w-12 h-12 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">ios_share</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Aura Mechanical Keys -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col gap-space-md transition-all relative">
+<div class="flex gap-space-md">
+<!-- Thumbnail -->
+<div class="relative w-28 h-28 rounded-xl overflow-hidden bg-surface-container-low flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Custom mechanical keyboard top down aesthetic view with cream and subtle pastel mint keycaps, premium aluminum body on warm oak desk with minimal accessories" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuv5BvH136hc-Dsq_5jQawqGo2n6ahKL0Ju_6lP97lBAjJeddAB7Uo0YmCPH1xxWXKJBAyTFIksyP8nTjhlHEPzQfm5AiLqHCcrEdgXdtU2P-NQkNhxDJJI8SfNX8zma1ANDWXeJ3ovh-0pi7CA8MLleDfkzGjBXEC57GC2TT5xJJYCKTKVpuOV3cahBJMXhFUEeoKViNcyPuIbQfZyWabwnDlc7rkCwxTKue3Xr9n"/>
+<button aria-label="Saved Item" class="absolute top-1.5 left-1.5 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-error transition-transform active:scale-75 shadow-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<!-- Details -->
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div>
+<div class="flex items-center justify-between gap-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold truncate">
+                Saved 2 wks ago
+              </span>
+<button aria-label="More options" class="text-on-surface-variant hover:text-on-surface w-8 h-8 flex items-center justify-center -mr-2">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold truncate mt-1">Aura Mechanical Keys</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Silent Tactile Switches • Cream / Mint</p>
+</div>
+<div class="mt-1 flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-on-surface font-bold tabular-nums">$115.00</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Price steady</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<div class="flex items-center text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="ml-0.5 font-bold">4.9</span>
+</div>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">In Stock</span>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="flex-1 h-12 bg-secondary-container hover:bg-secondary text-on-secondary font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-2 shadow-sm transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+<span>Move to Cart</span>
+</button>
+<button aria-label="Share product" class="w-12 h-12 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">ios_share</span>
+</button>
+</div>
+</div>
+<!-- Card 4: Ultra-Fast Magnetic Wireless Charging Pad -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col gap-space-md transition-all relative">
+<div class="flex gap-space-md">
+<!-- Thumbnail -->
+<div class="relative w-28 h-28 rounded-xl overflow-hidden bg-surface-container-low flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Sleek magnetic aluminum circular wireless fast charging pad resting on slate surface with soft ambient blue edge illumination and precision braided cable" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXCVX3CQZ-5Qvhd3Q5n3d5R8LOzV9Tnerio7eOUlpEXPnv2xyDh94kiczNLSTY5KcVu68zoGcVEtrQ3P4Mz5vmst-67cD_E8gP-cVGHAhTyene1PovRF5rrW6WtiK5BTS71ufKafk5p_HLS47j3fqnEFv_wiKvD325eoDiMid-ViN0T46EZOXcYYadTS59W7QUYCaQHGPT-vRS4iELkNKmoRlAfba2OJhaHoHZrwKo"/>
+<button aria-label="Saved Item" class="absolute top-1.5 left-1.5 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-error transition-transform active:scale-75 shadow-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<!-- Details -->
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div>
+<div class="flex items-center justify-between gap-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold truncate">
+                🏷️ 15% Off with TECH15
+              </span>
+<button aria-label="More options" class="text-on-surface-variant hover:text-on-surface w-8 h-8 flex items-center justify-center -mr-2">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold truncate mt-1">Magnetic Wireless Pad</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Slate Silver • 15W Qi2 Certified</p>
+</div>
+<div class="mt-1 flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-on-surface font-bold tabular-nums">$34.00</span>
+<span class="font-body-sm text-body-sm text-outline line-through tabular-nums">$40.00</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="inline-block w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-body-sm text-body-sm text-primary font-medium truncate">Back in Stock</span>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="flex-1 h-12 bg-secondary-container hover:bg-secondary text-on-secondary font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-2 shadow-sm transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+<span>Move to Cart</span>
+</button>
+<button aria-label="Share product" class="w-12 h-12 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">ios_share</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Bottom Recommendations Section -->
+<section class="mt-space-xl">
+<div class="px-gutter flex items-center justify-between mb-space-sm">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Recommended for Your Wishlist</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Matches your Tech &amp; Desk Setup board</p>
+</div>
+<button class="text-primary font-label-md text-label-md hover:underline">Explore</button>
+</div>
+<!-- Recommendations Carousel -->
+<div class="flex gap-space-md px-gutter overflow-x-auto no-scrollbar py-2">
+<!-- Rec Card 1 -->
+<div class="w-44 flex-shrink-0 bg-surface-container-lowest rounded-2xl p-3 shadow-sm flex flex-col justify-between">
+<div>
+<div class="relative w-full h-32 rounded-xl overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Ergonomic memory foam wrist rest in charcoal dark gray fabric sitting seamlessly in front of minimalist computer keyboard on clean desk surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSA-MC-_aXF3WbhRVA0wZSSQB6yW8YjZjy73JuLovbrQ870eASaWHSyXdX-0Qv88w3ne3suhL806rkW9RcaderHZPO6d-3-7EMF4fa4vG9cVldXaAI2DHzVZoiTdOIT83qs4XNb3RDm_KTtg_cnm7fLI_k8znPsd2IzeE12bZHPJ37AbA1ZOteBuLqfmVai82AnBJ8uboN9VkGtuPEXJWecxnxe8_5qaGojlReHzM3"/>
+<button class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-primary active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[16px]">bookmark_add</span>
+</button>
+</div>
+<div class="mt-2.5">
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Desk Comfort</p>
+<h4 class="font-label-md text-label-md text-on-surface font-semibold line-clamp-1">Ergonomic Wrist Rest</h4>
+<span class="font-title-md text-title-md text-on-surface font-bold mt-1 block tabular-nums">$24.00</span>
+</div>
+</div>
+<button class="w-full mt-3 h-9 bg-surface-container hover:bg-primary-fixed text-primary font-label-sm text-label-sm rounded-lg flex items-center justify-center gap-1 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add to Board</span>
+</button>
+</div>
+<!-- Rec Card 2 -->
+<div class="w-44 flex-shrink-0 bg-surface-container-lowest rounded-2xl p-3 shadow-sm flex flex-col justify-between">
+<div>
+<div class="relative w-full h-32 rounded-xl overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Premium audiophile USB-C to 3.5mm hi-res DAC headphone dongle adapter with braided slate gray nylon cable and brushed metal connectors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2WuSN35t_5tEKFJFgPPtgp6OTpj5Xxf3NteIzgNoLGd3NzeSQvPUgKrYsBbUzfAAYGo-XJwFAX4JKUVEJztFMtrI_9CNQuzslAMNPvfbl0HwsT0lfK8VDfPc_LYQi7GqaZiBKkhFFNhNZOWWt7UEf5C3q2pqVhBYrKw3ajCO733qlBObnwBFRtgHgNc8DEoQbMJLvbXAFbW3apFyjjibNSnap6ZxlROigKsQFoQ9v"/>
+<button class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-primary active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[16px]">bookmark_add</span>
+</button>
+</div>
+<div class="mt-2.5">
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Audio Gear</p>
+<h4 class="font-label-md text-label-md text-on-surface font-semibold line-clamp-1">Hi-Fi DAC Adapter</h4>
+<span class="font-title-md text-title-md text-on-surface font-bold mt-1 block tabular-nums">$19.00</span>
+</div>
+</div>
+<button class="w-full mt-3 h-9 bg-surface-container hover:bg-primary-fixed text-primary font-label-sm text-label-sm rounded-lg flex items-center justify-center gap-1 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add to Board</span>
+</button>
+</div>
+<!-- Rec Card 3 -->
+<div class="w-44 flex-shrink-0 bg-surface-container-lowest rounded-2xl p-3 shadow-sm flex flex-col justify-between">
+<div>
+<div class="relative w-full h-32 rounded-xl overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Modern vegan leather desk blotter pad in deep midnight navy color with aesthetic laptop and clean workspace essentials" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCakeNJboQBmbYtuTupCUhLHVBoDx41G9B1m3zIZ42eTDkkiFXWh5uS6LqYslLVU70iaE3ek_4QtYWp-MY_WNy3Z7RN8PDKRMaOkCs9oT4X42eCts7ydttCJnm0Y-J-ru-MXxl3-_HNuBHcp63v4q1yjFH5Sp9WicyxW5Ggoe01uYLv3LbPsLEPRJkrd_pXLz6Z0ABiSkubKRifQsvSBQwz0TMVyKNji0FvLi8AhmAl"/>
+<button class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-primary active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[16px]">bookmark_add</span>
+</button>
+</div>
+<div class="mt-2.5">
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Organization</p>
+<h4 class="font-label-md text-label-md text-on-surface font-semibold line-clamp-1">Vegan Leather Desk Mat</h4>
+<span class="font-title-md text-title-md text-on-surface font-bold mt-1 block tabular-nums">$32.00</span>
+</div>
+</div>
+<button class="w-full mt-3 h-9 bg-surface-container hover:bg-primary-fixed text-primary font-label-sm text-label-sm rounded-lg flex items-center justify-center gap-1 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add to Board</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Micro-interaction / Toast Notification Anchor -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-xl shadow-xl flex items-center gap-3 text-sm z-50 transition-all duration-300 opacity-0 pointer-events-none translate-y-4" id="toast-notification">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span class="font-body-sm text-body-sm font-medium" id="toast-text">Added to Cart</span>
+</div>
+</div>
+<script>
+  // Simple toast feedback for quick commerce actions
+  const toast = document.getElementById('toast-notification');
+  const toastText = document.getElementById('toast-text');
+  let timeoutId;
+
+  function showToast(message) {
+    if (timeoutId) clearTimeout(timeoutId);
+    toastText.innerText = message;
+    toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+    toast.classList.add('opacity-100', 'translate-y-0');
+    timeoutId = setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+    }, 2400);
+  }
+
+  // Hook up fast buttons
+  document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const text = btn.innerText.trim();
+      if (text.includes('Move to Cart')) {
+        showToast('Moved item to active shopping bag 🛍️');
+      } else if (text.includes('Move All')) {
+        showToast('12 in-stock items moved to Cart ✨');
+      } else if (text.includes('Add to Board')) {
+        showToast('Saved recommendation to Desk Board 📌');
+      }
+    });
+  });
+</script></main></body></html>
